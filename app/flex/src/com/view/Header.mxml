@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Panel xmlns:mx="http://www.adobe.com/2006/mxml"
+	 layout="absolute" 
+	 width="100%" 
+	 styleName="panel"
+	 height="100%"
+	 xmlns:search="com.view.search.*">
+
+	<mx:Style source="css/SearchBox.css"/>
+	<mx:Style source="css/Header.css"/>
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.containers.ViewStack;
+			import mx.collections.ArrayCollection ;
+			
+			[Bindable]
+			private var mainBodyViews:ViewStack;
+			
+			public function set linkBarFor(elements:ViewStack): void{
+				this.mainBodyViews = elements;
+			}
+		]]>
+	</mx:Script>
+
+	<mx:LinkBar id="linkBarForMainBody" label="Go To"
+		enabled="true"
+		dataProvider="{mainBodyViews}"
+		styleName="linkBar"
+		left="10"
+		bottom="10"></mx:LinkBar>
+			
+	
+	<search:SearchBox id="searchBox" 
+		width="371" height="50" 
+		right="10" bottom="10"
+		styleName="siteWideSearch" ></search:SearchBox>
+	
+
+</mx:Panel>

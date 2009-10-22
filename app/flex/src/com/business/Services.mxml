@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cairngorm:ServiceLocator 
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	xmlns:cairngorm="com.business.*">
+	
+	<mx:HTTPService  
+		id="getDirectory" 
+	    resultFormat="xml"
+	    url="http://dhakads-online-directory.haroku.com/people"
+		result="event.token.resultHandler(event);" 
+		fault="event.token.resultHandler(event);"																		
+	/>     
+</cairngorm:ServiceLocator>

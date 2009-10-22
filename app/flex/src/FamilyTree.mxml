@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+	layout="absolute"
+	styleName="main"
+	height="100%"
+	width="100%"
+	pageTitle="FamilyTree"
+	horizontalAlign="center"
+	creationComplete="init();"
+	xmlns:text="flash.text.*"
+	xmlns:search="com.view.search.*"
+	xmlns:view="com.view.*"
+	xmlns:control="com.controller.*"
+	xmlns:service="com.business.*">
+	
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+			import com.adobe.cairngorm.control.CairngormEventDispatcher;
+			import com.event.GetDirectoryEvent;
+			import com.adobe.cairngorm.control.CairngormEvent;
+			import com.adobe.cairngorm.model.ModelLocator;
+			import com.model.FamilyTreeModelLocator;
+			import com.controller.FamilyTreeController;
+			import flexunit.utils.Collection;
+			import mx.collections.ArrayList;
+			import mx.collections.IList;
+		
+			[Bindable]
+			public var familyTreeModelLocator : FamilyTreeModelLocator = FamilyTreeModelLocator.getInstance();
+				 
+			private function init() : void{
+				var event : CairngormEvent = new GetDirectoryEvent();
+				CairngormEventDispatcher.getInstance().dispatchEvent(event);
+			}
+			
+
+		]]>
+	</mx:Script>
+	
+	<control:FamilyTreeController id="controller"></control:FamilyTreeController>
+	<service:Services id="services"></service:Services>
+	
+	<mx:Style source="css/familytree.css"></mx:Style>
+	<mx:Style source="css/SearchResults.css"/>
+	<mx:Style source="css/SearchBox.css"/>
+	
+	<view:Header id="header" linkBarFor="{mainBody}"
+		 left="150" 
+		 right="150" 
+		 height="110"></view:Header>
+
+
+	<mx:ViewStack id="mainBody" 
+		right="150" left="150" 
+		top="110" bottom="80" >
+		
+		<view:DirectoryPage id="directory" 
+			label="Directory Page" 
+			width="100%" 
+			height="100%"  
+			uid="temp"></view:DirectoryPage>
+			
+		<view:PersonDetailsPage id="personDetails"
+			label="Person Details Page"
+			width="100%" 
+			height="100%"> </view:PersonDetailsPage>
+			
+		<view:LoginForm id="loginForm"
+			label="Login Form"
+			width="100%"
+			height="100%"></view:LoginForm>
+			 
+				
+			
+	</mx:ViewStack>
+	
+		
+</mx:Application>

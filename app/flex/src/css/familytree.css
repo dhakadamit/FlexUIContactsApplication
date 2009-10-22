@@ -1,0 +1,22 @@
+.main {
+	backgroundColor: #393939;
+	fontFamily: Verdana;
+	fontStyle: normal;
+	fontAntiAliasType: normal;
+	borderColor: #0B87D5;
+	backgroundAlpha: 0.98;
+	backgroundSize: auto;
+}
+
+.header {
+
+}
+
+
+.body {
+	right: 80;
+	left: 80;
+	top: 110;
+	bottom: 80;
+}
+	
