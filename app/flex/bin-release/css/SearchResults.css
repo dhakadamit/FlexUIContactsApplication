@@ -1,0 +1,38 @@
+.searchResults{
+	borderStyle: solid;
+	borderThickness: 2;
+	corner-radius: 5;
+	borderColor: #0B87D5;
+	selectionColor: #FFFFFF;
+	rollOverColor: #FFFFFF;
+	headerStyleName: dataGridHeader;
+	headerColors: #FFFFFF, #BBBCBC;
+	fillAlphas: 0.4, 1.0, 0.12, 0.12;
+	horizontalGridLines: true;
+	verticalGridLineColor: #CCCCCC;
+	horizontalGridLineColor: #EEEEEE;
+	color: #2B2B2B;
+	textRollOverColor: #0B87D5;
+	textSelectedColor: #0B87D5;
+	fontWeight: normal;
+	verticalScrollBarStyleName: dataGridVerticalScrollBar;
+	paddingRight: 2;
+	paddingBottom: 2;
+	paddingLeft: 2;
+	alternatingItemColors: #F7F7F7, #F7F7F7;
+	rowCount: 10;
+	
+}
+.dataGridHeader
+{
+	fontFamily: Verdana;
+	fontWeight: bold;
+	fontSize: 10;
+	textAlign: left;
+	color: #0B87D5;	
+}
+.dataGridVerticalScrollBar
+{
+	borderColor: #0B87D5;
+	cornerRadius: 5;
+}

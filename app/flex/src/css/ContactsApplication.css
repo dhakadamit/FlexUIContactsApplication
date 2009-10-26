@@ -1,0 +1,32 @@
+Application.main
+{
+	backgroundGradientAlphas: 1.0, 1.0;
+	backgroundGradientColors: #FFFFFF, #FFFFFF;
+	color: #FFFFFF;
+	fontAntiAliasType: advanced;
+	fontFamily: Verdana;
+	fontSize: 10;
+	fontStyle: normal;
+	fontWeight: normal;
+	horizontalAlign: center;
+	horizontalGap: 20;
+	letterSpacing: 1;
+	textAlign: center;
+	verticalAlign: top;
+	verticalGap: 20;
+	padding-bottom: 0;
+	padding-top: 0;
+}
+
+.header {
+
+}
+
+
+.body {
+	right: 80;
+	left: 80;
+	top: 110;
+	bottom: 80;
+}
+	

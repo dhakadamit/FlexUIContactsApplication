@@ -1,27 +1,4 @@
-.panel {
-	borderStyle:none;
-	backgroundAlpha:0.0;
-}
-
-.linkBar {
-	color: #0B87D5;
-	fontWeight: bold;
-	fontSize: 15;
-	textRollOverColor: #24A3F4;
-	textSelectedColor: #24A3F4;
-	rollOverColor: #393939;
-	selectionColor: #393939;
-	borderStyle: solid;
-	borderThickness: 2;
-	borderColor: #FFFFFF;
-	cornerRadius: 5;
-	backgroundColor: #393939;
-	backgroundAlpha: 1.0;
-	separatorColor: #FFFFFF;
-}
-
-.labelForLinkBar {
-	color: #0B87D5;
-	fontWeight: bold;
-	fontSize: 15;
+Canvas.main
+{
+	backgroundColor: #3274D0;
 }
