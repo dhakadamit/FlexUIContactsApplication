@@ -1,9 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" styleName="main">
 
-
 	<mx:Style source="css/Header.css"/>
 
-	<mx:Image id="logoBackground" source="../assets/Logo.png" left="40" scaleContent="true" width="25%" height="70%"></mx:Image>
+	<mx:Canvas width="25%" height="80%" left="40">
+		<mx:Image id="logoBackground" source="../assets/Logo.png" width="100%" height="100%"></mx:Image>
+		<mx:Label id="logoText" text="Dhakad's" top="5" left="20" styleName="logo"></mx:Label>
+	</mx:Canvas>	
 	
+	<mx:ButtonBar id="mainControlBar" bottom="10" horizontalCenter="-20" selectedIndex="0" doubleClickEnabled="false" styleName="headerButtonBarStyle">
+		<mx:dataProvider>
+                <mx:Array>
+                    <mx:String>Flash</mx:String>
+                    <mx:String>Director</mx:String>
+                    <mx:String>Dreamweaver</mx:String>
+                    <mx:String>ColdFusion</mx:String>
+                </mx:Array>
+            </mx:dataProvider>		
+	</mx:ButtonBar>
+	
+	<mx:VBox width="25%" height="50%" right="40" top="5">
+	 	<mx:HBox>
+	 		<mx:TextInput id="query" text="Enter search query"
+			 editable="true" alpha="1.0" width="75%" height="100%"
+			 styleName="queryBoxStyle"></mx:TextInput>
+			
+			<mx:Button id="search" label="Search" height="100%" width="25%" styleName="mainHeaderButtonStyle" focusAlpha="1"></mx:Button> 	
+	 	</mx:HBox>
+	 	
+		
+	</mx:VBox>
+		
 </mx:Canvas>

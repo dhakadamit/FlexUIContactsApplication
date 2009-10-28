@@ -2,3 +2,46 @@ Canvas.main
 {
 	backgroundColor: #3274D0;
 }
+
+Label.logo
+{
+	fontFamily: TempusSansITC;
+	fontSize: 36;
+}
+
+
+.mainHeaderButtonStyle {
+	upSkin:ClassReference('skins.MainHeaderButtonSkin');
+    overSkin:ClassReference('skins.MainHeaderButtonSkin');
+    downSkin:ClassReference('skins.MainHeaderButtonSkin');
+    disabledSkin:ClassReference('skins.MainHeaderButtonSkin');
+	color: #FFFFFF;
+	textRollOverColor: #013E7D;
+	textSelectedColor: #013E7D;
+	disabledColor: #FFFFFF;
+	fontFamily: Verdana;
+	fontWeight: bold; 
+}
+
+.headerButtonBarStyle
+{
+	buttonStyleName: mainHeaderButtonStyle;
+	horizontalGap: 10;
+}
+
+.queryBoxStyle
+{
+	backgroundAlpha: 1.0;
+	backgroundColor: #FFFFFF;
+	borderColor: #013E7D;
+	borderStyle: solid;
+	borderThickness: 2;
+	color: #013E7D;
+	cornerRadius: 9;
+	fontFamily: Verdana;
+	fontSize: 10;
+	fontStyle: italic;
+	fontWeight: normal;
+	textAlign: left;
+	themeColor: #013E7D;
+}
