@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
-	layout="vertical" width="100%" height="100%"
+	layout="vertical" width="100%" height="100%" paddingBottom="0"
 	alpha="1" styleName="main"
 	xmlns:views="com.view" xmlns:view="com.view.*" verticalScrollPolicy="auto" horizontalScrollPolicy="auto">
 	
@@ -8,8 +8,10 @@
 	<mx:Style source="css/Header.css"/>
 	<mx:Style source="css/Fonts.css"/>
 	
-	<mx:VBox width="1280" height="768" paddingTop="0" paddingLeft="20" paddingRight="20">
-		<view:Header id="header" width="100%" height="11%"/>
+	<mx:VBox width="1280" height="100%" paddingTop="0" paddingLeft="20" paddingRight="20" verticalGap="0">
+		<view:Header id="header" width="100%" height="11%" />
+		<view:MainBody id="mainBody" width="100%" height="78%"/>
+		<view:Footer id="footer" width="100%" height="11%"/>
 	</mx:VBox>
 	
 </mx:Application>

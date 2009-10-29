@@ -30,5 +30,21 @@ Application.main
 	bottom: 80;
 }
 
+PositionedTabNavigator
+{
+	borderColor: #3274D0;
+	borderStyle: solid;
+	borderThickness: 3;
+	color: #FFFFFF;
+	cornerRadius: 10;
+	fontFamily: Verdana;
+	fontSize: 14;
+	fontWeight: bold;
+	paddingTop: 0;
+	tabOffset: 20;
+	tabPosition: leftTop;
+	textAlign: left;
+	themeColor: #3274D0;
+}
 
 	

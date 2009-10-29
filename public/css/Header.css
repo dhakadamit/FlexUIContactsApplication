@@ -1,9 +1,9 @@
-Canvas.main
+.main
 {
 	backgroundColor: #3274D0;
 }
 
-Label.logo
+.logo
 {
 	fontFamily: TempusSansITC;
 	fontSize: 36;
@@ -43,5 +43,17 @@ Label.logo
 	fontStyle: italic;
 	fontWeight: normal;
 	textAlign: left;
+	themeColor: #013E7D;
+}
+
+.searchCriteriaRadioButtonStyle
+{
+	borderColor: #FFFFFF;
+	color: #FFFFFF;
+	cornerRadius: 10;
+	fillAlphas: 1.0, 1.0;
+	fillColors: #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
 	themeColor: #013E7D;
 }
