@@ -20,7 +20,7 @@ Label.logo
 	textSelectedColor: #013E7D;
 	disabledColor: #FFFFFF;
 	fontFamily: Verdana;
-	fontWeight: bold;
+	fontWeight: bold; 
 }
 
 .headerButtonBarStyle

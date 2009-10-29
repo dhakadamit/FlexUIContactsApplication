@@ -45,3 +45,14 @@ Label.logo
 	textAlign: left;
 	themeColor: #013E7D;
 }
+RadioButton.searchCriteriaRadioButtonStyle
+{
+	borderColor: #FFFFFF;
+	color: #FFFFFF;
+	cornerRadius: 10;
+	fillAlphas: 1.0, 1.0;
+	fillColors: #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+	themeColor: #013E7D;
+}

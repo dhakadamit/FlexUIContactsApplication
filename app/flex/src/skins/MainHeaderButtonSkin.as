@@ -38,7 +38,6 @@ package skins{ // Use unnamed package if this skin is not in its own package.
            case "disabledSkin":
             setDisabledState();
             break;
-            
            
              
 //		   case "selectedUpSkin":
