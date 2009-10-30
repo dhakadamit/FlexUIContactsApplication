@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<external_comps:PositionedTabNavigator 
+	xmlns:external_comps="com.external.components.*"
+	xmlns:mx="http://www.adobe.com/2006/mxml" 
+	tabEnabled="false" tabChildren="false" focusEnabled="false" doubleClickEnabled="false"
+	tabStyleName="tabStyle" verticalGap="25" textAlign="left" tabWidth="100" tabHeight="40">
+	
+	<mx:Style source="../css/PersonDetailsPage.css"/>
+	
+	<mx:WipeLeft id="wipeLeft" duration="1000"/>
+	<mx:WipeRight id="wipeRight" duration="1000"/>
+	
+	<mx:Canvas width="100%" height="100%" label="ADD"
+		hideEffect="{wipeLeft}" showEffect="{wipeRight}" styleName="hideDottedImageCorners"/>
+		
+    <mx:Canvas width="100%" height="100%" label="EDIT"
+    	hideEffect="{wipeLeft}" showEffect="{wipeRight}" styleName="hideDottedImageCorners"/>
+    	
+</external_comps:PositionedTabNavigator>

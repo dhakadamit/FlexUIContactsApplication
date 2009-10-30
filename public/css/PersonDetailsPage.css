@@ -1,0 +1,28 @@
+/* CSS file */
+
+.tabStyle {
+	upSkin:ClassReference('skins.TabNavigatorTabSkin');
+    overSkin:ClassReference('skins.TabNavigatorTabSkin');
+    downSkin:ClassReference('skins.TabNavigatorTabSkin');
+    disabledSkin:ClassReference('skins.TabNavigatorTabSkin');
+    selectedUpSkin:ClassReference('skins.TabNavigatorTabSkin');
+    selectedOverSkin:ClassReference('skins.TabNavigatorTabSkin');
+    selectedDownSkin:ClassReference('skins.TabNavigatorTabSkin');
+    selectedDisabledSkin:ClassReference('skins.TabNavigatorTabSkin');
+  
+	color: #FFFFFF;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+	disabledColor: #FFFFFF;
+	fontFamily: Verdana;
+	fontWeight: bold;
+}
+
+.hideDottedImageCorners
+{	
+	borderStyle: solid;
+	borderColor: #FFFFFF;
+	cornerRadius: 10;
+	borderThickness: 2;
+	backgroundImage: Embed(source="../../assets/Middle-Background.png");
+}
