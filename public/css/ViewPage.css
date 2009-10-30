@@ -1,0 +1,14 @@
+.profileDetailsControlBarButtonStyle {
+	upSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
+    overSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
+    downSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
+    disabledSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
+	color: #FFFFFF;
+	fontFamily: Verdana;
+	fontWeight: bold; 
+	fontSize: 16;
+}
+
+.profileDetailsControlBarStyle {
+	buttonStyleName
+}

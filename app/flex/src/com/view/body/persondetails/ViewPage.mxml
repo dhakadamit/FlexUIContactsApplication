@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml">
+
+	<mx:Style source="../css/ViewPage.css"/>
+	
+	
+	<mx:VBox left="40" right="40" top="10" bottom="40" verticalGap="50">
+		<mx:ToggleButtonBar id="profileViewControlBar" dataProvider="{profileViewStack}" 
+			selectedIndex="0" tabChildren="false" tabEnabled="false" 
+			textAlign="center"
+			styleName="profileDetailsControlBarStyle" horizontalGap="50" buttonHeight="25"/>
+		
+		<mx:ViewStack id="profileViewStack" width="100%" height="100%">
+			<mx:Form id="personalDetails" label="Personal Details">
+				<mx:Label text="personal details"/>
+			</mx:Form>
+			
+			<mx:Form id="businessDetails" label="Business Details">
+				<mx:Label text="business details"/>
+			</mx:Form>		
+			
+			<mx:Form id="familyTree" label="Family Tree">
+				<mx:Label text="family tree"/>
+			</mx:Form>		
+		</mx:ViewStack>
+		
+	</mx:VBox>
+	
+</mx:Canvas>

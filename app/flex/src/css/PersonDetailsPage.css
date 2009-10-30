@@ -16,6 +16,8 @@
 	disabledColor: #FFFFFF;
 	fontFamily: Verdana;
 	fontWeight: bold;
+	padding-top: 20;
+	padding-bottom: 20;
 }
 
 .hideDottedImageCorners
