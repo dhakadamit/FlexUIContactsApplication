@@ -2,13 +2,19 @@
 	upSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
     overSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
     downSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
-    disabledSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
-	color: #FFFFFF;
+	selectedDownSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
+    selectedUpSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
+    selectedOverSkin:ClassReference('skins.ProfileDetailsControlBarSkin');
+    color: #FFFFFF;
+	text-roll-over-color: #FFFFFF;
+	text-selected-color: #FFFFFF;
 	fontFamily: Verdana;
 	fontWeight: bold; 
 	fontSize: 16;
+	padding-left: 30;
+	padding-right: 30;
 }
 
 .profileDetailsControlBarStyle {
-	buttonStyleName
+	buttonStyleName: profileDetailsControlBarButtonStyle;
 }
