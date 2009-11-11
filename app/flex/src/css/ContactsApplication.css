@@ -16,6 +16,8 @@ Application.main
 	verticalGap: 20;
 	padding-bottom: 0;
 	padding-top: 0;
+	horizontal-scroll-bar-style-name: scrollBarStyle;
+	vertical-scroll-bar-style-name: scrollBarStyle;
 }
 
 .header {
@@ -47,4 +49,17 @@ PositionedTabNavigator
 	themeColor: #3274D0;
 }
 
-	
+FormItem {
+	verticalGap: 0;
+}	
+
+.scrollBarStyle {
+	upArrowSkin: ClassReference(null);
+	downArrowSkin: ClassReference(null);
+	cornerRadius: 10;
+	borderColor: #C6C8C3;
+	fillColors: #013e7d, #013e7d;
+	fillAlphas: 1.0,1.0;
+	trackColors: #c6c8c3, #c6c8c3;
+}
+

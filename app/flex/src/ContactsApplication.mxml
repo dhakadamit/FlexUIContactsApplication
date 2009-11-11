@@ -8,11 +8,21 @@
 	<mx:Style source="css/ContactsApplication.css"/>
 	<mx:Style source="css/Header.css"/>
 	<mx:Style source="css/Fonts.css"/>
+	<mx:Style source="css/ViewPage.css"/>
 	
-	<mx:VBox width="1280" height="100%" paddingTop="0" paddingLeft="20" paddingRight="20" verticalGap="0">
+	<mx:Script>
+		<![CDATA[
+			private function initApp():void {
+				content.height = Application.application.height;
+			}
+		]]>
+	</mx:Script>
+	
+	<mx:VBox id="content" width="1280" paddingTop="0" paddingLeft="20" paddingRight="20" verticalGap="0"
+		horizontalScrollPolicy="off" verticalScrollPolicy="off" creationComplete="initApp();">
 		<comps:Header id="header" width="100%" height="11%" />
-		<comps:MainBody id="mainBody" width="100%" height="78%"/>
-		<comps:Footer id="footer" width="100%" height="11%"/>
+		<comps:MainBody id="mainBody" width="100%" height="78%" />
+		<comps:Footer id="footer" width="100%" height="11%" />
 	</mx:VBox>
 	
 </mx:Application>

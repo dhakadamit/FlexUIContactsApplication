@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" horizontalGap="50" creationComplete="setup();">
+	
+	<mx:Script>
+		<![CDATA[
+			private function setup():void {
+				handleEmptyFields(education);
+				handleEmptyFields(dob);
+				handleEmptyFields(streetAddress);
+				handleEmptyFields(area);
+				handleEmptyFields(city);
+				handleEmptyFields(pincode);			
+			}
+			
+			private function handleEmptyFields(field:Text):void {
+				if(field.text == "") {
+					field.text = "Not available";
+					field.setStyle("color", "#C6C8C3");	
+				}
+			}
+		]]>
+	</mx:Script>
+
+	
+	<mx:Form name="column1" styleName="formStyle">
+		<mx:FormItem>
+        	<mx:Label text="First Name" width="200" styleName="formItemLabelStyle"/>
+            <mx:Text id="firstName" text="Amit" styleName="formItemTextStyle"/>
+        </mx:FormItem>
+        
+        <mx:FormItem>
+        	<mx:Label text="Middle Name" styleName="formItemLabelStyle"/>
+            <mx:Text id="middleName" text="Kanhaiyalal" styleName="formItemTextStyle"/>
+        </mx:FormItem>
+        
+        <mx:FormItem>
+        	<mx:Label text="Education" styleName="formItemLabelStyle"/>
+            <mx:Text id="education" text="B.E. in computers" styleName="formItemTextStyle"/>
+        </mx:FormItem>
+        
+        <mx:FormItem>
+        	<mx:Label text="Date of birth" styleName="formItemLabelStyle"/>
+            <mx:Text id="dob" text="17-11-1986" styleName="formItemTextStyle"/>
+        </mx:FormItem>
+        
+        <mx:FormItem>
+        	<mx:Label text="Sex" styleName="formItemLabelStyle"/>
+            <mx:Text id="sex" text="Male" styleName="formItemTextStyle"/>
+        </mx:FormItem>	
+	</mx:Form>
+	
+	
+	<mx:Form name="column2" styleName="formStyle">
+		<mx:FormItem>
+        	<mx:Label text="Street Address" styleName="formItemLabelStyle"/>
+            <mx:Text id="streetAddress" width="250" height="89" text="A-101, Omkar Building, Prabhat Colony" styleName="formItemTextStyle"/>
+        </mx:FormItem>
+        <mx:FormItem>
+        	<mx:Label text="Area" styleName="formItemLabelStyle"/>
+            <mx:Text id="area" text="Santacruz-East" styleName="formItemTextStyle"/>
+        </mx:FormItem>		        
+        <mx:FormItem>
+        	<mx:Label text="City" styleName="formItemLabelStyle"/>
+            <mx:Text id="city" text="Mumbai" styleName="formItemTextStyle"/>
+        </mx:FormItem>		          
+        <mx:FormItem>
+        	<mx:Label text="Pincode" styleName="formItemLabelStyle"/>
+            <mx:Text id="pincode" text="400055" styleName="formItemTextStyle"/>
+        </mx:FormItem>	
+	</mx:Form>
+	
+	<mx:Form name="column3" styleName="formStyle">
+		<mx:FormItem>
+		 	<mx:Canvas>
+		 		<mx:Image id="teleIcon1" source="../assets/telephone_icon.png" width="20" y="8" height="10"/>
+				<mx:Label text="# 1" styleName="formItemLabelStyle" x="25"/>	
+		 	</mx:Canvas>
+			<mx:Text id="telephone1" text="9820620697" styleName="formItemTextStyle"/> 
+		</mx:FormItem>
+		<mx:FormItem>
+		 	<mx:Canvas>
+		 		<mx:Image id="teleIcon2" source="../assets/telephone_icon.png" width="20" y="8" height="10"/>
+				<mx:Label text="# 2" styleName="formItemLabelStyle" x="25"/>	
+		 	</mx:Canvas>
+			<mx:Text id="telephone2" text="9820620697" styleName="formItemTextStyle"/> 
+		</mx:FormItem>
+	</mx:Form>
+</mx:HBox>

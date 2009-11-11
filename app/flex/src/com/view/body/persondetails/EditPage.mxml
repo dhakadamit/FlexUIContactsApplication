@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:comps="com.view.body.persondetails.viewpage.*">
+	xmlns:comps="com.view.body.persondetails.editpage.*">
 
-	<mx:Style source="../css/ViewPage.css"/>
-	
+	<mx:Style source="../css/EditPage.css"/>	
 	
 	<mx:VBox left="40" right="40" top="10" bottom="40" verticalGap="30">
 		<mx:ToggleButtonBar id="profileViewControlBar" dataProvider="{profileViewStack}" 
-			selectedIndex="0" tabChildren="false" tabEnabled="false" 
+			selectedIndex="0" tabChildren="false" tabEnabled="false"
 			textAlign="center"
 			styleName="profileDetailsControlBarStyle" horizontalGap="50" buttonHeight="25"/>
 		

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:HBox xmlns:mx="http://www.adobe.com/2006/mxml" horizontalGap="100" creationComplete="setup();">
+	<mx:Script>
+		<![CDATA[
+			import mx.controls.Alert;
+		
+			public const DELETE_ICON:String = "../assets/red-cross.png";
+			public const ADD_ICON:String = "../assets/add-icon.png";
+			public const EMPTY_FIELD_TEXT:String = "Not available";
+			  
+			private function setup():void {
+				handleEmptyFields(father, fatherIcon);
+				handleEmptyFields(mother, motherIcon);
+				handleEmptyFields(wife, wifeIcon);							
+			}
+			
+			private function handleEmptyFields(field:Text, icon:Image):void {
+				if(field.text == "") {
+					field.text = EMPTY_FIELD_TEXT;
+					field.setStyle("color", "#C6C8C3");	
+					icon.source = ADD_ICON;		
+				} else {
+					icon.source = DELETE_ICON;
+				}
+				
+			}
+			
+		]]>
+	</mx:Script>
+	<mx:Form name="column1" styleName="formStyle">
+		<mx:FormItem>
+        	<mx:Label text="Father" styleName="formItemLabelStyle"/>
+        	<mx:HBox verticalAlign="middle">
+        		<mx:Text id="father" text="Kanhaiyalal" width="150" styleName="formItemTextStyle"/>
+        		<mx:Image id="fatherIcon"/>	
+        	</mx:HBox>            
+        </mx:FormItem>
+        
+        <mx:FormItem>
+        	<mx:Label text="Mother" styleName="formItemLabelStyle"/>
+            <mx:HBox verticalAlign="middle">
+	            <mx:Text id="mother" text="Anju" width="150" styleName="formItemTextStyle"/>
+	            <mx:Image id="motherIcon"/>
+            </mx:HBox>
+        </mx:FormItem>
+        
+        <mx:FormItem>
+        	<mx:Label text="Wife" styleName="formItemLabelStyle"/>
+            <mx:HBox verticalAlign="middle">
+	            <mx:Text id="wife" width="150" styleName="formItemTextStyle"/>
+	            <mx:Image id="wifeIcon"/>
+            </mx:HBox>
+        </mx:FormItem>
+                	
+	</mx:Form>
+	
+	<mx:XMLList id="children">
+			        <child>
+			            <name>Christina Coenraets</name>
+			        </child>
+			        <child>
+			            <name>Joanne Wall</name>
+			        </child>
+	</mx:XMLList>
+			    
+	<mx:Form name="column2" styleName="formStyle">
+		
+		<mx:FormItem>
+        	<mx:VBox horizontalAlign="left" verticalGap="0">
+        	    <mx:Label text="Children" styleName="formItemLabelStyle"/>
+            	<!--<mx:DataGrid dataProvider="{children}" headerHeight="0" styleName="transparentDataGridStyle" variableRowHeight="true" rowCount="{children.length()}">
+            		<mx:columns>
+            			<mx:DataGridColumn dataField="name" width="300" wordWrap="true">
+            			 	<mx:itemRenderer>
+	            			 	<mx:Component>
+	            			 		<mx:HBox verticalAlign="middle">
+	            			 			<mx:Label text="{data.name}" width="200"/>
+	            			 			<mx:Image source="@Embed('../assets/red-cross.png')"/>
+	            			 		</mx:HBox>	            			 		
+	            			 	</mx:Component>                        			
+                    		</mx:itemRenderer>
+            			</mx:DataGridColumn>
+            		</mx:columns>
+	        	</mx:DataGrid>-->    	
+	        
+	            <mx:HBox verticalAlign="middle" visible="true" paddingTop="10">
+	                <mx:Image id="addAnotherChildIcon" source="{ADD_ICON}"/>
+	            	<mx:Text id="addAnotherChild" text="Add another Child"  styleName="formItemGreenTextStyle"/>
+	            </mx:HBox>
+	            	            
+            </mx:VBox>
+        </mx:FormItem>	
+	</mx:Form>
+	</mx:HBox>
