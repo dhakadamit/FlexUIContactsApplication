@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml"
+<mx:Application 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
 	xmlns:comps="com.view.*" 
-	layout="vertical" width="100%" height="100%" paddingBottom="0"
-	alpha="1" styleName="main"
-	verticalScrollPolicy="auto" horizontalScrollPolicy="auto">
+	layout="vertical" width="100%" height="100%"
+	paddingBottom="0" alpha="1"
+	styleName="main"
+	verticalScrollPolicy="auto" horizontalScrollPolicy="auto"
+	creationComplete="initApp();">
 	
 	<mx:Style source="css/ContactsApplication.css"/>
 	<mx:Style source="css/Header.css"/>
@@ -13,13 +16,13 @@
 	<mx:Script>
 		<![CDATA[
 			private function initApp():void {
-				content.height = Application.application.height;
+				applicationContent.height = Application.application.height;
 			}
 		]]>
 	</mx:Script>
 	
-	<mx:VBox id="content" width="1280" paddingTop="0" paddingLeft="20" paddingRight="20" verticalGap="0"
-		horizontalScrollPolicy="off" verticalScrollPolicy="off" creationComplete="initApp();">
+	<mx:VBox id="applicationContent" width="1280" paddingTop="0" paddingLeft="20" paddingRight="20" verticalGap="0"
+		horizontalScrollPolicy="off" verticalScrollPolicy="off">
 		<comps:Header id="header" width="100%" height="11%" />
 		<comps:MainBody id="mainBody" width="100%" height="78%" />
 		<comps:Footer id="footer" width="100%" height="11%" />

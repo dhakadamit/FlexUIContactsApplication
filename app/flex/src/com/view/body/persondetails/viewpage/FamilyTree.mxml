@@ -4,7 +4,7 @@
 		<![CDATA[
 			import mx.controls.Alert;
 		
-			public const DELETE_ICON:String = "../assets/red-cross.png";
+			public const DELETE_ICON:String = "../assets/delete-icon.png";
 			public const ADD_ICON:String = "../assets/add-icon.png";
 			public const EMPTY_FIELD_TEXT:String = "Not available";
 			  
@@ -75,7 +75,7 @@
 	            			 	<mx:Component>
 	            			 		<mx:HBox verticalAlign="middle">
 	            			 			<mx:Label text="{data.name}" width="200"/>
-	            			 			<mx:Image source="@Embed('../assets/red-cross.png')"/>
+	            			 			<mx:Image source="@Embed('../assets/delete-icon.png')"/>
 	            			 		</mx:HBox>	            			 		
 	            			 	</mx:Component>                        			
                     		</mx:itemRenderer>

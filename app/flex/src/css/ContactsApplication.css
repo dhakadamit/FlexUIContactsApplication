@@ -9,27 +9,12 @@ Application.main
 	fontStyle: normal;
 	fontWeight: normal;
 	horizontalAlign: center;
-	horizontalGap: 20;
 	letterSpacing: 1;
 	textAlign: center;
 	verticalAlign: top;
 	verticalGap: 20;
 	padding-bottom: 0;
 	padding-top: 0;
-	horizontal-scroll-bar-style-name: scrollBarStyle;
-	vertical-scroll-bar-style-name: scrollBarStyle;
-}
-
-.header {
-
-}
-
-
-.body {
-	right: 80;
-	left: 80;
-	top: 110;
-	bottom: 80;
 }
 
 PositionedTabNavigator
@@ -53,13 +38,13 @@ FormItem {
 	verticalGap: 0;
 }	
 
-.scrollBarStyle {
+ScrollBar {
 	upArrowSkin: ClassReference(null);
 	downArrowSkin: ClassReference(null);
-	cornerRadius: 10;
-	borderColor: #C6C8C3;
-	fillColors: #013e7d, #013e7d;
-	fillAlphas: 1.0,1.0;
-	trackColors: #c6c8c3, #c6c8c3;
+	thumbDownSkin: Embed(source="../../assets/scroll-bar-thumbs/light-grey-thumb.png",scaleGridTop="9",scaleGridLeft="1",scaleGridRight="10",scaleGridBottom="51");
+	thumbOverSkin: Embed(source="../../assets/scroll-bar-thumbs/dark-grey-thumb.png",scaleGridTop="9",scaleGridLeft="1",scaleGridRight="10",scaleGridBottom="51");
+	thumbUpSkin: Embed(source="../../assets/scroll-bar-thumbs/dark-grey-thumb.png",scaleGridTop="9",scaleGridLeft="2",scaleGridRight="10",scaleGridBottom="51");
+	trackSkin: Embed(source="../../assets/scroll-bar-thumbs/light-grey-track.png",scaleGridTop="9",scaleGridLeft="1",scaleGridRight="16",scaleGridBottom="55");
+	thumbOffset: 0;
 }
 

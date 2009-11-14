@@ -2,8 +2,8 @@ package skins{ // Use unnamed package if this skin is not in its own package.
   // skins/ButtonStatesSkin.as
   // Import necessary classes here.
   import flash.display.Graphics;
-  
   import mx.skins.ProgrammaticSkin;
+  
   public class MainHeaderButtonSkin extends ProgrammaticSkin {
      public var backgroundFillColor:Number;
      public var borderColor:Number;
@@ -75,12 +75,6 @@ package skins{ // Use unnamed package if this skin is not in its own package.
      
      private function setSelectedState(): void {
        borderLineThickness = 2;
-       backgroundFillColor = 0xFFFFFF;
-     }
-     
-     private function setFocusState(): void {
-       borderLineThickness = 3;
-       borderColor = 0x013e7d;
        backgroundFillColor = 0xFFFFFF;
      }
   }

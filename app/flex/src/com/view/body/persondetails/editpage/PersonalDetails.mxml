@@ -4,13 +4,11 @@
 	
 	<mx:Script>
 		<![CDATA[
+		
+		    private var months:Array = ['Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+		    
 			private function setup():void {
-//				handleEmptyFields(education);
-//				handleEmptyFields(dob);
-//				handleEmptyFields(streetAddress);
-//				handleEmptyFields(area);
-//				handleEmptyFields(city);
-//				handleEmptyFields(pincode);			
+				
 			}
 			
 		]]>
@@ -20,25 +18,29 @@
     <mx:Dissolve id="dissolveIn" duration="1000" alphaFrom="0.0" alphaTo="1.0"/> -->
 
 	
-	<mx:Form name="column1" styleName="formStyle" >
+	<mx:Form name="column1" styleName="formStyle">
 		<mx:FormItem>
         	<mx:Label text="First Name" width="200" styleName="formItemLabelStyle"/>
-            <mx:TextInput id="firstName" text="Amit" styleName="formItemTextInputStyle" />
+            <mx:TextInput id="firstName" width="200" text="Amit" styleName="formItemTextInputStyle" />
         </mx:FormItem>
         
         <mx:FormItem>
         	<mx:Label text="Middle Name" styleName="formItemLabelStyle"/>
-            <mx:TextInput id="middleName" text="Kanhaiyalal" styleName="formItemTextInputStyle" hideEffect="{dissolveOut}" showEffect="{dissolveIn}" />
+            <mx:TextInput id="middleName" width="200" text="Kanhaiyalal" styleName="formItemTextInputStyle"/>
         </mx:FormItem>
         
         <mx:FormItem>
         	<mx:Label text="Education" styleName="formItemLabelStyle"/>
-            <mx:TextInput id="education" text="B.E. in computers" styleName="formItemTextInputStyle"/>
+            <mx:TextInput id="education" width="200" text="B.E. in computers" styleName="formItemTextInputStyle"/>
         </mx:FormItem>
         
         <mx:FormItem>
         	<mx:Label text="Date of birth" styleName="formItemLabelStyle"/>
-            <mx:TextInput id="dob" text="17-11-1986" styleName="formItemTextInputStyle"/>
+        	<mx:HBox horizontalGap="10" width="200">
+        		<mx:ComboBox id="day" width="50" />
+        		<mx:ComboBox id="month" dataProvider="{months}" width="50" styleName="comboBoxStyle"/>
+        		<mx:ComboBox id="year" width="50"/>
+        	</mx:HBox>            
         </mx:FormItem>
         
         <mx:FormItem>
@@ -63,7 +65,7 @@
         </mx:FormItem>		          
         <mx:FormItem>
         	<mx:Label text="Pincode" styleName="formItemLabelStyle"/>
-            <mx:TextInput id="pincode" text="400055" styleName="formItemTextInputStyle"/>
+            <mx:TextInput id="pincode" width="200" text="400055" styleName="formItemTextInputStyle"/>
         </mx:FormItem>	
 	</mx:Form>
 	
@@ -73,14 +75,14 @@
 		 		<mx:Image id="teleIcon1" source="../assets/telephone_icon.png" width="20" y="8" height="10"/>
 				<mx:Label text="# 1" styleName="formItemLabelStyle" x="25"/>	
 		 	</mx:Canvas>
-			<mx:TextInput id="telephone1" text="9820620697" styleName="formItemTextInputStyle"/> 
+			<mx:TextInput id="telephone1" width="200" text="9820620697" styleName="formItemTextInputStyle"/> 
 		</mx:FormItem>
 		<mx:FormItem>
 		 	<mx:Canvas>
 		 		<mx:Image id="teleIcon2" source="../assets/telephone_icon.png" width="20" y="8" height="10"/>
 				<mx:Label text="# 2" styleName="formItemLabelStyle" x="25"/>	
 		 	</mx:Canvas>
-			<mx:TextInput id="telephone2" text="9820620697" styleName="formItemTextInputStyle"/> 
+			<mx:TextInput id="telephone2" width="200" text="9820620697" styleName="formItemTextInputStyle"/> 
 		</mx:FormItem>
 	</mx:Form>
 </mx:HBox>

@@ -36,11 +36,20 @@
 	fontWeight: bold;
 	borderStyle: solid;
 	borderThickness: 2;
-	borderColor: #303030;
+	borderColor: #C6C8C3;
 	backgroundAlpha: 1.0;
 	corner-radius: 2;
 	paddingLeft: 5;
 	paddingRight: 5;
+}
+
+
+.formItemTextStyle
+{
+	color: #1259C7;
+	fontFamily: Verdana;
+	fontSize: 14;
+	fontWeight: bold;
 }
 
 .formItemGreenTextStyle
@@ -72,4 +81,9 @@
 	textRollOverColor: #1259C7;
 	textSelectedColor: #1259C7;
 	verticalGridLines: false;
+}
+
+.comboBoxStyle 
+{
+		
 }
