@@ -4,8 +4,8 @@
 		<![CDATA[
 			import mx.controls.Alert;
 		
-			public const DELETE_ICON:String = "../assets/delete-icon.png";
-			public const ADD_ICON:String = "../assets/add-icon.png";
+			public const DELETE_ICON:String = "../../assets/delete-icon.png";
+			public const ADD_ICON:String = "../../assets/add-icon.png";
 			public const EMPTY_FIELD_TEXT:String = "Not available";
 			  
 			private function setup():void {

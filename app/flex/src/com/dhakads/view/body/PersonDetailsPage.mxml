@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <external_comps:PositionedTabNavigator 
-	xmlns:external_comps="com.external.components.*"
+	xmlns:external_comps="com.dhakads.external.components.*"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:comps="com.view.body.persondetails.*" 
+	xmlns:comps="com.dhakads.view.body.persondetails.*" 
 	tabEnabled="false" tabChildren="false" focusEnabled="false" doubleClickEnabled="false"
 	tabStyleName="tabStyle" verticalGap="25" textAlign="left" tabWidth="100" tabHeight="40">
 	

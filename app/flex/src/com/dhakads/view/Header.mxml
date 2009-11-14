@@ -12,10 +12,8 @@
 		focusEnabled="false" styleName="buttonBarStyle">
 		<mx:dataProvider>
                 <mx:Array>
-                    <mx:String>Flash</mx:String>
-                    <mx:String>Director</mx:String>
-                    <mx:String>Dreamweaver</mx:String>
-                    <mx:String>ColdFusion</mx:String>
+                    <mx:String>Home</mx:String>
+                    <mx:String>Logout</mx:String>
                 </mx:Array>
             </mx:dataProvider>		
 	</mx:ButtonBar>
