@@ -15,14 +15,17 @@
 	
 	<mx:Script>
 		<![CDATA[
+			import com.flexspy.FlexSpy;
+			
 			private function initApp():void {
 				applicationContent.height = Application.application.height;
-			}
+			}			
 		]]>
 	</mx:Script>
 	
 	<mx:VBox id="applicationContent" width="1280" paddingTop="0" paddingLeft="20" paddingRight="20" verticalGap="0"
 		horizontalScrollPolicy="off" verticalScrollPolicy="off">
+		<mx:Button id="btnFlexSpy" label="FlexSpy" click="FlexSpy.show()" styleName="mainHeaderButtonStyle"/>
 		<comps:Header id="header" width="100%" height="11%" />
 		<comps:MainBody id="mainBody" width="100%" height="78%" />
 		<comps:Footer id="footer" width="100%" height="11%" />

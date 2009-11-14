@@ -2,7 +2,6 @@ Application.main
 {
 	backgroundGradientAlphas: 1.0, 1.0;
 	backgroundGradientColors: #FFFFFF, #FFFFFF;
-	color: #FFFFFF;
 	fontAntiAliasType: advanced;
 	fontFamily: Verdana;
 	fontSize: 10;

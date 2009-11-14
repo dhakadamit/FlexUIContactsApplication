@@ -15,8 +15,6 @@ Application.main
 	verticalGap: 20;
 	padding-bottom: 0;
 	padding-top: 0;
-	horizontal-scroll-bar-style-name: scrollBarStyle;
-	vertical-scroll-bar-style-name: scrollBarStyle;
 }
 
 PositionedTabNavigator
@@ -40,12 +38,13 @@ FormItem {
 	verticalGap: 0;
 }	
 
-.scrollBarStyle {
+ScrollBar {
 	upArrowSkin: ClassReference(null);
 	downArrowSkin: ClassReference(null);
-	thumbDownSkin: Embed(source="../../assets/scroll-bar-thumbs/light-grey-thumb.png",scaleGridTop="8",scaleGridLeft="1",scaleGridRight="12",scaleGridBottom="47");
-	thumbOverSkin: Embed(source="../../assets/scroll-bar-thumbs/light-grey-thumb.png",scaleGridTop="8",scaleGridLeft="1",scaleGridRight="12",scaleGridBottom="47");
-	thumbUpSkin: Embed(source="../../assets/scroll-bar-thumbs/dark-grey-thumb.png",scaleGridTop="8",scaleGridLeft="2",scaleGridRight="12",scaleGridBottom="47");
-	trackSkin: Embed(source="../../assets/scroll-bar-thumbs/light-grey-track.png",scaleGridTop="1",scaleGridRight="12",scaleGridBottom="62");
+	thumbDownSkin: Embed(source="../../assets/scroll-bar-thumbs/light-grey-thumb.png",scaleGridTop="9",scaleGridLeft="1",scaleGridRight="10",scaleGridBottom="51");
+	thumbOverSkin: Embed(source="../../assets/scroll-bar-thumbs/dark-grey-thumb.png",scaleGridTop="9",scaleGridLeft="1",scaleGridRight="10",scaleGridBottom="51");
+	thumbUpSkin: Embed(source="../../assets/scroll-bar-thumbs/dark-grey-thumb.png",scaleGridTop="9",scaleGridLeft="2",scaleGridRight="10",scaleGridBottom="51");
+	trackSkin: Embed(source="../../assets/scroll-bar-thumbs/light-grey-track.png",scaleGridTop="9",scaleGridLeft="1",scaleGridRight="16",scaleGridBottom="55");
+	thumbOffset: 0;
 }
 
