@@ -8,7 +8,8 @@
 		<!--<mx:Label id="logoText" text="Dhakad's" top="5" left="20" styleName="logo"></mx:Label>-->
 	</mx:Canvas>	
 	
-	<mx:ButtonBar id="mainControlBar" bottom="10" horizontalCenter="-20" selectedIndex="0" doubleClickEnabled="false" styleName="headerButtonBarStyle">
+	<mx:ButtonBar id="mainControlBar" bottom="10" horizontalCenter="-20" selectedIndex="0" doubleClickEnabled="false"
+		focusEnabled="false" styleName="buttonBarStyle">
 		<mx:dataProvider>
                 <mx:Array>
                     <mx:String>Flash</mx:String>
@@ -22,10 +23,11 @@
 	<mx:VBox width="25%" right="40" top="5">
 	 	<mx:HBox width="100%">
 	 		<mx:TextInput id="query" text="Enter search query"
-			 editable="true" alpha="1.0" width="75%" height="100%"
-			 styleName="queryBoxStyle"></mx:TextInput>
+			 editable="true" focusEnabled="false" alpha="1.0" width="75%" height="100%"
+			 styleName="queryBoxStyle" click="{query.selectionEndIndex = query.text.length}"></mx:TextInput>
 			
-			<mx:Button id="search" label="Search" height="100%" width="25%" styleName="mainHeaderButtonStyle"></mx:Button> 	
+			<mx:Button id="search" label="Search" height="100%" width="25%"
+				focusEnabled="false" styleName="buttonStyle"></mx:Button> 	
 	 	</mx:HBox>
 	 	
 	 	<mx:HBox paddingLeft="5" width="75%" paddingRight="5">

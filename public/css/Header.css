@@ -9,15 +9,18 @@
 	fontSize: 36;
 }
 
-
 .mainHeaderButtonStyle {
 	upSkin:ClassReference('skins.MainHeaderButtonSkin');
     overSkin:ClassReference('skins.MainHeaderButtonSkin');
     downSkin:ClassReference('skins.MainHeaderButtonSkin');
     disabledSkin:ClassReference('skins.MainHeaderButtonSkin');
-	color: #FFFFFF;
+    fillColors: #013e7d, #FFFFFF;
+    cornerRadius: 10;
+    borderThickness: 2;
+    borderColor: #013e7d;
+    color: #FFFFFF;
 	textRollOverColor: #013E7D;
-	textSelectedColor: #013E7D;
+	textSelectedColor: #FFFFFF;
 	disabledColor: #FFFFFF;
 	fontFamily: Verdana;
 	fontWeight: bold;
@@ -44,6 +47,7 @@
 	fontWeight: normal;
 	textAlign: left;
 	themeColor: #013E7D;
+	focusThickness: 0;
 }
 
 .searchCriteriaRadioButtonStyle

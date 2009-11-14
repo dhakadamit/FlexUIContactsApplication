@@ -9,23 +9,26 @@
 	fontSize: 36;
 }
 
-
-.mainHeaderButtonStyle {
-	upSkin:ClassReference('skins.MainHeaderButtonSkin');
-    overSkin:ClassReference('skins.MainHeaderButtonSkin');
-    downSkin:ClassReference('skins.MainHeaderButtonSkin');
-    disabledSkin:ClassReference('skins.MainHeaderButtonSkin');
-	color: #FFFFFF;
+.buttonStyle {
+	upSkin:ClassReference('skins.CustomButtonSkin');
+    overSkin:ClassReference('skins.CustomButtonSkin');
+    downSkin:ClassReference('skins.CustomButtonSkin');
+    disabledSkin:ClassReference('skins.CustomButtonSkin');
+    fillColors: #FFFFFF, #013e7d;
+    cornerRadius: 10;
+    borderThickness: 2;
+    borderColor: #013e7d;
+    color: #FFFFFF;
 	textRollOverColor: #013E7D;
-	textSelectedColor: #013E7D;
+	textSelectedColor: #FFFFFF;
 	disabledColor: #FFFFFF;
 	fontFamily: Verdana;
 	fontWeight: bold;
 }
 
-.headerButtonBarStyle
+.buttonBarStyle
 {
-	buttonStyleName: mainHeaderButtonStyle;
+	buttonStyleName: buttonStyle;
 	horizontalGap: 10;
 }
 
@@ -44,6 +47,7 @@
 	fontWeight: normal;
 	textAlign: left;
 	themeColor: #013E7D;
+	focusThickness: 0;
 }
 
 .searchCriteriaRadioButtonStyle
