@@ -2,18 +2,35 @@
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" styleName="main">
 
 	<mx:Style source="css/Header.css"/>
+	
+	<mx:Script>
+		<![CDATA[
+			import com.dhakads.model.ContactsApplicationModelLocator;
+			import mx.controls.Alert;
+			import com.dhakads.event.PageChangeEvent;
+			import mx.events.ItemClickEvent;
+			
+			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
+			
+			public function buttonBarItemClickHandler(event:ItemClickEvent):void {
+				var pageChangeEvent:PageChangeEvent = new PageChangeEvent(event.index);
+				pageChangeEvent.dispatch();
+				Alert.show(model.pageToView.toString());
+			}
+		]]>
+	</mx:Script>
 
 	<mx:Canvas width="25%" height="80%" left="40">
 		<mx:Image id="logoBackground" source="../assets/Logo.png" width="100%" height="100%"></mx:Image>
 		<!--<mx:Label id="logoText" text="Dhakad's" top="5" left="20" styleName="logo"></mx:Label>-->
 	</mx:Canvas>	
 	
-	<mx:ButtonBar id="mainControlBar" bottom="10" horizontalCenter="-20" selectedIndex="0" doubleClickEnabled="false"
-		focusEnabled="false" styleName="buttonBarStyle">
+	<mx:ButtonBar id="mainControlBar" bottom="10" selectedIndex="0" doubleClickEnabled="false"
+		focusEnabled="false" styleName="buttonBarStyle" right="450" itemClick="buttonBarItemClickHandler(event);">
 		<mx:dataProvider>
                 <mx:Array>
                     <mx:String>Home</mx:String>
-                    <mx:String>Logout</mx:String>
+                    <mx:String>Directory</mx:String>
                 </mx:Array>
             </mx:dataProvider>		
 	</mx:ButtonBar>
