@@ -20,6 +20,7 @@
 		]]>
 	</mx:Script>
 
+	
 	<mx:Canvas width="25%" height="80%" left="40">
 		<mx:Image id="logoBackground" source="../assets/Logo.png" width="100%" height="100%"></mx:Image>
 		<!--<mx:Label id="logoText" text="Dhakad's" top="5" left="20" styleName="logo"></mx:Label>-->
