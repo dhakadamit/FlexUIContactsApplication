@@ -5,6 +5,7 @@
 	
 	<mx:Script>
 		<![CDATA[
+			import com.dhakads.model.PageNames;
 			import com.dhakads.model.ContactsApplicationModelLocator;
 			import mx.controls.Alert;
 			import com.dhakads.event.PageChangeEvent;
@@ -13,7 +14,16 @@
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 			
 			public function buttonBarItemClickHandler(event:ItemClickEvent):void {
-				var pageChangeEvent:PageChangeEvent = new PageChangeEvent(event.index);
+				var pageNumber:Number;
+				var selectedPage:String = event.label.toLowerCase();
+				if( selectedPage == "home") {
+					pageNumber = PageNames.HOME_PAGE;
+				}
+				if (selectedPage == "directory") {
+					pageNumber = PageNames.DIRECTORY_PAGE;
+				}
+				
+				var pageChangeEvent:PageChangeEvent = new PageChangeEvent(pageNumber);
 				pageChangeEvent.dispatch();
 				Alert.show(model.pageToView.toString());
 			}

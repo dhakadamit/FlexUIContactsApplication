@@ -2,5 +2,17 @@
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
 	xmlns:comps="com.dhakads.view.body.*" width="100%" height="100%">
 	
-	<comps:PersonDetailsPage width="100%" height="100%" bottom="80" left="80" right="150" top="80"/>
+	<mx:Script>
+		<![CDATA[
+			import com.dhakads.model.ContactsApplicationModelLocator;
+			
+			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
+		]]>
+	</mx:Script>
+	
+	<mx:ViewStack id="pages" width="100%" height="100%" bottom="80" left="80" right="150" top="80" selectedIndex="{model.pageToView}">
+	<comps:HomePage id="home" width="100%" height="100%"/>
+	<comps:DirectoryPage id="directory" width="100%" height="100%"/> 
+	<comps:PersonDetailsPage id="personDetails" width="100%" height="100%" />
+	</mx:ViewStack>
 </mx:Canvas>
