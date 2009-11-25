@@ -2,6 +2,7 @@
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml"
 	xmlns:comps="com.dhakads.view.body.persondetails.viewpage.*">
 
+	<mx:Style source="../css/FormStyle.css"/>
 	<mx:Style source="../css/ViewPage.css"/>
 	
 	

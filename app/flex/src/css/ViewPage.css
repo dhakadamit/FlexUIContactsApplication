@@ -19,41 +19,6 @@
 	buttonStyleName: profileDetailsControlBarButtonStyle;
 }
 
-.formItemLabelStyle
-{
-	color: #303030;
-	fontFamily: Verdana;
-	fontSize: 16;
-	fontWeight: bold;
-	letterSpacing: 0;
-}
-
-.formItemTextStyle
-{
-	color: #1259C7;
-	fontFamily: Verdana;
-	fontSize: 14;
-	fontWeight: bold;
-}
-
-.formItemGreenTextStyle
-{
-	color: #5a9119;
-	fontFamily: Verdana;
-	fontSize: 12;
-	fontWeight: bold;
-}
-
-.formStyle
-{
-	borderColor: #FFFFFF;
-	color: #303030;
-	paddingLeft: 0;
-	themeColor: #FFFFFF;
-	verticalGap: 20;
-}
-
-
 .transparentDataGridStyle
 {
 	backgroundAlpha: 0.0;

@@ -27,7 +27,7 @@ package skins{ // Use unnamed package if this skin is not in its own package.
             break;
                     
            case "overSkin":
-            setSelectedState();
+            setOverState();
             break;           
            
            case "disabledSkin":
@@ -70,6 +70,14 @@ package skins{ // Use unnamed package if this skin is not in its own package.
         new_width = 150;
  	    new_height = 40;
  	    xpos = -50;
+ 	    ypos = 0;
+     }
+     
+     private function setOverState(): void {
+        backgroundFillColor = 0x013e7d;
+        new_width = 100;
+ 	    new_height = 40;
+ 	    xpos = 0;
  	    ypos = 0;
      }
   }

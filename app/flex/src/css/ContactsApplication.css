@@ -47,3 +47,9 @@ ScrollBar {
 	thumbOffset: 0;
 }
 
+.header1 {
+    fontFamily: Verdana;
+	fontWeight: bold; 
+	fontSize: 20;
+	color: #1259C7;
+}

@@ -26,21 +26,21 @@ package skins{
         switch (name) {
            
            case "upSkin":
-           	setDisabledState(fillColors);
+           	setDisabledState(fillColors[1]);
             break;
            
            case "downSkin":
-            setDisabledState(fillColors);
+            setDisabledState(fillColors[1]);
             break;
            
            
            case "overSkin":
-            setSelectedState(fillColors);
+            setSelectedState(fillColors[0]);
             break;
            
            
            case "disabledSkin":
-            setDisabledState(fillColors);
+            setDisabledState(fillColors[1]);
             break;
            
              
@@ -70,12 +70,12 @@ package skins{
         g.endFill();
      }
      
-     private function setDisabledState(fillColors:Array): void {
- 	    backgroundFillColor = fillColors[1];
+     private function setDisabledState(fillColor:String): void {
+ 	    backgroundFillColor = fillColor;
      }
      
-     private function setSelectedState(fillColors:Array): void {
-       backgroundFillColor = fillColors[0];
+     private function setSelectedState(fillColor:String): void {
+       backgroundFillColor = fillColor;
      }
   }
 } // Close unnamed package.

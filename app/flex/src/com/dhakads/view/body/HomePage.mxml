@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml">
-	<mx:Label text="homePage"/>
+
+	<mx:Form id="loginForm" width="30%" height="100%" left="100" bottom="20" styleName="loginFormStyle">
+		<mx:Label text="Login" styleName="header1"/>
+		
+		<mx:FormItem>
+			<mx:FormItem>
+				<mx:Label text="Username" styleName="formItemLabelStyle"/>
+				<mx:TextInput id="username" width="200" styleName="formItemTextInputStyle"/>
+			</mx:FormItem>
+		</mx:FormItem>		
+	</mx:Form>
 </mx:Canvas>
