@@ -2,16 +2,16 @@
 {
 	color: #303030;
 	fontFamily: Verdana;
-	fontSize: 16;
-	fontWeight: bold;
-	letterSpacing: 0;
+	fontSize: 14;
+	fontWeight: normal;
+	letterSpacing: 1;
 }
 
 .formItemTextInputStyle
 {
 	color: #1259C7;
 	fontFamily: Verdana;
-	fontSize: 14;
+	fontSize: 12;
 	fontWeight: bold;
 	borderStyle: solid;
 	borderThickness: 2;
@@ -20,6 +20,9 @@
 	corner-radius: 2;
 	paddingLeft: 5;
 	paddingRight: 5;
+	focusColor: #1259C7;
+	focusThickness:2;
+	focusAlpha: 1;
 }
 
 
@@ -27,7 +30,7 @@
 {
 	color: #1259C7;
 	fontFamily: Verdana;
-	fontSize: 14;
+	fontSize: 12;
 	fontWeight: bold;
 }
 
@@ -35,7 +38,7 @@
 {
 	color: #5a9119;
 	fontFamily: Verdana;
-	fontSize: 12;
+	fontSize: 11;
 	fontWeight: bold;
 }
 

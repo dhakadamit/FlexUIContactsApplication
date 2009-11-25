@@ -24,6 +24,8 @@
 	disabledColor: #FFFFFF;
 	fontFamily: Verdana;
 	fontWeight: bold;
+	focusThickness:0;
+	focusAlpha: 0;
 }
 
 .buttonBarStyle

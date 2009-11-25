@@ -42,7 +42,6 @@ package skins{
            case "disabledSkin":
             setDisabledState(fillColors[1]);
             break;
-           
              
 //		   case "selectedUpSkin":
 //           	setSelectedState();
@@ -70,11 +69,11 @@ package skins{
         g.endFill();
      }
      
-     private function setDisabledState(fillColor:String): void {
+     private function setDisabledState(fillColor:Number): void {
  	    backgroundFillColor = fillColor;
      }
      
-     private function setSelectedState(fillColor:String): void {
+     private function setSelectedState(fillColor:Number): void {
        backgroundFillColor = fillColor;
      }
   }

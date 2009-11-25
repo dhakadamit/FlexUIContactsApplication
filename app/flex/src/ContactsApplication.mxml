@@ -13,6 +13,8 @@
 	<mx:Style source="css/Header.css"/>
 	<mx:Style source="css/Fonts.css"/>
 	<mx:Style source="css/ViewPage.css"/>
+	<mx:Style source="css/FormStyle.css"/>
+	<mx:Style source="css/HomePage.css"/>	
 	
 	<mx:Script>
 		<![CDATA[

@@ -24,8 +24,7 @@
 				}
 				
 				var pageChangeEvent:PageChangeEvent = new PageChangeEvent(pageNumber);
-				pageChangeEvent.dispatch();
-				Alert.show(model.pageToView.toString());
+				pageChangeEvent.dispatch();		
 			}
 		]]>
 	</mx:Script>

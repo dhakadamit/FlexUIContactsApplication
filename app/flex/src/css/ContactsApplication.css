@@ -49,7 +49,7 @@ ScrollBar {
 
 .header1 {
     fontFamily: Verdana;
-	fontWeight: bold; 
-	fontSize: 20;
-	color: #1259C7;
+	fontWeight: normal; 
+	fontSize: 26;
+	color: #303030;
 }
