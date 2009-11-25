@@ -24,10 +24,8 @@
 	disabledColor: #FFFFFF;
 	fontFamily: Verdana;
 	fontWeight: bold;
-	focusColor: #1259C7;
-	focusThickness:2;
-	focusAlpha: 1;
-	focusRoundedCorners
+	focusThickness:0;
+	focusAlpha: 0;
 }
 
 .buttonBarStyle

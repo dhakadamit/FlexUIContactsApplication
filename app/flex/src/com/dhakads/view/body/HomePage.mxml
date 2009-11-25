@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml">
-
- 	<mx:Form id="loginForm" width="25%" height="100%" paddingTop="50" bottom="20" left="100" styleName="loginFormStyle">
+    <mx:Form id="loginForm" width="25%" height="100%" paddingTop="50" bottom="20" left="100" 
+ 		styleName="loginFormStyle">
 		<mx:FormItem>
 			<mx:Label text="Login" styleName="header1"/>
 		</mx:FormItem>	
-		<mx:FormItem>
+		<mx:FormItem required="true">
 			<mx:Label text="Username" styleName="formItemLabelStyle"/>
 			<mx:TextInput id="username" width="200" styleName="formItemTextInputStyle"/>
 		</mx:FormItem>
-		<mx:FormItem>
+		<mx:FormItem required="true">
 			<mx:Label text="Password" styleName="formItemLabelStyle"/>
 			<mx:TextInput id="password" width="200" styleName="formItemTextInputStyle" displayAsPassword="true"/>
 		</mx:FormItem>

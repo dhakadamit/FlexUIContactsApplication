@@ -7,6 +7,7 @@ require 'spec/rails'
 
 require File.join(File.dirname(__FILE__), "/model_factory")
 
+include AuthenticatedTestHelper
 
 Spec::Runner.configure do |config|
   # If you're not using ActiveRecord you should remove these
