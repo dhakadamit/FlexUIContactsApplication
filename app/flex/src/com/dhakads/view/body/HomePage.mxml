@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml">
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" creationComplete="init();">
+
+	<mx:Script>
+		<![CDATA[
+			import com.dhakads.event.LoginEvent;
+			public function init():void {
+				submit.addEventListener(MouseEvent.CLICK, submitLoginForm);
+			}			
+			
+			public function submitLoginForm(event:Event):void {
+				var loginEvent:LoginEvent = new LoginEvent(username.text, password.text);
+				loginEvent.dispatch();
+			}
+		]]>
+	</mx:Script>
+	
+	
     <mx:Form id="loginForm" width="25%" height="100%" paddingTop="50" bottom="20" left="100" 
  		styleName="loginFormStyle">
 		<mx:FormItem>
