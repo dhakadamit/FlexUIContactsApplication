@@ -27,7 +27,7 @@ class SessionsController < ApplicationController
     else
       respond_to do |format|
         format.html { render :action => 'new' }
-        format.xml { render :text => "badlogin" }
+        format.xml { render :text => "badlogin", :status => 404 }
       end
     end
   end

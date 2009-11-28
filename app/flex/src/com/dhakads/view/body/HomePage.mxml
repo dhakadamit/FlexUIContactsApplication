@@ -3,33 +3,55 @@
 
 	<mx:Script>
 		<![CDATA[
+			import com.dhakads.model.ContactsApplicationModelLocator;
+			import mx.events.ValidationResultEvent;
+			import mx.validators.Validator;
+			import mx.controls.Alert;
+			import com.dhakads.model.Login;
 			import com.dhakads.event.LoginEvent;
-			public function init():void {
+			
+			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
+			
+			private function init():void {
 				submit.addEventListener(MouseEvent.CLICK, submitLoginForm);
 			}			
 			
-			public function submitLoginForm(event:Event):void {
+			private function submitLoginForm(event:Event):void {
+				var validators:Array = [usernameValidator, passwordValidator];
+				var results:Array = Validator.validateAll(validators);
+				
+				if(results.length > 0) {
+					model.serverError = "Please correct the highlighted errors."
+					return;
+				}
+				
 				var loginEvent:LoginEvent = new LoginEvent(username.text, password.text);
 				loginEvent.dispatch();
 			}
+			 
 		]]>
 	</mx:Script>
 	
+	<mx:StringValidator id="usernameValidator" source="{username}" property="text" maxLength="20"/>
+	<mx:StringValidator id="passwordValidator" source="{password}" property="text" maxLength="20"/>
 	
     <mx:Form id="loginForm" width="25%" height="100%" paddingTop="50" bottom="20" left="100" 
  		styleName="loginFormStyle">
 		<mx:FormItem>
 			<mx:Label text="Login" styleName="header1"/>
-		</mx:FormItem>	
-		<mx:FormItem required="true">
+		</mx:FormItem>
+		<mx:FormItem>
+			<mx:Text id="errors" text="{model.serverError}" styleName="errorText" paddingTop="5" textAlign="left" width="250" truncateToFit="false"/>
+		</mx:FormItem>
+		<mx:FormItem>
 			<mx:Label text="Username" styleName="formItemLabelStyle"/>
 			<mx:TextInput id="username" width="200" styleName="formItemTextInputStyle"/>
 		</mx:FormItem>
-		<mx:FormItem required="true">
+		<mx:FormItem>
 			<mx:Label text="Password" styleName="formItemLabelStyle"/>
 			<mx:TextInput id="password" width="200" styleName="formItemTextInputStyle" displayAsPassword="true"/>
-		</mx:FormItem>
-		<mx:FormItem>
+		</mx:FormItem>	
+		<mx:FormItem paddingTop="20">
 			<mx:Button id="submit" label="Login" styleName="buttonStyle" fontSize="12"/>
 		</mx:FormItem>
 	</mx:Form>

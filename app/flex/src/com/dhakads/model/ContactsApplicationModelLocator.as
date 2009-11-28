@@ -4,8 +4,11 @@ package com.dhakads.model
 
 	[Bindable]
 	public class ContactsApplicationModelLocator implements ModelLocator
-	{
+	{   
 		private static var modelLocator:ContactsApplicationModelLocator;
+		public var pageToView:Number;
+		public var serverError:String; 
+
 
         public static function getInstance():ContactsApplicationModelLocator{
             if (modelLocator == null) {
@@ -20,8 +23,6 @@ package com.dhakads.model
                 throw new Error("Only one PomodoModelLocator instance may be instantiated.");
             }
 		}
-		
-		public var pageToView:Number; 
-
+				
 	}
 }

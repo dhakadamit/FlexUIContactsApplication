@@ -53,3 +53,11 @@ ScrollBar {
 	fontSize: 26;
 	color: #303030;
 }
+
+.errorText {
+    fontFamily: Verdana;
+	fontWeight: normal;
+	fontStyle: normal; 
+	fontSize: 10;
+	color: #ff0000;
+}

@@ -4,12 +4,16 @@ package com.dhakads.command
 	import com.adobe.cairngorm.control.CairngormEvent;
 	import com.dhakads.business.SessionDelegate;
 	import com.dhakads.event.LoginEvent;
+	import com.dhakads.model.ContactsApplicationModelLocator;
+	import com.dhakads.model.Pages;
 	
-	import mx.controls.Alert;
 	import mx.rpc.IResponder;
+	import mx.rpc.events.FaultEvent;
 
 	public class LoginCommand implements ICommand, IResponder
 	{
+		private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
+		
 		public function LoginCommand()
 		{
 		}
@@ -22,13 +26,16 @@ package com.dhakads.command
 		}
 		
 		public function result(data:Object):void {
-			ContactsApplication.debug("Result: " + data.toString());
-			Alert.show(data.result.toString());
+			this.model.pageToView = Pages.DIRECTORY_PAGE;
 		}
 		
 		public function fault(data:Object):void {
-			ContactsApplication.debug("CreateSessionCommand#fault: " + data);
-            Alert.show("Login Failed", "Error");
+			var statusCode:Number = data.statusCode;
+			if(statusCode == 404) {
+				model.serverError = "Invalid username or password. Please try again.";
+				return;
+			}
+			model.serverError = "We have encountered an error. Sorry for the inconvenience. Please try again after some time.";
 		}
 		
 	}

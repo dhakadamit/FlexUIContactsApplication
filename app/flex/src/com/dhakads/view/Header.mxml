@@ -5,7 +5,7 @@
 	
 	<mx:Script>
 		<![CDATA[
-			import com.dhakads.model.PageNames;
+			import com.dhakads.model.Pages;
 			import com.dhakads.model.ContactsApplicationModelLocator;
 			import mx.controls.Alert;
 			import com.dhakads.event.PageChangeEvent;
@@ -17,10 +17,10 @@
 				var pageNumber:Number;
 				var selectedPage:String = event.label.toLowerCase();
 				if( selectedPage == "home") {
-					pageNumber = PageNames.HOME_PAGE;
+					pageNumber = Pages.HOME_PAGE;
 				}
 				if (selectedPage == "directory") {
-					pageNumber = PageNames.DIRECTORY_PAGE;
+					pageNumber = Pages.DIRECTORY_PAGE;
 				}
 				
 				var pageChangeEvent:PageChangeEvent = new PageChangeEvent(pageNumber);
