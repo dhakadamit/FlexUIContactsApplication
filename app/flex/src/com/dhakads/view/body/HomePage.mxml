@@ -7,7 +7,6 @@
 			import mx.events.ValidationResultEvent;
 			import mx.validators.Validator;
 			import mx.controls.Alert;
-			import com.dhakads.model.Login;
 			import com.dhakads.event.LoginEvent;
 			
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
