@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<external_comps:PositionedTabNavigator 
-	xmlns:external_comps="com.dhakads.external.components.*"
+<mx:Canvas xmlns:external_comps="com.dhakads.external.components.*"
 	xmlns:mx="http://www.adobe.com/2006/mxml"
-	xmlns:comps="com.dhakads.view.body.persondetails.*" 
-	tabEnabled="false" tabChildren="false" focusEnabled="false" doubleClickEnabled="false"
-	tabStyleName="tabStyle" verticalGap="25" textAlign="left" tabWidth="100" tabHeight="40">
-	
+	xmlns:comps="com.dhakads.view.body.persondetails.*">
+
 	<mx:Style source="../css/PersonDetailsPage.css"/>
 	
-	<comps:ViewPage width="100%" height="100%" label="ADD"
-		styleName="hideDottedImageCorners"/>
+	<external_comps:PositionedTabNavigator tabEnabled="false" tabChildren="false" focusEnabled="false" doubleClickEnabled="false"
+		tabStyleName="tabStyle" verticalGap="25" textAlign="left" tabWidth="100" tabHeight="40"
+		bottom="80" left="80" right="150" top="80" >
 		
-    <comps:EditPage width="100%" height="100%" label="EDIT"
-    	styleName="hideDottedImageCorners"/>
-    	
-</external_comps:PositionedTabNavigator>
+		
+		<comps:ViewPage width="100%" height="100%" label="ADD"
+			styleName="hideDottedImageCorners"/>
+			
+	    <comps:EditPage width="100%" height="100%" label="EDIT"
+	    	styleName="hideDottedImageCorners"/>
+	    	
+	</external_comps:PositionedTabNavigator>
+
+</mx:Canvas>
