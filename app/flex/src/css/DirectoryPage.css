@@ -1,0 +1,30 @@
+.directoryStyle {
+	backgroundAlpha: 0.0;
+	borderStyle: none;
+	color: #3274D0;
+	focusAlpha: 0;
+	fontSize: 12;
+	textAlign: left;
+	textRollOverColor: #FFFFFF;
+	textSelectedColor: #FFFFFF;
+	verticalGridLines: true;
+	rollOverColor: #013E7D;
+	selectionColor: #013E7D;
+	headerColors: #C6C8C3, #C6C8C3;
+	verticalGridLineColor: #E7E7E7;
+	horizontalGridLines: true;
+	horizontalGridLineColor: #E7E7E7;
+	paddingLeft: 5;
+	paddingTop: 2;
+	paddingRight: 5;
+	paddingBottom: 2;
+	headerStyleName: dataGridHeader;
+}
+.dataGridHeader
+{
+	fontWeight: bold;
+	fontFamily: Verdana;
+	fontSize: 14;
+	textAlign: left;
+	color: #303030;
+}

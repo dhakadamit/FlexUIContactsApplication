@@ -9,27 +9,44 @@
 		]]>
 	</mx:Script>
 	
+	<mx:Style source="../css/DirectoryPage.css"/>
+	
 	<mx:XMLList id="people">
 			        <person>
-			            <name>Monica Dhakad</name>
+			            <name>ABC</name>
 			            <area>Mumbai</area>
 			            <business>Studying</business>
 			        </person>
 			        <person>
-			            <name>Amit Dhakad</name>
+			            <name>XYZ</name>
 			            <area>Pune</area>
 			            <business>Service IT</business>
 			        </person>
 	</mx:XMLList>
 	
-	<mx:VBox verticalGap="20">
+	<mx:VBox verticalGap="20" bottom="80" left="80" right="80" top="40">
 		
 		<mx:HBox>
 			<mx:Label text="Index: "/>
 			<mx:LinkBar dataProvider="{allAlphabets}"/>	
 		</mx:HBox>
 		
-		<mx:DataGrid dataProvider="{people}" rowCount="20"/> 
+		<mx:DataGrid dataProvider="{people}" rowCount="15" width="100%" styleName="directoryStyle">
+			<mx:columns>
+				<mx:DataGridColumn dataField="name" headerText="Name">
+					<mx:itemRenderer>
+        			 	<mx:Component>
+        			 		<mx:HBox verticalAlign="middle">
+        			 			<mx:Label text="{data.name}" width="200"/>
+        			 			<mx:Image source="@Embed('../assets/delete-icon.png')"/>
+        			 		</mx:HBox>	            			 		
+        			 	</mx:Component>                        			
+                    </mx:itemRenderer>
+				</mx:DataGridColumn>
+				<mx:DataGridColumn dataField="area" headerText="Area"/>
+				<mx:DataGridColumn dataField="business" headerText="Profession"/>
+			</mx:columns>
+		</mx:DataGrid> 
 		
 	</mx:VBox>
 </mx:Canvas>
