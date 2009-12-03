@@ -72,5 +72,15 @@
 			</mx:columns>
 		</mx:DataGrid> 
 		
+		<mx:HBox verticalAlign="middle" horizontalGap="10">
+			<mx:Label text="1-10 of 15" styleName="indexLinkTextStyle"/>
+			<mx:LinkButton id="previous">
+				<mx:skin>@Embed(source='../../../../../assets/previous-button-previous.png')</mx:skin>
+			</mx:LinkButton>
+			<mx:LinkButton id="next">
+				<mx:skin>@Embed(source='../../../../../assets/previous-button-next.png')</mx:skin>
+			</mx:LinkButton>
+		</mx:HBox>
+		
 	</mx:VBox>
 </mx:Canvas>
