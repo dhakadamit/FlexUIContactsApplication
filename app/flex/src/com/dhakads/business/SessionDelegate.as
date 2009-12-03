@@ -15,7 +15,7 @@ package com.dhakads.business
 		}
 		
 		public function create(username:String, password:String) {
-			ServiceUtils.post(WebServiceUrls.CREATE_SESSION, {login:username, password:password}, this._responder);  
+			ServiceUtils.httpPost(WebServiceUrls.CREATE_SESSION, {login:username, password:password}, this._responder);  
 		}
 
 	}

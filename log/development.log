@@ -3102,3 +3102,271 @@ ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticit
 Rendered rescues/_trace (47.0ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2009-12-04 00:48:06) [GET]
+  [4;36;1mPerson Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mContactDetail Columns (31.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mBusiness Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+Rendering template within layouts/application
+Rendering people/new
+Rendered people/_business (0.0ms)
+Rendered people/_business (0.0ms)
+Rendered people/_person_form (16.0ms)
+Completed in 188ms (View: 47, DB: 47) | 200 OK [http://localhost/people/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2009-12-04 00:48:19) [POST]
+  Parameters: {"commit"=>"Save changes", "person"=>{"business_attributes"=>[{"name"=>"", "description"=>""}], "contact_detail_attributes"=>[{"city"=>"mumabi", "area"=>"mumbai"}], "first_name"=>"amit", "last_name"=>"dhakad"}}
+  [4;35;1mPerson Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mBusiness Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mContactDetail Create (0.0ms)[0m   [0mINSERT INTO `contact_details` (`city`, `steet_address`, `pincode`, `business_id`, `area`, `state`) VALUES('mumabi', NULL, NULL, NULL, 'mumbai', NULL)[0m
+  [4;36;1mSQL (78.0ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mPerson Create (0.0ms)[0m   [0;1mINSERT INTO `people` (`father_id`, `mother_id`, `dob`, `updated_at`, `sex`, `first_name`, `education`, `last_name`, `middle_name`, `contact_detail_id`, `created_at`) VALUES(NULL, NULL, NULL, '2009-12-03 19:18:19', NULL, 'amit', NULL, 'dhakad', NULL, 1, '2009-12-03 19:18:19')[0m
+  [4;35;1mBusiness Create (0.0ms)[0m   [0mINSERT INTO `businesses` (`name`, `description`, `person_id`) VALUES('', '', 1)[0m
+  [4;36;1mSQL (31.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/people/1
+Completed in 1859ms (DB: 125) | 302 Found [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2009-12-04 00:48:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (16.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+Rendering template within layouts/application
+Rendering people/show
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+  [4;36;1mBusiness Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+Completed in 78ms (View: 46, DB: 16) | 200 OK [http://localhost/people/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2009-12-04 00:48:39) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/directory]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2009-12-04 00:48:48) [GET]
+  Parameters: {"alphabet"=>"A"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE 'A%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://localhost/directory/A]
+  [4;36;1mSQL (15.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#edit (for 127.0.0.1 at 2009-12-04 00:49:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering people/edit
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+Rendered people/_business (0.0ms)
+Rendered people/_business (0.0ms)
+Rendered people/_person_form (94.0ms)
+Completed in 156ms (View: 125, DB: 15) | 200 OK [http://localhost/people/1/edit]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#update (for 127.0.0.1 at 2009-12-04 00:49:21) [PUT]
+  Parameters: {"commit"=>"Save changes", "id"=>"1", "person"=>{"business_attributes"=>{"1"=>{"name"=>"", "description"=>""}}, "contact_detail_attributes"=>{"1"=>{"city"=>"mumabi", "area"=>"mumbai"}}, "first_name"=>"amit", "last_name"=>"dhakad"}}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = 1) [0m
+
+TypeError (Symbol as array index):
+  app/models/person.rb:51:in `[]'
+  app/models/person.rb:51:in `business_attributes='
+  app/models/person.rb:50:in `each'
+  app/models/person.rb:50:in `business_attributes='
+  app/controllers/people_controller.rb:50:in `update'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (15.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-04 00:50:41) [GET]
+
+ActionController::RoutingError (No route matches "/directory.xml" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-04 00:52:06) [GET]
+
+ActionController::RoutingError (No route matches "/directory.xml" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-04 00:52:08) [GET]
+
+ActionController::RoutingError (No route matches "/directory.xml" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-04 00:53:05) [GET]
+
+ActionController::RoutingError (No route matches "/directory.xml" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-04 00:53:10) [GET]
+
+ActionController::RoutingError (No route matches "/directory.xml" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-04 00:53:35) [GET]
+
+ActionController::RoutingError (No route matches "/directory.html" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-04 00:54:39) [GET]
+
+ActionController::RoutingError (No route matches "/directory.html" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-04 00:54:43) [GET]
+
+ActionController::RoutingError (No route matches "/directory.xml" with {:method=>:get}):
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

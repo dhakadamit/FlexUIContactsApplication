@@ -1,6 +1,8 @@
 package com.dhakads.model
 {
 	import com.adobe.cairngorm.model.ModelLocator;
+	
+	import mx.collections.ArrayCollection;
 
 	[Bindable]
 	public class ContactsApplicationModelLocator implements ModelLocator
@@ -8,7 +10,7 @@ package com.dhakads.model
 		private static var modelLocator:ContactsApplicationModelLocator;
 		public var pageToView:Number = Pages.DIRECTORY_PAGE;
 		public var serverError:String; 
-
+		public var people:ArrayCollection;
 
         public static function getInstance():ContactsApplicationModelLocator{
             if (modelLocator == null) {

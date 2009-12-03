@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" >
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" creationComplete="init();">
 
 	<mx:Script>
 		<![CDATA[
+			import com.dhakads.model.ContactsApplicationModelLocator;
+			import com.dhakads.event.GetDirectoryEvent;
 			import mx.controls.Alert;
 			import mx.collections.Sort;
 			import mx.collections.SortField;
@@ -11,31 +13,23 @@
 			private static const allAlphabets:Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 													   'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 
 													   'U', 'V', 'W', 'X', 'Y', 'Z']
+													   
+			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance(); 
+													   
+			private function init():void {
+				getDirectory();
+			}										   
+			
+			private function getDirectory():void {
+				var getDirectoryEvent:GetDirectoryEvent = new GetDirectoryEvent();
+				getDirectoryEvent.dispatch();
+			}
+			
 		
 		]]>
 	</mx:Script>
 	
 	<mx:Style source="../css/DirectoryPage.css"/>
-	
-	 <mx:ArrayCollection id="people">
-        <mx:source>
-            <mx:Array>
-                <mx:Object name="ABC" area="Mumbai" business="IT" />
-                <mx:Object name="XYZ" area="Pune" business="Studying" />
-                <mx:Object name="ABC" area="Mumbai" business="IT" />
-                <mx:Object name="XYZ" area="Pune" business="Studying" />
-                <mx:Object name="ABC" area="Mumbai" business="IT" />
-                <mx:Object name="XYZ" area="Pune" business="Studying" />
-                <mx:Object name="ABC" area="Mumbai" business="IT" />
-                <mx:Object name="XYZ" area="Pune" business="Studying" />
-                <mx:Object name="ABC" area="Mumbai" business="IT" />
-                <mx:Object name="XYZ" area="Pune" business="Studying" />
-                <mx:Object name="ABC" area="Mumbai" business="IT" />
-                <mx:Object name="XYZ" area="Pune" business="Studying" />
-                
-            </mx:Array>
-        </mx:source>
-    </mx:ArrayCollection>
 	
 	<mx:VBox verticalGap="20" bottom="80" left="80" right="80" top="40">
 		
@@ -44,7 +38,7 @@
 			<mx:LinkBar dataProvider="{allAlphabets}" styleName="indexLinkStyle"/>	
 		</mx:HBox>
 		
-		<mx:DataGrid id="directoryListing" dataProvider="{people}" rowCount="15" width="100%" styleName="directoryStyle" horizontalScrollPolicy="off" verticalScrollPolicy="off">
+		<mx:DataGrid id="directoryListing" dataProvider="{model.people}" rowCount="{model.people.length}" width="100%" styleName="directoryStyle" horizontalScrollPolicy="off" verticalScrollPolicy="off">
 			<mx:columns>
 				<mx:DataGridColumn headerText="Name" paddingLeft="20">
 					<mx:itemRenderer>

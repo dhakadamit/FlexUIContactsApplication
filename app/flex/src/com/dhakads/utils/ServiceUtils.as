@@ -5,7 +5,7 @@ package com.dhakads.utils
     import mx.rpc.http.HTTPService;
 
     public class ServiceUtils {
-        public static function get(url:String, responder:IResponder = null):void
+        public static function httpGet(url:String, responder:IResponder = null):void
         {
             var service:HTTPService = new HTTPService();
             service.url = url;
@@ -16,7 +16,7 @@ package com.dhakads.utils
             call.addResponder(responder);
         }
         
-        public static function post(url:String,  request:Object, responder:IResponder = null, sendXML:Boolean = false):void
+        public static function httpPost(url:String,  request:Object, responder:IResponder = null, sendXML:Boolean = false):void
         {
             var service:HTTPService = new HTTPService();
             service.url = url;
@@ -29,7 +29,7 @@ package com.dhakads.utils
             call.addResponder(responder);
         }
         
-        public static function put(url:String,  request:Object, responder:IResponder = null, sendXML:Boolean = false):void
+        public static function httpPut(url:String,  request:Object, responder:IResponder = null, sendXML:Boolean = false):void
         {
             var service:HTTPService = new HTTPService();
             service.url = url;
@@ -43,7 +43,7 @@ package com.dhakads.utils
             call.addResponder(responder);
         }
         
-        public static function destroy(url:String,  request:Object, responder:IResponder = null, sendXML:Boolean = false):void
+        public static function httpDestroy(url:String,  request:Object, responder:IResponder = null, sendXML:Boolean = false):void
         {
             var service:HTTPService = new HTTPService();
             service.url = url;

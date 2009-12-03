@@ -5,6 +5,10 @@ class PeopleController < ApplicationController
 
   def directory
     @people = Person.find_by_first_alphabet(params[:alphabet]).paginate :page => params[:page], :per_page => 20
+    respond_to do |format|
+      format.html
+      format.xml { render :xml => @people.to_xml() }
+    end
   end
 
   def search
