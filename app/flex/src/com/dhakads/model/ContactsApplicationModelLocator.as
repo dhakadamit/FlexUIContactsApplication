@@ -6,7 +6,7 @@ package com.dhakads.model
 	public class ContactsApplicationModelLocator implements ModelLocator
 	{   
 		private static var modelLocator:ContactsApplicationModelLocator;
-		public var pageToView:Number = Pages.HOME_PAGE;
+		public var pageToView:Number = Pages.DIRECTORY_PAGE;
 		public var serverError:String; 
 
 

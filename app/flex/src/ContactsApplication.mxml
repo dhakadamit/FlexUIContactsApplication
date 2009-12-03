@@ -16,6 +16,7 @@
 	<mx:Style source="css/ViewPage.css"/>
 	<mx:Style source="css/FormStyle.css"/>
 	<mx:Style source="css/HomePage.css"/>	
+	<mx:Style source="css/DirectoryPage.css"/>
 	
 	<mx:Script>
 		<![CDATA[
@@ -34,8 +35,6 @@
 	
 	<controllers:ContactsApplicationController id="frontController"/> 
 	
-	<mx:VDividedBox width="100%" height="100%">
-		
 		<mx:VBox id="applicationContent" width="1280" paddingTop="0" paddingLeft="20" paddingRight="20" verticalGap="0"
 			horizontalScrollPolicy="off" verticalScrollPolicy="off">
 			<mx:Button id="btnFlexSpy" label="FlexSpy" click="FlexSpy.show()" styleName="buttonStyle"/>
@@ -45,7 +44,6 @@
 		</mx:VBox>
 		
 		<dev:DebugPanel id="debugPanel" width="100%" height="0%"/>
-	</mx:VDividedBox>
 	
 </mx:Application>
 	

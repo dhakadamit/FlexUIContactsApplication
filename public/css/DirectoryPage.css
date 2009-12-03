@@ -1,12 +1,40 @@
-Datagrid.directoryStyle {
+DataGrid.directoryStyle {
 	backgroundAlpha: 0.0;
 	borderStyle: none;
-	color: #1259C7;
+	color: #3274D0;
 	focusAlpha: 0;
+	fontSize: 12;
+	textAlign: left;
+	verticalGridLines: true;
+	headerColors: #C6C8C3, #C6C8C3;
+	verticalGridLineColor: #E7E7E7;
+	horizontalGridLines: true;
+	horizontalGridLineColor: #E7E7E7;
+	headerStyleName: dataGridHeader;
+	rollOverColor: #C6C8C3;
+	selectionColor: #FFFFFF;
+	selectionDisabledColor: #FFFFFF;
+	textRollOverColor: #3274D0;
+	textSelectedColor: #3274D0;
+	use-roll-over: false;
+}
+
+.dataGridHeader
+{
+	fontWeight: bold;
+	fontFamily: Verdana;
 	fontSize: 14;
 	textAlign: left;
-	textRollOverColor: #1259C7;
-	textSelectedColor: #1259C7;
-	verticalGridLines: false;
-	useRollOver: false;
+	color: #303030;
+}
+
+.linkToPersonDetailsPage
+{
+	textAlign: left;
+	color: #FFFFFF;
+	textRollOverColor: #013E7D;
+	textSelectedColor: #013E7D;
+	selectionColor: #FFFFFF;
+	themeColor: #FFFFFF;
+	rollOverColor: #FFFFFF;
 }

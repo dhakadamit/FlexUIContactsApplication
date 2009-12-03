@@ -1,28 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%">
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" >
 
 	<mx:Script>
 		<![CDATA[
+			import mx.controls.Alert;
+			import mx.collections.Sort;
+			import mx.collections.SortField;
+			import mx.events.FlexEvent;
+			
 			private static const allAlphabets:Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 													   'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 
 													   'U', 'V', 'W', 'X', 'Y', 'Z']
+		
 		]]>
 	</mx:Script>
 	
 	<mx:Style source="../css/DirectoryPage.css"/>
 	
-	<mx:XMLList id="people">
-			        <person>
-			            <name>ABC</name>
-			            <area>Mumbai</area>
-			            <business>Studying</business>
-			        </person>
-			        <person>
-			            <name>XYZ</name>
-			            <area>Pune</area>
-			            <business>Service IT</business>
-			        </person>
-	</mx:XMLList>
+	 <mx:ArrayCollection id="people">
+        <mx:source>
+            <mx:Array>
+                <mx:Object name="ABC" area="Mumbai" business="IT" />
+                <mx:Object name="XYZ" area="Pune" business="Studying" />
+                <mx:Object name="ABC" area="Mumbai" business="IT" />
+                <mx:Object name="XYZ" area="Pune" business="Studying" />
+                <mx:Object name="ABC" area="Mumbai" business="IT" />
+                <mx:Object name="XYZ" area="Pune" business="Studying" />
+                <mx:Object name="ABC" area="Mumbai" business="IT" />
+                <mx:Object name="XYZ" area="Pune" business="Studying" />
+                <mx:Object name="ABC" area="Mumbai" business="IT" />
+                <mx:Object name="XYZ" area="Pune" business="Studying" />
+                <mx:Object name="ABC" area="Mumbai" business="IT" />
+                <mx:Object name="XYZ" area="Pune" business="Studying" />
+                
+            </mx:Array>
+        </mx:source>
+    </mx:ArrayCollection>
 	
 	<mx:VBox verticalGap="20" bottom="80" left="80" right="80" top="40">
 		
@@ -31,20 +44,31 @@
 			<mx:LinkBar dataProvider="{allAlphabets}"/>	
 		</mx:HBox>
 		
-		<mx:DataGrid dataProvider="{people}" rowCount="15" width="100%" styleName="directoryStyle">
+		<mx:DataGrid id="directoryListing" dataProvider="{people}" rowCount="15" width="100%" styleName="directoryStyle" horizontalScrollPolicy="off" verticalScrollPolicy="off">
 			<mx:columns>
-				<mx:DataGridColumn dataField="name" headerText="Name">
+				<mx:DataGridColumn headerText="Name" paddingLeft="20">
 					<mx:itemRenderer>
         			 	<mx:Component>
-        			 		<mx:HBox verticalAlign="middle">
-        			 			<mx:Label text="{data.name}" width="200"/>
-        			 			<mx:Image source="@Embed('../assets/delete-icon.png')"/>
-        			 		</mx:HBox>	            			 		
+        			 		<mx:LinkButton label="{data.name}" themeColor="#FFFFFF" textAlign="left" textRollOverColor="#013E7D"/>				            			 		
         			 	</mx:Component>                        			
                     </mx:itemRenderer>
 				</mx:DataGridColumn>
-				<mx:DataGridColumn dataField="area" headerText="Area"/>
-				<mx:DataGridColumn dataField="business" headerText="Profession"/>
+				
+				<mx:DataGridColumn headerText="Area" paddingLeft="20">
+					<mx:itemRenderer>
+        			 	<mx:Component>
+        			 		<mx:Label text="{data.name}" />				            			 		
+        			 	</mx:Component>                        			
+                    </mx:itemRenderer>
+				</mx:DataGridColumn>
+				
+				<mx:DataGridColumn headerText="Profession" paddingLeft="20">
+					<mx:itemRenderer>
+        			 	<mx:Component>
+        			 		<mx:Label text="{data.name}" />				            			 		
+        			 	</mx:Component>                        			
+                    </mx:itemRenderer>
+				</mx:DataGridColumn>
 			</mx:columns>
 		</mx:DataGrid> 
 		
