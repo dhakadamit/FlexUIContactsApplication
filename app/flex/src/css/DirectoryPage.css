@@ -29,13 +29,21 @@ DataGrid.directoryStyle {
 	color: #303030;
 }
 
-.linkToPersonDetailsPage
-{
-	textAlign: left;
-	color: #FFFFFF;
-	textRollOverColor: #013E7D;
-	textSelectedColor: #013E7D;
+.indexLinkStyle {
+	fontWeight: bold;
+	fontSize: 11;
+	fontFamily: Verdana;
+	color: #303030;
+	rollOverColor: #C6C8C3;
 	selectionColor: #FFFFFF;
-	themeColor: #FFFFFF;
-	rollOverColor: #FFFFFF;
+	themeColor: #C6C8C3;
+	textRollOverColor: #FFFFFF;
+}
+
+.indexLinkTextStyle
+{
+	fontWeight: bold;
+	fontSize: 12;
+	fontFamily: Verdana;
+	color: #303030;
 }

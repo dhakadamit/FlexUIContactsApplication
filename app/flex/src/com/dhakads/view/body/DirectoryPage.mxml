@@ -39,9 +39,9 @@
 	
 	<mx:VBox verticalGap="20" bottom="80" left="80" right="80" top="40">
 		
-		<mx:HBox>
-			<mx:Label text="Index: "/>
-			<mx:LinkBar dataProvider="{allAlphabets}"/>	
+		<mx:HBox verticalAlign="middle" horizontalGap="10">
+			<mx:Label text="Index:" styleName="indexLinkTextStyle"/>
+			<mx:LinkBar dataProvider="{allAlphabets}" styleName="indexLinkStyle"/>	
 		</mx:HBox>
 		
 		<mx:DataGrid id="directoryListing" dataProvider="{people}" rowCount="15" width="100%" styleName="directoryStyle" horizontalScrollPolicy="off" verticalScrollPolicy="off">
