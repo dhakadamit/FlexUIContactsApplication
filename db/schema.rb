@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(:version => 20091125182403) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login"
+    t.string   "login",                     :limit => 20
     t.string   "crypted_password",          :limit => 40
     t.string   "salt",                      :limit => 40
     t.datetime "created_at"
