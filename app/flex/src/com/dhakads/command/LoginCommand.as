@@ -31,7 +31,7 @@ package com.dhakads.command
 		
 		public function fault(data:Object):void {
 			var statusCode:Number = data.statusCode;
-			if(statusCode == 404) {
+			if(statusCode == 401) {
 				model.serverError = "Invalid username or password. Please try again.";
 				return;
 			}

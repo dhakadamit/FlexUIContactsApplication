@@ -1,9 +1,8 @@
 package com.dhakads.business
 {
-	import com.adobe.cairngorm.control.CairngormEvent;
-	import com.dhakads.event.GetDirectoryEvent;
 	import com.dhakads.model.WebServiceUrls;
 	import com.dhakads.utils.ServiceUtils;
+	import com.dhakads.utils.UrlBuilder;
 	
 	import mx.rpc.IResponder;
 	
@@ -16,9 +15,14 @@ package com.dhakads.business
 			this._responder = responder;
 		}
 		
-		public function getDirectory(event:CairngormEvent):void {
-			var getDirectoryEvent:GetDirectoryEvent = GetDirectoryEvent (event);
-			ServiceUtils.httpGet(WebServiceUrls.GET_DIRECTORY, this._responder);
+		public function getDirectory(alphabet:String = null, pageNumber:Number = 1):void {
+			var requestUrl:String = new UrlBuilder()
+										.withBaseUrl(WebServiceUrls.GET_DIRECTORY)
+										.withParameter("alphabet", alphabet)
+										.withParameter("page", String(pageNumber))
+										.build();
+			
+			ServiceUtils.httpGet(requestUrl, this._responder);
 		}
 		
 

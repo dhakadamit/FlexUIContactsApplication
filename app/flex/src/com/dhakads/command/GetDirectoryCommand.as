@@ -3,8 +3,10 @@ package com.dhakads.command
 	import com.adobe.cairngorm.commands.ICommand;
 	import com.adobe.cairngorm.control.CairngormEvent;
 	import com.dhakads.business.DirectoryDelegate;
+	import com.dhakads.event.GetDirectoryEvent;
 	import com.dhakads.model.ContactsApplicationModelLocator;
 	
+	import mx.controls.Alert;
 	import mx.rpc.IResponder;
 
 	public class GetDirectoryCommand implements ICommand, IResponder
@@ -17,14 +19,15 @@ package com.dhakads.command
 
 		public function execute(event:CairngormEvent):void
 		{
-			var directoryDelegate:DirectoryDelegate = new DirectoryDelegate(this); 
-//			this.model.people = new ArrayCollection();
-//			this.model.people.addItem({name:"amit", area:"mumbai", profession:"IT"});	
-//			this.model.people.addItem({name:"dhakad", area:"mumbai", profession:"IT"});
+			var getDirectoryEvent:GetDirectoryEvent = GetDirectoryEvent (event);
+			var directoryDelegate:DirectoryDelegate = new DirectoryDelegate(this);
+			directoryDelegate.getDirectory(getDirectoryEvent.alphabet, getDirectoryEvent.pageNumber); 
 		}
 		
 		public function result(data:Object):void
 		{
+			var data:Object = data;
+			Alert.show(data.toString());
 		}
 		
 		public function fault(info:Object):void
