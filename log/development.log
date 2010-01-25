@@ -3745,3 +3745,954 @@ ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticit
 Rendered rescues/_trace (47.0ms)
 Rendered rescues/_request_and_response (0.0ms)
 Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 23:38:10) [GET]
+
+ActionController::RoutingError (No route matches "/assets/Logo.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-25 23:38:18) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+Completed in 110ms (View: 63, DB: 0) | 200 OK [http://localhost/directory]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-25 23:38:22) [GET]
+  Parameters: {"alphabet"=>"A"}
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (first_name LIKE 'A%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/directory/A]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 23:38:39) [GET]
+
+ActionController::RoutingError (No route matches "/assets/Logo.png" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create to xml (for 127.0.0.1 at 2010-01-25 23:40:27) [POST]
+  Parameters: {"login"=>"a", "password"=>"a"}
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (141.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (unprocessable_entity)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 23:40:46) [GET]
+
+ActionController::RoutingError (No route matches "/session" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-25 23:40:50) [GET]
+
+ActionController::RoutingError (No route matches "/session/new" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-25 23:40:54) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `session_path' for #<ActionView::Base:0x4e88b14>) on line #1 of app/views/sessions/new.html.erb:
+1: <% form_tag session_path do -%>
+2: <p><label for="login">Login</label><br/>
+3: <%= text_field_tag 'login' %></p>
+4: 
+
+    app/views/sessions/new.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-25 23:43:32) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `session_path' for #<ActionView::Base:0x4d5b250>) on line #1 of app/views/sessions/new.html.erb:
+1: <% form_tag session_path do -%>
+2: <p><label for="login">Login</label><br/>
+3: <%= text_field_tag 'login' %></p>
+4: 
+
+    app/views/sessions/new.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-25 23:43:36) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `session_path' for #<ActionView::Base:0x4ecfac8>) on line #1 of app/views/sessions/new.html.erb:
+1: <% form_tag session_path do -%>
+2: <p><label for="login">Login</label><br/>
+3: <%= text_field_tag 'login' %></p>
+4: 
+
+    app/views/sessions/new.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-25 23:44:38) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `sessions' for #<ActionView::Base:0x4dc0934>) on line #1 of app/views/sessions/new.html.erb:
+1: <% form_tag sessions do -%>
+2: <p><label for="login">Login</label><br/>
+3: <%= text_field_tag 'login' %></p>
+4: 
+
+    app/views/sessions/new.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-25 23:44:48) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `new_sessions' for #<ActionView::Base:0x4f07f40>) on line #1 of app/views/sessions/new.html.erb:
+1: <% form_tag new_sessions do -%>
+2: <p><label for="login">Login</label><br/>
+3: <%= text_field_tag 'login' %></p>
+4: 
+
+    app/views/sessions/new.html.erb:1
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    -e:1:in `load'
+    -e:1
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-01-26 00:01:39) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 62ms (View: 62, DB: 0) | 200 OK [http://localhost/signup]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-01-26 00:01:48) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"test123", "password"=>"test123", "login"=>"test"}, "commit"=>"Sign up"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'test') LIMIT 1[0m
+  [4;35;1mUser Create (0.0ms)[0m   [0mINSERT INTO `users` (`salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `created_at`) VALUES('247b4110bf85d9f6505935db4d9ed4f872d9ac2d', '2010-01-25 18:31:48', 'f47d79207914943945c189177451766690926113', NULL, NULL, 'test', '2010-01-25 18:31:48')[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 562ms (DB: 16) | 302 Found [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-01-26 00:02:34) [GET]
+Rendering template within layouts/application
+Rendering users/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/signup]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-01-26 00:02:43) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"test123", "password"=>"test123", "login"=>"test"}, "commit"=>"Sign up"}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'test') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+Rendering template within layouts/application
+Rendering users/new
+Completed in 63ms (View: 16, DB: 31) | 200 OK [http://localhost/users]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-01-26 00:02:48) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"test123", "password"=>"test123", "login"=>"test1"}, "commit"=>"Sign up"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT `users`.id FROM `users` WHERE (LOWER(`users`.`login`) = BINARY 'test1') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO `users` (`salt`, `updated_at`, `crypted_password`, `remember_token_expires_at`, `remember_token`, `login`, `created_at`) VALUES('574baa9c1fdd24d64797168472eae6eb92135767', '2010-01-25 18:32:48', 'b552bb41c9d08493dd6cf3f8cd7ae34d8a372689', NULL, NULL, 'test1', '2010-01-25 18:32:48')[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed in 62ms (DB: 31) | 302 Found [http://localhost/users]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-01-26 00:04:38) [GET]
+
+ActionController::UnknownAction (No action responded to index. Actions: create and new):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-26 00:08:35) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 32ms (View: 16, DB: 0) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:13:25) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 2) LIMIT 1[0m
+  [4;36;1mPerson Load (16.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+Completed in 62ms (View: 15, DB: 16) | 200 OK [http://localhost/directory]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:14:02) [GET]
+
+NameError (undefined local variable or method `new_session_path' for #<PeopleController:0x4c0fcc0>):
+  lib/authenticated_system.rb:67:in `access_denied'
+  lib/authenticated_system.rb:64:in `access_denied'
+  lib/authenticated_system.rb:52:in `login_required'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:16:56) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/directory]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-01-26 00:16:56) [GET]
+
+NameError (uninitialized constant SessionsController):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:17:43) [GET]
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/directory]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#new (for 127.0.0.1 at 2010-01-26 00:17:43) [GET]
+
+NameError (uninitialized constant SessionsController):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-26 00:21:50) [GET]
+
+ActionController::RoutingError (No route matches "/session/new" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:22:10) [GET]
+
+NameError (undefined local variable or method `new_session_path' for #<PeopleController:0x4c0fbd0>):
+  lib/authenticated_system.rb:67:in `access_denied'
+  lib/authenticated_system.rb:64:in `access_denied'
+  lib/authenticated_system.rb:52:in `login_required'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:22:42) [GET]
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 0ms (DB: 16) | 302 Found [http://localhost/directory]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-26 00:22:42) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 94ms (View: 94, DB: 0) | 200 OK [http://localhost/sessions/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-26 00:22:57) [POST]
+  Parameters: {"commit"=>"Log in", "login"=>"test", "password"=>"test123"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'test') LIMIT 1[0m
+Redirected to http://localhost:3000/directory
+Completed in 31ms (DB: 15) | 302 Found [http://localhost/sessions]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:22:57) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+Completed in 140ms (View: 15, DB: 0) | 200 OK [http://localhost/directory]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-26 00:24:02) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-26 00:37:29) [GET]
+Redirected to http://localhost:3000/sessions/new
+Filter chain halted as [:login_required] rendered_or_redirected.
+Completed in 1828ms (DB: 0) | 302 Found [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-01-26 00:37:31) [GET]
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0ms (View: 0, DB: 0) | 200 OK [http://localhost/sessions/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-01-26 00:37:37) [POST]
+  Parameters: {"commit"=>"Log in", "login"=>"test", "password"=>"test123"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'test') LIMIT 1[0m
+Redirected to http://localhost:3000/people
+Completed in 125ms (DB: 0) | 302 Found [http://localhost/sessions]
+  [4;35;1mSQL (15.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-26 00:37:38) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 31ms (View: 0, DB: 15) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-26 00:37:45) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (16.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mPerson Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+Rendering template within layouts/application
+Rendering people/new
+Rendered people/_business (16.0ms)
+Rendered people/_business (0.0ms)
+Rendered people/_person_form (31.0ms)
+Completed in 125ms (View: 63, DB: 32) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-26 00:38:22) [POST]
+  Parameters: {"commit"=>"Save changes", "person"=>{"business_attributes"=>[{"name"=>"Service", "description"=>"IT consultant"}], "contact_detail_attributes"=>[{"city"=>"mumbai", "area"=>"santacruz"}], "first_name"=>"amit", "last_name"=>"kanhaiyalal"}}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContactDetail Create (0.0ms)[0m   [0;1mINSERT INTO `contact_details` (`city`, `steet_address`, `pincode`, `business_id`, `area`, `state`) VALUES('mumbai', NULL, NULL, NULL, 'santacruz', NULL)[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Create (0.0ms)[0m   [0mINSERT INTO `people` (`father_id`, `mother_id`, `dob`, `updated_at`, `sex`, `first_name`, `education`, `last_name`, `middle_name`, `contact_detail_id`, `created_at`) VALUES(NULL, NULL, NULL, '2010-01-25 19:08:23', NULL, 'amit', NULL, 'kanhaiyalal', NULL, 1, '2010-01-25 19:08:23')[0m
+  [4;36;1mBusiness Create (0.0ms)[0m   [0;1mINSERT INTO `businesses` (`name`, `description`, `person_id`) VALUES('Service', 'IT consultant', 1)[0m
+  [4;35;1mSQL (32.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/1
+Completed in 141ms (DB: 64) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-26 00:38:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+Rendering template within layouts/application
+Rendering people/show
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+Completed in 140ms (View: 62, DB: 0) | 200 OK [http://localhost/people/1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-26 00:38:28) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+Rendering template within layouts/application
+Rendering people/new
+Rendered people/_business (15.0ms)
+Rendered people/_business (0.0ms)
+Rendered people/_person_form (15.0ms)
+Completed in 78ms (View: 15, DB: 0) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-26 00:38:51) [POST]
+  Parameters: {"commit"=>"Save changes", "person"=>{"business_attributes"=>[{"name"=>"Student", "description"=>"T.Y.BCOM"}], "contact_detail_attributes"=>[{"city"=>"mumbai", "area"=>"santacruz"}], "first_name"=>"Monica", "last_name"=>"kanhaiyalal"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContactDetail Create (0.0ms)[0m   [0;1mINSERT INTO `contact_details` (`city`, `steet_address`, `pincode`, `business_id`, `area`, `state`) VALUES('mumbai', NULL, NULL, NULL, 'santacruz', NULL)[0m
+  [4;35;1mSQL (78.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Create (0.0ms)[0m   [0mINSERT INTO `people` (`father_id`, `mother_id`, `dob`, `updated_at`, `sex`, `first_name`, `education`, `last_name`, `middle_name`, `contact_detail_id`, `created_at`) VALUES(NULL, NULL, NULL, '2010-01-25 19:08:51', NULL, 'Monica', NULL, 'kanhaiyalal', NULL, 2, '2010-01-25 19:08:51')[0m
+  [4;36;1mBusiness Create (0.0ms)[0m   [0;1mINSERT INTO `businesses` (`name`, `description`, `person_id`) VALUES('Student', 'T.Y.BCOM', 2)[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/2
+Completed in 188ms (DB: 124) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-26 00:38:51) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mUser Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '2') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 2) [0m
+Rendering template within layouts/application
+Rendering people/show
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 2) [0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `businesses` WHERE (`businesses`.person_id = 2) [0m
+Completed in 78ms (View: 31, DB: 15) | 200 OK [http://localhost/people/2]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-26 00:38:55) [GET]
+  [4;35;1mUser Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mContactDetail Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+Rendering template within layouts/application
+Rendering people/new
+Rendered people/_business (0.0ms)
+Rendered people/_business (0.0ms)
+Rendered people/_person_form (15.0ms)
+Completed in 78ms (View: 31, DB: 32) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-26 00:39:18) [POST]
+  Parameters: {"commit"=>"Save changes", "person"=>{"business_attributes"=>[{"name"=>"HouseWife", "description"=>""}], "contact_detail_attributes"=>[{"city"=>"mumbai", "area"=>"santacruz"}], "first_name"=>"Anju", "last_name"=>"kanhaiyalal"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mContactDetail Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContactDetail Create (0.0ms)[0m   [0;1mINSERT INTO `contact_details` (`city`, `steet_address`, `pincode`, `business_id`, `area`, `state`) VALUES('mumbai', NULL, NULL, NULL, 'santacruz', NULL)[0m
+  [4;35;1mSQL (47.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Create (0.0ms)[0m   [0mINSERT INTO `people` (`father_id`, `mother_id`, `dob`, `updated_at`, `sex`, `first_name`, `education`, `last_name`, `middle_name`, `contact_detail_id`, `created_at`) VALUES(NULL, NULL, NULL, '2010-01-25 19:09:18', NULL, 'Anju', NULL, 'kanhaiyalal', NULL, 3, '2010-01-25 19:09:18')[0m
+  [4;36;1mBusiness Create (0.0ms)[0m   [0;1mINSERT INTO `businesses` (`name`, `description`, `person_id`) VALUES('HouseWife', '', 3)[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/3
+Completed in 250ms (DB: 79) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-26 00:39:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '3') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 3) [0m
+Rendering template within layouts/application
+Rendering people/show
+  [4;35;1mContactDetail Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 3) [0m
+  [4;35;1mBusiness Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `businesses` WHERE (`businesses`.person_id = 3) [0m
+Completed in 78ms (View: 0, DB: 31) | 200 OK [http://localhost/people/3]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#new (for 127.0.0.1 at 2010-01-26 00:39:22) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mBusiness Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+Rendering template within layouts/application
+Rendering people/new
+Rendered people/_business (0.0ms)
+Rendered people/_business (0.0ms)
+Rendered people/_person_form (15.0ms)
+Completed in 78ms (View: 15, DB: 16) | 200 OK [http://localhost/people/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#create (for 127.0.0.1 at 2010-01-26 00:39:51) [POST]
+  Parameters: {"commit"=>"Save changes", "person"=>{"business_attributes"=>[{"name"=>"Business", "description"=>"Supreme Alloy India Pvt Ltd"}], "contact_detail_attributes"=>[{"city"=>"mumbai", "area"=>"santacruz"}], "first_name"=>"Kanhaiyalal", "last_name"=>"Kasturchand"}}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mContactDetail Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mContactDetail Create (0.0ms)[0m   [0;1mINSERT INTO `contact_details` (`city`, `steet_address`, `pincode`, `business_id`, `area`, `state`) VALUES('mumbai', NULL, NULL, NULL, 'santacruz', NULL)[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mPerson Create (0.0ms)[0m   [0mINSERT INTO `people` (`father_id`, `mother_id`, `dob`, `updated_at`, `sex`, `first_name`, `education`, `last_name`, `middle_name`, `contact_detail_id`, `created_at`) VALUES(NULL, NULL, NULL, '2010-01-25 19:09:51', NULL, 'Kanhaiyalal', NULL, 'Kasturchand', NULL, 4, '2010-01-25 19:09:51')[0m
+  [4;36;1mBusiness Create (0.0ms)[0m   [0;1mINSERT INTO `businesses` (`name`, `description`, `person_id`) VALUES('Business', 'Supreme Alloy India Pvt Ltd', 4)[0m
+  [4;35;1mSQL (31.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:3000/people/4
+Completed in 125ms (DB: 78) | 302 Found [http://localhost/people]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-26 00:39:51) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mUser Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '4') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 4) [0m
+Rendering template within layouts/application
+Rendering people/show
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 4) [0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `businesses` WHERE (`businesses`.person_id = 4) [0m
+Completed in 297ms (View: 15, DB: 48) | 200 OK [http://localhost/people/4]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#index (for 127.0.0.1 at 2010-01-26 00:39:57) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendering template within layouts/application
+Rendering people/index
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/people]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#search (for 127.0.0.1 at 2010-01-26 00:40:01) [GET]
+  Parameters: {"commit"=>"Search", "filter"=>"Name", "query"=>"amit"}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (first_name LIKE '%amit%' OR middle_name LIKE '%amit') [0m
+Rendering template within layouts/application
+Rendering people/search
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Completed in 62ms (View: 16, DB: 0) | 200 OK [http://localhost/search?query=amit&filter=Name&commit=Search]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show (for 127.0.0.1 at 2010-01-26 00:40:03) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+Rendering template within layouts/application
+Rendering people/show
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+  [4;36;1mBusiness Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+Completed in 62ms (View: 31, DB: 15) | 200 OK [http://localhost/people/1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:40:12) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/directory]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:40:15) [GET]
+  Parameters: {"alphabet"=>"A"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE 'A%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 79ms (View: 16, DB: 0) | 200 OK [http://localhost/directory/A]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:40:18) [GET]
+  Parameters: {"alphabet"=>"M"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE 'M%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+  [4;35;1mPerson Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 157ms (View: 0, DB: 16) | 200 OK [http://localhost/directory/M]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:40:21) [GET]
+  Parameters: {"alphabet"=>"K"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE 'K%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+  [4;35;1mPerson Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 46ms (View: 0, DB: 15) | 200 OK [http://localhost/directory/K]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:40:23) [GET]
+  Parameters: {"alphabet"=>"A"}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (15.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE 'A%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 47ms (View: 16, DB: 15) | 200 OK [http://localhost/directory/A]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory (for 127.0.0.1 at 2010-01-26 00:40:27) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (16.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+Rendering template within layouts/application
+Rendering people/directory
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 46ms (View: 15, DB: 16) | 200 OK [http://localhost/directory]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `businesses`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `businesses`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mSQL (15.0ms)[0m   [0mdescribe `contact_details`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `contact_details`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `marriages`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mdescribe `marriages`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mSHOW KEYS FROM `marriages`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mdescribe `people`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `people`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW FIELDS FROM `phone_numbers`[0m
+  [4;36;1mSQL (15.0ms)[0m   [0;1mdescribe `phone_numbers`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW KEYS FROM `phone_numbers`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (16.0ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
