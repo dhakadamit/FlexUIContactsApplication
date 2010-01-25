@@ -41,9 +41,9 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "people"
 
   map.resources :people
-  map.directory '/directory', :controller => 'people', :action => 'directory'
-  map.directory_with_alphabet '/directory/:alphabet', :controller => 'people', :action => 'directory'
-  map.search_people '/search', :controller => 'people', :action => 'search'
+  map.directory '/directory.:format', :controller => 'people', :action => 'directory'
+  map.directory_with_alphabet '/directory/:alphabet.:format', :controller => 'people', :action => 'directory'
+  map.search_people '/search.:format', :controller => 'people', :action => 'search'
 
 
   map.admin '/admin', :controller => "admin", :action => "index"
