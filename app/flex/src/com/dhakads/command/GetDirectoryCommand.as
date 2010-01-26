@@ -27,7 +27,7 @@ package com.dhakads.command
 		public function result(data:Object):void
 		{
 			var data:Object = data;
-			Alert.show(data.toString());
+			Alert.show(data.result);
 		}
 		
 		public function fault(info:Object):void

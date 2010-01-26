@@ -14,7 +14,7 @@ package com.dhakads.business
 			this._responder = responder;
 		}
 		
-		public function create(username:String, password:String) {
+		public function create(username:String, password:String):void {
 			ServiceUtils.httpPost(WebServiceUrls.CREATE_SESSION, {login:username, password:password}, this._responder);  
 		}
 

@@ -1,5 +1,5 @@
 class PeopleController < ApplicationController
-  before_filter :login_required
+  #before_filter :login_required
 
   def index
   end
@@ -9,6 +9,9 @@ class PeopleController < ApplicationController
     respond_to do |format|
       format.html
       format.xml { render :xml => @people.to_xml() }
+      format.json { render :json => @people.to_json(:only => [:first_name, :last_name],
+                                                    :include => {:contact_detail => {:only => [:area, :city]}}
+                                                    )}
     end
   end
 
@@ -21,12 +24,13 @@ class PeopleController < ApplicationController
     @children = @person.children
     respond_to do |format|
       format.html
-      format.xml { render :xml => @person.to_xml(:include => {
-            :father => {:except => {:methods => :children}},
-            :mother => {:except => {:methods => :children}},
-            :businesses => {:include => [:contact_detail]}},
-          :contact_detail => {},
-          :methods => [:children])}
+      format.json {  render :json => @person.to_json(:include => {
+              :contact_detail => {},
+              :businesses => {:only => :name},
+              :father => {:except => {:methods => :children}},
+              :mother => {:except => {:methods => :children}},
+              }, :methods => [:children]
+      ) }
     end
   end
 

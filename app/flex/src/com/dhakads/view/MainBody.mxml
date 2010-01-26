@@ -6,6 +6,7 @@
 		<![CDATA[
 			import com.dhakads.model.ContactsApplicationModelLocator;
 			
+			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 		]]>
 	</mx:Script>

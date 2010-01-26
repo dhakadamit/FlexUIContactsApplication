@@ -5301,3 +5301,883 @@ Processing PeopleController#directory to xml (for 127.0.0.1 at 2010-01-26 02:41:
   [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
   [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
 Completed in 63ms (View: 0, DB: 16) | 200 OK [http://localhost/directory.xml?alphabet=&page=1]
+  [4;36;1mSQL (31.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:08:30) [GET]
+  [4;36;1mPerson Load (47.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 562ms (View: 31, DB: 78) | 200 OK [http://localhost/directory.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:15:19) [GET]
+  Parameters: {"alphabet"=>"", "page"=>"1"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 31ms (View: 15, DB: 0) | 200 OK [http://localhost/directory.json?alphabet=&page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:19:14) [GET]
+  Parameters: {"alphabet"=>"", "page"=>"1"}
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/directory.json?alphabet=&page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:20:39) [GET]
+  Parameters: {"alphabet"=>"", "page"=>"1"}
+  [4;36;1mPerson Load (15.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 31ms (View: 0, DB: 15) | 200 OK [http://localhost/directory.json?alphabet=&page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:25:21) [GET]
+  [4;36;1mPerson Load (15.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 15ms (View: 0, DB: 15) | 200 OK [http://localhost/directory.json]
+  [4;36;1mSQL (16.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:25:37) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 78ms (View: 0, DB: 16) | 200 OK [http://localhost/directory.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:25:44) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/directory.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:25:52) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/directory.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:26:03) [GET]
+  Parameters: {"alphabet"=>"", "page"=>"1"}
+  [4;36;1mPerson Load (15.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+Completed in 31ms (View: 0, DB: 15) | 200 OK [http://localhost/directory.json?alphabet=&page=1]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 10:27:33) [GET]
+  Parameters: {"alphabet"=>"", "page"=>"1"}
+  [4;36;1mPerson Load (16.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mBusiness Load (63.0ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 3) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 4) [0m
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 2) [0m
+Completed in 125ms (View: 0, DB: 79) | 200 OK [http://localhost/directory.json?alphabet=&page=1]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-26 10:28:17) [GET]
+
+ActionController::RoutingError (No route matches "/person/1.xml" with {:method=>:get}):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to xml (for 127.0.0.1 at 2010-01-26 10:28:24) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (16.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mContactDetail Load (32.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.business_id = 1) LIMIT 1[0m
+Completed in 79ms (View: 0, DB: 48) | 200 OK [http://localhost/people/1.xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to xml (for 127.0.0.1 at 2010-01-26 10:29:40) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.business_id = 1) LIMIT 1[0m
+Completed in 47ms (View: 0, DB: 16) | 200 OK [http://localhost/people/1.xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show to xml (for 127.0.0.1 at 2010-01-26 10:33:16) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:31: syntax error, unexpected tASSOC, expecting ']'
+          :methods => [:children]])}
+                     ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:31: syntax error, unexpected ']', expecting '}'
+          :methods => [:children]])}
+                                  ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:64: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (94.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to xml (for 127.0.0.1 at 2010-01-26 10:35:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+
+NoMethodError (undefined method `macro' for nil:NilClass):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/people_controller.rb:27:in `show'
+  app/controllers/people_controller.rb:25:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (63.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show to xml (for 127.0.0.1 at 2010-01-26 10:36:32) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:28: syntax error, unexpected tASSOC, expecting ']'
+...                   :methods => [:children],
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:28: syntax error, unexpected ',', expecting '}'
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:29: syntax error, unexpected ',', expecting '}'
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:30: syntax error, unexpected ',', expecting '}'
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:31: syntax error, unexpected ']', expecting '}'
+...include => [:contact_detail]}])}
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:64: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show to xml (for 127.0.0.1 at 2010-01-26 10:36:48) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:28: syntax error, unexpected tASSOC, expecting ']'
+...                   :methods => :children,
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:29: syntax error, unexpected ',', expecting '}'
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:30: syntax error, unexpected ',', expecting '}'
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:31: syntax error, unexpected ']', expecting '}'
+...include => [:contact_detail]}])}
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:64: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show to xml (for 127.0.0.1 at 2010-01-26 10:52:16) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected kEND, expecting '}'
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:64: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to xml (for 127.0.0.1 at 2010-01-26 10:52:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+
+NoMethodError (undefined method `macro' for nil:NilClass):
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `call'
+  builder (2.1.2) lib/builder/xmlbase.rb:134:in `_nested_structures'
+  builder (2.1.2) lib/builder/xmlbase.rb:58:in `method_missing'
+  builder (2.1.2) lib/builder/xmlbase.rb:31:in `tag!'
+  app/controllers/people_controller.rb:27:in `show'
+  app/controllers/people_controller.rb:25:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to xml (for 127.0.0.1 at 2010-01-26 10:53:16) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Completed in 94ms (View: 0, DB: 0) | 200 OK [http://localhost/directory.xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 10:54:43) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Completed in 47ms (View: 0, DB: 16) | 200 OK [http://localhost/people/1.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 10:54:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Completed in 63ms (View: 0, DB: 15) | 200 OK [http://localhost/people/1.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to xml (for 127.0.0.1 at 2010-01-26 10:55:59) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Completed in 32ms (View: 0, DB: 0) | 200 OK [http://localhost/directory.xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to xml (for 127.0.0.1 at 2010-01-26 10:56:02) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/directory.xml]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 10:56:14) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+
+NoMethodError (undefined method `macro' for nil:NilClass):
+  app/controllers/people_controller.rb:32:in `show'
+  app/controllers/people_controller.rb:24:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 10:56:51) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Completed in 47ms (View: 0, DB: 15) | 200 OK [http://localhost/people/1.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show to json (for 127.0.0.1 at 2010-01-26 11:02:36) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected tASSOC, expecting ']'
+...contact_detail, :businesses => {:include => [:contact_detail...
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected ']', expecting '}'
+...include => [:contact_detail]}]) }
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:65: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show to json (for 127.0.0.1 at 2010-01-26 11:04:17) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected tASSOC, expecting ']'
+...contact_detail, :businesses => {:include => [:contact_detail...
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected ']', expecting '}'
+...include => [:contact_detail]}]) }
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:65: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:05:26) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (16.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+
+NoMethodError (undefined method `macro' for nil:NilClass):
+  app/controllers/people_controller.rb:32:in `show'
+  app/controllers/people_controller.rb:24:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (172.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:12:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/people/1.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:13:54) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (16.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (16.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Completed in 47ms (View: 0, DB: 32) | 200 OK [http://localhost/people/1.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:14:50) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+  [4;36;1mBusiness Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+Completed in 63ms (View: 0, DB: 0) | 200 OK [http://localhost/people/1.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show to json (for 127.0.0.1 at 2010-01-26 11:17:08) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected tASSOC, expecting ']'
+...contact_detail, :businesses => {:only => :name}]) }
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected ']', expecting '}'
+...usinesses => {:only => :name}]) }
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:65: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show to json (for 127.0.0.1 at 2010-01-26 11:17:28) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected tASSOC, expecting ']'
+...[:contact_detail, :business => {:only => :name}]) }
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected ']', expecting '}'
+...:business => {:only => :name}]) }
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:65: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ApplicationController#show to json (for 127.0.0.1 at 2010-01-26 11:18:35) [GET]
+  Parameters: {"id"=>"1"}
+
+SyntaxError (C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected tASSOC, expecting ']'
+...contact_detail, :businesses => {:only => [:name]}]) }
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:32: syntax error, unexpected ']', expecting '}'
+...inesses => {:only => [:name]}]) }
+                              ^
+C:/Documents and Settings/dhakadamit/My Documents/Work/ContactsApplication/app/controllers/people_controller.rb:65: syntax error, unexpected kEND, expecting '}'):
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (47.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:19:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+
+TypeError (can't convert Symbol into Hash):
+  app/controllers/people_controller.rb:32:in `show'
+  app/controllers/people_controller.rb:24:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (157.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:26:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (16.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+  [4;36;1mBusiness Columns (15.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (16.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Completed in 63ms (View: 0, DB: 47) | 200 OK [http://localhost/people/1.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:33:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/people/1.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:36:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+
+NoMethodError (undefined method `macro' for nil:NilClass):
+  app/controllers/people_controller.rb:32:in `show'
+  app/controllers/people_controller.rb:24:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (78.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:36:25) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (16.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mBusiness Load (0.0ms)[0m   [0;1mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+  [4;35;1mBusiness Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `businesses`[0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Completed in 79ms (View: 0, DB: 16) | 200 OK [http://localhost/people/1.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:36:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+
+NoMethodError (undefined method `macro' for nil:NilClass):
+  app/controllers/people_controller.rb:32:in `show'
+  app/controllers/people_controller.rb:24:in `show'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (16.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#show to json (for 127.0.0.1 at 2010-01-26 11:37:58) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPerson Columns (15.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`id` = '1') LIMIT 1[0m
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (`people`.`father_id` = 1) [0m
+  [4;35;1mBusiness Load (0.0ms)[0m   [0mSELECT * FROM `businesses` WHERE (`businesses`.person_id = 1) [0m
+  [4;36;1mBusiness Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `businesses`[0m
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (15.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+Completed in 78ms (View: 0, DB: 30) | 200 OK [http://localhost/people/1.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 11:40:30) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+
+NoMethodError (undefined method `macro' for nil:NilClass):
+  C:1:in `__send__'
+  C:1:in `encode'
+  app/controllers/people_controller.rb:12:in `directory'
+  app/controllers/people_controller.rb:9:in `directory'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (156.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 11:41:20) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+
+NoMethodError (undefined method `macro' for nil:NilClass):
+  C:1:in `__send__'
+  C:1:in `encode'
+  app/controllers/people_controller.rb:12:in `directory'
+  app/controllers/people_controller.rb:9:in `directory'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+  -e:1:in `load'
+  -e:1
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 11:41:33) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;36;1mPerson Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 3) [0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 4) [0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 2) [0m
+Completed in 78ms (View: 15, DB: 0) | 200 OK [http://localhost/directory.json]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 11:41:42) [GET]
+  [4;36;1mPerson Load (0.0ms)[0m   [0;1mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;35;1mPerson Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `people`[0m
+  [4;36;1mContactDetail Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `contact_details`[0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 3) [0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 4) [0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 2) [0m
+Completed in 157ms (View: 0, DB: 0) | 200 OK [http://localhost/directory.json]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing PeopleController#directory to json (for 127.0.0.1 at 2010-01-26 11:43:32) [GET]
+  [4;35;1mPerson Load (0.0ms)[0m   [0mSELECT * FROM `people` WHERE (first_name LIKE '%') ORDER BY first_name[0m
+  [4;36;1mPerson Columns (16.0ms)[0m   [0;1mSHOW FIELDS FROM `people`[0m
+  [4;35;1mContactDetail Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `contact_details`[0m
+  [4;36;1mContactDetail Load (16.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 1) [0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 3) [0m
+  [4;36;1mContactDetail Load (0.0ms)[0m   [0;1mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 4) [0m
+  [4;35;1mContactDetail Load (0.0ms)[0m   [0mSELECT * FROM `contact_details` WHERE (`contact_details`.`id` = 2) [0m
+Completed in 47ms (View: 0, DB: 32) | 200 OK [http://localhost/directory.json]

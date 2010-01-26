@@ -9,6 +9,7 @@
 			import mx.controls.Alert;
 			import com.dhakads.event.LoginEvent;
 			
+			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 			
 			private function init():void {
