@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20091125182403) do
   end
 
   create_table "contact_details", :force => true do |t|
-    t.string  "steet_address"
+    t.string  "street_address"
     t.string  "area"
     t.string  "city"
     t.string  "state"

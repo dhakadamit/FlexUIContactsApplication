@@ -10,7 +10,10 @@ class PeopleController < ApplicationController
       format.html
       format.xml { render :xml => @people.to_xml() }
       format.json { render :json => @people.to_json(:only => [:first_name, :last_name],
-                                                    :include => {:contact_detail => {:only => [:area, :city]}}
+                                                    :include => {
+                                                            :contact_detail => {:only => [:area, :city]},
+                                                            :businesses => {:only => :name}
+                                                    }
                                                     )}
     end
   end
@@ -25,8 +28,8 @@ class PeopleController < ApplicationController
     respond_to do |format|
       format.html
       format.json {  render :json => @person.to_json(:include => {
-              :contact_detail => {},
-              :businesses => {:only => :name},
+              :contact_detail => {:include => :phone_numbers},
+              :businesses => {:include => {:contact_detail => {:include => :phone_numbers}}},
               :father => {:except => {:methods => :children}},
               :mother => {:except => {:methods => :children}},
               }, :methods => [:children]

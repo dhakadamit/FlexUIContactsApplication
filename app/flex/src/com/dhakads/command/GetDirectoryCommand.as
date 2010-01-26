@@ -9,7 +9,6 @@ package com.dhakads.command
 	import com.dhakads.model.Person;
 	import com.dhakads.model.builders.PersonBuilder;
 	
-	import mx.controls.Alert;
 	import mx.rpc.IResponder;
 
 	public class GetDirectoryCommand implements ICommand, IResponder
@@ -30,9 +29,7 @@ package com.dhakads.command
 		public function result(data:Object):void
 		{
 			var decoder:JSONDecoder = new JSONDecoder(data.result);
-			var person:Person = new PersonBuilder().build(decoder.getValue().person);
-			Alert.show(person.firstName + "\t" + person.lastName + "\t" + person.middleName);
-//			var people:ArrayCollection = new ArrayCollection(decoder.getValue());			
+			var person:Person = new PersonBuilder().build(decoder.getValue().person);			
 		}
 		
 		public function fault(info:Object):void
