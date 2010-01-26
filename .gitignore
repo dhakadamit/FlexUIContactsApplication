@@ -1,2 +1,4 @@
+.idea/*.*
+public/*.*
 config/database.yml
 log/*.log
