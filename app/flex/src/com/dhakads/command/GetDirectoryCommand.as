@@ -6,9 +6,9 @@ package com.dhakads.command
 	import com.dhakads.business.DirectoryDelegate;
 	import com.dhakads.event.GetDirectoryEvent;
 	import com.dhakads.model.ContactsApplicationModelLocator;
-	import com.dhakads.model.Person;
-	import com.dhakads.model.builders.PersonBuilder;
+	import com.dhakads.model.builders.PeopleBuilder;
 	
+	import mx.collections.ArrayCollection;
 	import mx.rpc.IResponder;
 
 	public class GetDirectoryCommand implements ICommand, IResponder
@@ -29,7 +29,7 @@ package com.dhakads.command
 		public function result(data:Object):void
 		{
 			var decoder:JSONDecoder = new JSONDecoder(data.result);
-			var person:Person = new PersonBuilder().build(decoder.getValue().person);			
+			var people:ArrayCollection = new PeopleBuilder().build(decoder.getValue() as Array);			
 		}
 		
 		public function fault(info:Object):void

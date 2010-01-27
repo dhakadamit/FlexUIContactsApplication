@@ -23,8 +23,11 @@ package com.dhakads.model.builders
 		}
 		
 		private function buildPhoneNumbers(array:Array):ArrayCollection {
-			var phoneNumbers:ArrayCollection = new ArrayCollection();
+			if(array == null) {
+				return new ArrayCollection();
+			}
 			
+			var phoneNumbers:ArrayCollection = new ArrayCollection();
 			for(var i:int = 0 ; i<array.length ; i++) {
 				phoneNumbers.addItem(array[i].number);
 			}

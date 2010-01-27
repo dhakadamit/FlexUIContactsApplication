@@ -16,13 +16,13 @@ package com.dhakads.business
 		}
 		
 		public function getDirectory(alphabet:String = null, pageNumber:Number = 1):void {
-//			var requestUrl:String = new UrlBuilder()
-//										.withBaseUrl(WebServiceUrls.GET_DIRECTORY)
-//										.withParameter("alphabet", alphabet)
-//										.withParameter("page", String(pageNumber))
-//										.build();
-//			
-			ServiceUtils.httpGet('http://localhost:3000/people/1.json', this._responder);
+			var requestUrl:String = new UrlBuilder()
+										.withBaseUrl(WebServiceUrls.GET_DIRECTORY)
+										.withParameter("alphabet", alphabet)
+										.withParameter("page", String(pageNumber))
+										.build();
+			
+			ServiceUtils.httpGet(requestUrl, this._responder);
 		}
 		
 
