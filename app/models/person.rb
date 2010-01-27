@@ -59,12 +59,12 @@ class Person < ActiveRecord::Base
   private
   def self.query_conditions(query, filter)
     case filter
-    when "Name"
+    when "name"
       {:conditions => "first_name LIKE '%#{query}%' OR middle_name LIKE '%#{query}'"}
-    when "Business"
+    when "business"
       {:joins => :businesses, :conditions =>"businesses.name LIKE '%#{query}%'"}
-    when "Area"
-      {:joins => :contact_detail, :conditions =>"contact_details.area LIKE '%#{query}%'"}
+    when "area"
+      {:joins => :contact_detail, :conditions =>"contact_details.area LIKE '%#{query}%'"}  
     end
   end
 

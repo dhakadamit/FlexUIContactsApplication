@@ -3,6 +3,7 @@
 
 	<mx:Script>
 		<![CDATA[
+			import com.dhakads.event.SearchEvent;
 			import com.dhakads.model.ContactsApplicationModelLocator;
 			import com.dhakads.event.GetDirectoryEvent;
 			import mx.controls.Alert;
@@ -22,8 +23,7 @@
 			}										   
 			
 			private function getDirectory():void {
-				var getDirectoryEvent:GetDirectoryEvent = new GetDirectoryEvent();
-				getDirectoryEvent.dispatch();
+				new GetDirectoryEvent().dispatch();
 			}
 			
 		

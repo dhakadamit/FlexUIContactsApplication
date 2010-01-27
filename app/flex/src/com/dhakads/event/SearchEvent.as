@@ -1,0 +1,46 @@
+package com.dhakads.event
+{
+	import com.adobe.cairngorm.control.CairngormEvent;
+
+	public class SearchEvent extends CairngormEvent
+	{
+		public static const SEARCH_EVENT:String = "searchEvent";
+		
+		private var _query:String;
+		private var _filter:String;
+		private var _pageNumber:Number;
+
+		public function SearchEvent(query:String, filter:String = "name", pageNumber:Number = 1)
+		{
+			super(SEARCH_EVENT);
+			this._query = query;
+			this._filter = filter;
+			this._pageNumber = pageNumber;
+		}
+
+		public function get query():String {
+			return _query;
+		}
+
+		public function set query(value:String):void {
+			_query = value;
+		}
+
+		public function get filter():String {
+			return _filter;
+		}
+
+		public function set filter(value:String):void {
+			_filter = value;
+		}
+
+		public function get pageNumber():Number {
+			return _pageNumber;
+		}
+
+		public function set pageNumber(value:Number):void {
+			_pageNumber = value;
+		}
+
+	}
+}

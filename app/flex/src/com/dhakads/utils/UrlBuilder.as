@@ -16,7 +16,7 @@ package com.dhakads.utils
 			return this;
 		}
 		
-		public function withParameter(key:String, value:String):UrlBuilder {
+		public function withParameter(key:String, value:*):UrlBuilder {
 			this._parameters.addItem(key + "=" + value);
 			return this;
 		}
@@ -25,11 +25,11 @@ package com.dhakads.utils
 			var url:String = this._baseUrl;
 			
 			if(this._parameters.length > 1) {
-				url = url + "?" + this._parameters.getItemAt(0);
+				url = url + "?" + this._parameters.getItemAt(0).toString();
 			}
 			
 			for(var i:int = 1; i < this._parameters.length ; i++) {
-				url = url + "&" + this._parameters.getItemAt(i);
+				url = url + "&" + this._parameters.getItemAt(i).toString();
 			}
 			
 			return url;
