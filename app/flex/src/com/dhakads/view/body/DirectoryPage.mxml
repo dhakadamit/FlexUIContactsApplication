@@ -3,6 +3,7 @@
 
 	<mx:Script>
 		<![CDATA[
+			import com.dhakads.event.GetPersonDetailsEvent;
 			import com.dhakads.event.SearchEvent;
 			import com.dhakads.model.ContactsApplicationModelLocator;
 			import com.dhakads.event.GetDirectoryEvent;

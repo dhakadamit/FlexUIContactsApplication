@@ -41,8 +41,8 @@ class PeopleController < ApplicationController
       format.json {  render :json => @person.to_json(:include => {
               :contact_detail => {:include => :phone_numbers},
               :businesses => {:include => {:contact_detail => {:include => :phone_numbers}}},
-              :father => {:except => {:methods => :children}},
-              :mother => {:except => {:methods => :children}},
+              :father => {:only => [:first_name], :methods => {}},
+              :mother => {:only => [:first_name], :methods => {}},
               }, :methods => [:children]
       ) }
     end
