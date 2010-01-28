@@ -22,6 +22,21 @@ package com.dhakads.model.builders
 			return contactDetail;
 		}
 		
+		public function build(streetAddress:String, area:String, city:String,
+							  state:String, pincode:Number,
+							  phoneNumbers:ArrayCollection):ContactDetail{
+			var contactDetail:ContactDetail = new ContactDetail();
+			contactDetail.streetAddress = streetAddress;
+			contactDetail.area = area;
+			contactDetail.city = city;
+			contactDetail.state = state;
+			contactDetail.pincode = pincode;
+			contactDetail.phoneNumbers = phoneNumbers;
+			return contactDetail;
+		}
+
+
+		
 		private function buildPhoneNumbers(array:Array):ArrayCollection {
 			if(array == null) {
 				return new ArrayCollection();

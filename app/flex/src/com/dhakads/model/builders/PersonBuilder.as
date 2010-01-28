@@ -1,5 +1,6 @@
 package com.dhakads.model.builders
 {
+	import com.dhakads.model.ContactDetail;
 	import com.dhakads.model.Person;
 	
 	import mx.collections.ArrayCollection;
@@ -25,6 +26,24 @@ package com.dhakads.model.builders
 			return person;
 		}
 		
+		public function build(firstName:String, middleName:String, sex:String, dob:Date,
+							  contactDetail:ContactDetail, father:Person, mother:Person,
+							  businesses:ArrayCollection, education:String,
+							  lastName:String = "Dhakad"):Person{
+			var person:Person = new Person();
+			person.firstName = firstName;
+			person.lastName = lastName;
+			person.middleName = middleName;
+			person.education = education;
+			person.sex = sex;
+			person.dob = dob;
+			person.contactDetail = contactDetail;
+			person.father = father;
+			person.mother = mother;
+			person.businesses = businesses;
+			return person;
+		}
+
 		private function buildBusinesses(businessesArray:Array):ArrayCollection {
 			if(businessesArray == null) {
 				return new ArrayCollection();

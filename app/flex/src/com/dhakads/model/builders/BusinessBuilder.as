@@ -1,6 +1,7 @@
 package com.dhakads.model.builders
 {
 	import com.dhakads.model.Business;
+	import com.dhakads.model.ContactDetail;
 	
 	public class BusinessBuilder
 	{
@@ -15,5 +16,14 @@ package com.dhakads.model.builders
 			business.contactDetail = new ContactDetailBuilder().buildFromJson(object.contactDetail);
 			return business;
 		}
+		
+		public function build(name:String, description:String, contactDetail:ContactDetail):Business{
+			var business:Business = new Business();
+			business.name = name;
+			business.description = description;
+			business.contactDetail = contactDetail;
+			return business;
+		}
+
 	}
 }
