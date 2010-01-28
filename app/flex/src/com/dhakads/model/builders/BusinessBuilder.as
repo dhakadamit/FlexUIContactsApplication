@@ -4,7 +4,7 @@ package com.dhakads.model.builders
 	
 	public class BusinessBuilder
 	{
-		public function build(object:Object):Business{
+		public function buildFromJson(object:Object):Business{
 			if(object == null) {
 				return new Business();
 			}
@@ -12,7 +12,7 @@ package com.dhakads.model.builders
 			var business:Business = new Business();
 			business.name = object.name;
 			business.description = object.description;
-			business.contactDetail = new ContactDetailBuilder().build(object.contactDetail);
+			business.contactDetail = new ContactDetailBuilder().buildFromJson(object.contactDetail);
 			return business;
 		}
 	}

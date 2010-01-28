@@ -12,7 +12,7 @@ package com.dhakads.model.builders
 			var people:ArrayCollection = new ArrayCollection();
 			var personBuilder:PersonBuilder = new PersonBuilder();
 			for(var i:int=0 ; i<personArray.length ; i++) {
-				people.addItem(personBuilder.build(personArray[i].person));
+				people.addItem(personBuilder.buildFromJson(personArray[i].person));
 			}
 			return people;
 		}

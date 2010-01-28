@@ -7,7 +7,7 @@ package com.dhakads.model.builders
 	public class ContactDetailBuilder
 	{
 
-		public function build(object:Object):ContactDetail{
+		public function buildFromJson(object:Object):ContactDetail{
 			if(object == null) {
 				return new ContactDetail();
 			}

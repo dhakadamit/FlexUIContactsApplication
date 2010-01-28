@@ -6,7 +6,7 @@ package com.dhakads.model.builders
 	
 	public class PersonBuilder
 	{
-		public function build(object:Object):Person{
+		public function buildFromJson(object:Object):Person{
 			if(object == null) {
 				return new Person();
 			}
@@ -18,9 +18,9 @@ package com.dhakads.model.builders
 			person.education = object.education;
 			person.sex = object.sex;
 			person.dob = object.dob as Date;
-			person.contactDetail = new ContactDetailBuilder().build(object.contact_detail);
-			person.father = new PersonBuilder().build(object.father);
-			person.mother = new PersonBuilder().build(object.mother);
+			person.contactDetail = new ContactDetailBuilder().buildFromJson(object.contact_detail);
+			person.father = new PersonBuilder().buildFromJson(object.father);
+			person.mother = new PersonBuilder().buildFromJson(object.mother);
 			person.businesses = buildBusinesses(object.businesses as Array);
 			return person;
 		}
@@ -32,7 +32,7 @@ package com.dhakads.model.builders
 			
 			var businesses:ArrayCollection = new ArrayCollection();
 			for(var i:int=0 ; i < businessesArray.length ; i++) {
-				businesses.addItem(new BusinessBuilder().build(businessesArray[i]));
+				businesses.addItem(new BusinessBuilder().buildFromJson(businessesArray[i]));
 			}
 			return businesses;
 		}

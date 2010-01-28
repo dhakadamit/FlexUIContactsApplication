@@ -24,7 +24,7 @@ package com.dhakads.command
 		public function result(data:Object):void
 		{
 			var decoder:JSONDecoder = new JSONDecoder(data.result);
-			var person:Person = new PersonBuilder().build(decoder.getValue());
+			var person:Person = new PersonBuilder().buildFromJson(decoder.getValue());
 		}
 		
 		public function fault(info:Object):void
