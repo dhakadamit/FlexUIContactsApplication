@@ -4,16 +4,26 @@ package com.dhakads.model
 	
 	public class Person
 	{
+		
+		private var _id:Number;
 		private var _firstName:String;
 		private var _lastName:String;
 		private var _middleName:String;
 		private var _education:String;
 		private var _sex:String;
-		private var _dob:Date;
+		private var _dob:String;
 		private var _contactDetail:ContactDetail;
 		private var _father:Person;
 		private var _mother:Person;
 		private var _businesses:ArrayCollection = new ArrayCollection();
+
+		public function get id():Number {
+			return _id;
+		}
+
+		public function set id(value:Number):void {
+			_id = value;
+		}
 
 		public function get firstName():String {
 			return _firstName;
@@ -55,11 +65,11 @@ package com.dhakads.model
 			_sex = value;
 		}
 
-		public function get dob():Date {
+		public function get dob():String {
 			return _dob;
 		}
 
-		public function set dob(value:Date):void {
+		public function set dob(value:String):void {
 			_dob = value;
 		}
 

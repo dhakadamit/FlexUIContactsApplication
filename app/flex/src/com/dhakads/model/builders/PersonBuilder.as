@@ -18,7 +18,7 @@ package com.dhakads.model.builders
 			person.middleName = object.middle_name;
 			person.education = object.education;
 			person.sex = object.sex;
-			person.dob = object.dob as Date;
+			person.dob = object.dob;
 			person.contactDetail = new ContactDetailBuilder().buildFromJson(object.contact_detail);
 			person.father = new PersonBuilder().buildFromJson(object.father);
 			person.mother = new PersonBuilder().buildFromJson(object.mother);
@@ -26,7 +26,7 @@ package com.dhakads.model.builders
 			return person;
 		}
 		
-		public function build(firstName:String, middleName:String, sex:String, dob:Date,
+		public function build(firstName:String, middleName:String, sex:String, dob:String,
 							  contactDetail:ContactDetail, father:Person, mother:Person,
 							  businesses:ArrayCollection, education:String,
 							  lastName:String = "Dhakad"):Person{
@@ -42,6 +42,35 @@ package com.dhakads.model.builders
 			person.mother = mother;
 			person.businesses = businesses;
 			return person;
+		}
+		
+		public function convertToJson(person:Person):String {
+			var json:String = "{person:{" + 
+									"mother_id:" + person.father.id;
+									"father_id:" + person.mother.id;
+									"dob:" + person.dob;
+									"sex:" + person.sex;
+									"first_name:" + person.firstName;
+									"last_name:" + person.lastName;
+									"middle_name:" + person.middleName;
+									"education:" + person.education;
+									convertBusinessesToJson(person.businesses) +
+									new ContactDetailBuilder().convertToJson(person.contactDetail) + 
+								"}";
+			return json;
+		}
+		
+		private function convertBusinessesToJson(businesses:ArrayCollection):String {
+			var builder:BusinessBuilder = new BusinessBuilder();
+			var json:String = "businesses:[";
+			
+			for(var i:int=0; i<(businesses.length-1) ; i++) {
+				json += builder.convertToJson(businesses[i]) + ", ";
+			}
+			 
+			json += builder.convertToJson(businesses[i]);
+			json += "]";
+			return json;
 		}
 
 		private function buildBusinesses(businessesArray:Array):ArrayCollection {

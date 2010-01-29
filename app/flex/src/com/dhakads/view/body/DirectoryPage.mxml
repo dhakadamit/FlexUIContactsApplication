@@ -24,7 +24,8 @@
 			}										   
 			
 			private function getDirectory():void {
-				new GetDirectoryEvent().dispatch();
+//				new GetDirectoryEvent().dispatch();
+                new GetPersonDetailsEvent(1).dispatch();
 			}
 			
 		

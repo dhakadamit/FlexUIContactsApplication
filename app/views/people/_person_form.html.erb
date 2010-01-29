@@ -1,5 +1,6 @@
 First Name: <%= f.text_field :first_name %>
 Middle Name: <%= f.text_field :last_name %>
+Father id: <%= f.text_field :father_id %>
 
 <% fields_for "person[contact_detail_attributes][]", @contact_detail do |cd_form| %>
   <p>

@@ -4,6 +4,8 @@ package com.dhakads.model
 	
 	public class ContactDetail
 	{
+		
+		private var _id:Number;
 		private var _streetAddress:String;
 		private var _area:String;
 		private var _city:String;
@@ -11,6 +13,13 @@ package com.dhakads.model
 		private var _pincode:Number;
 		private var _phoneNumbers:ArrayCollection = new ArrayCollection();
 
+		public function get id():Number {
+			return _id;
+		}
+
+		public function set id(value:Number):void {
+			_id = value;
+		}
 
 		public function get phoneNumbers():ArrayCollection {
 			return _phoneNumbers;

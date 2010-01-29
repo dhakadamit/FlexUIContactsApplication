@@ -3,9 +3,18 @@ package com.dhakads.model
 	public class Business
 	{
 		
+		private var _id:Number;
 		private var _name:String;
 		private var _description:String;
 		private var _contactDetail:ContactDetail;
+
+		public function get id():Number {
+			return _id;
+		}
+
+		public function set id(value:Number):void {
+			_id = value;
+		}
 
 		public function get contactDetail():ContactDetail {
 			return _contactDetail;

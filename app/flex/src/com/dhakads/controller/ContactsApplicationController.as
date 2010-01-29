@@ -2,10 +2,12 @@ package com.dhakads.controller
 {
 	import com.adobe.cairngorm.control.FrontController;
 	import com.dhakads.command.ChangePageCommand;
+	import com.dhakads.command.CreatePersonCommand;
 	import com.dhakads.command.GetDirectoryCommand;
 	import com.dhakads.command.GetPersonDetailsCommand;
 	import com.dhakads.command.LoginCommand;
 	import com.dhakads.command.SearchCommand;
+	import com.dhakads.event.CreatePersonEvent;
 	import com.dhakads.event.GetDirectoryEvent;
 	import com.dhakads.event.GetPersonDetailsEvent;
 	import com.dhakads.event.LoginEvent;
@@ -25,6 +27,7 @@ package com.dhakads.controller
 			addCommand(GetDirectoryEvent.GET_DIRECTORY_EVENT, GetDirectoryCommand);
 			addCommand(SearchEvent.SEARCH_EVENT, SearchCommand);
 			addCommand(GetPersonDetailsEvent.GET_PERSON_DETAILS, GetPersonDetailsCommand);
+			addCommand(CreatePersonEvent.CREATE_PERSON, CreatePersonCommand);
 		}
 		
 	}

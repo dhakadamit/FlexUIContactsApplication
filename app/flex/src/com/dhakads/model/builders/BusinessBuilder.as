@@ -24,6 +24,16 @@ package com.dhakads.model.builders
 			business.contactDetail = contactDetail;
 			return business;
 		}
+		
+		public function convertToJson(business:Business):String {
+			var json:String = "{" + 
+						      	"name:" + business.name + ", "
+							  	"description:" + business.description + ", "
+								new ContactDetailBuilder().convertToJson(business.contactDetail) +
+							  "}";
+								
+			return json;					  		
+		}
 
 	}
 }

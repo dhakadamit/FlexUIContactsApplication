@@ -34,6 +34,23 @@ package com.dhakads.model.builders
 			contactDetail.phoneNumbers = phoneNumbers;
 			return contactDetail;
 		}
+		
+		public function convertToJson(contactDetail:ContactDetail):String {
+			var json:String = "contact_detail:{" + 
+										"id:" + contactDetail.id + ", "
+										"city:" + contactDetail.city + ", "
+										"pincode:" + contactDetail.pincode + ", "
+										"street_address:" + contactDetail.streetAddress + ", "
+										"area:" + contactDetail.area + ", "
+										"phone_numbers:[" 
+											+ contactDetail.phoneNumbers.toArray().toString()
+											+ "]" + ", "
+										"state:" + contactDetail.city + ", "
+										"}" +	 		 
+									"}";
+									
+			return json;
+		}
 
 
 		

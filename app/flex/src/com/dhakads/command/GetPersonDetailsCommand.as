@@ -8,6 +8,7 @@ package com.dhakads.command
 	import com.dhakads.model.Person;
 	import com.dhakads.model.builders.PersonBuilder;
 	
+	import mx.controls.Alert;
 	import mx.rpc.IResponder;
 
 	public class GetPersonDetailsCommand implements ICommand, IResponder
@@ -25,6 +26,8 @@ package com.dhakads.command
 		{
 			var decoder:JSONDecoder = new JSONDecoder(data.result);
 			var person:Person = new PersonBuilder().buildFromJson(decoder.getValue());
+			var json:String = new PersonBuilder().convertToJson(person);
+			Alert.show(json);
 		}
 		
 		public function fault(info:Object):void
