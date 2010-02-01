@@ -9,10 +9,11 @@ package com.dhakads.model.builders
 
 		public function buildFromJson(object:Object):ContactDetail{
 			if(object == null) {
-				return new ContactDetail();
+				return null;
 			}
 			
 			var contactDetail:ContactDetail = new ContactDetail();
+			contactDetail.id = object.id;
 			contactDetail.streetAddress = object.street_address;
 			contactDetail.area = object.area;
 			contactDetail.city = object.city;
@@ -23,7 +24,7 @@ package com.dhakads.model.builders
 		}
 		
 		public function build(streetAddress:String, area:String, city:String,
-							  state:String, pincode:Number,
+							  state:String, pincode:String,
 							  phoneNumbers:ArrayCollection):ContactDetail{
 			var contactDetail:ContactDetail = new ContactDetail();
 			contactDetail.streetAddress = streetAddress;
@@ -36,18 +37,21 @@ package com.dhakads.model.builders
 		}
 		
 		public function convertToJson(contactDetail:ContactDetail):String {
+			if(contactDetail == null) {
+				return "contact_detail:{}";
+			}
+			
 			var json:String = "contact_detail:{" + 
-										"id:" + contactDetail.id + ", "
-										"city:" + contactDetail.city + ", "
-										"pincode:" + contactDetail.pincode + ", "
-										"street_address:" + contactDetail.streetAddress + ", "
-										"area:" + contactDetail.area + ", "
+										"id:" + contactDetail.id + ", " +
+										"city:" + contactDetail.city + ", " +
+										"pincode:" + contactDetail.pincode + ", " +
+										"street_address:" + contactDetail.streetAddress + ", " +
+										"area:" + contactDetail.area + ", " +
 										"phone_numbers:[" 
 											+ contactDetail.phoneNumbers.toArray().toString()
-											+ "]" + ", "
-										"state:" + contactDetail.city + ", "
-										"}" +	 		 
-									"}";
+											+ "]" + ", " +
+										"state:" + contactDetail.city +
+										"}";
 									
 			return json;
 		}

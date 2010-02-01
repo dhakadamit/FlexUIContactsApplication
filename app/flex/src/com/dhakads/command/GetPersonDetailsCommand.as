@@ -4,11 +4,11 @@ package com.dhakads.command
 	import com.adobe.cairngorm.control.CairngormEvent;
 	import com.adobe.serialization.json.JSONDecoder;
 	import com.dhakads.business.GetPersonDetailsDelegate;
+	import com.dhakads.event.CreatePersonEvent;
 	import com.dhakads.event.GetPersonDetailsEvent;
 	import com.dhakads.model.Person;
 	import com.dhakads.model.builders.PersonBuilder;
 	
-	import mx.controls.Alert;
 	import mx.rpc.IResponder;
 
 	public class GetPersonDetailsCommand implements ICommand, IResponder
@@ -25,9 +25,11 @@ package com.dhakads.command
 		public function result(data:Object):void
 		{
 			var decoder:JSONDecoder = new JSONDecoder(data.result);
-			var person:Person = new PersonBuilder().buildFromJson(decoder.getValue());
+			var person:Person = new PersonBuilder().buildFromJson(decoder.getValue().person);
 			var json:String = new PersonBuilder().convertToJson(person);
-			Alert.show(json);
+			
+			// testing
+			new CreatePersonEvent(person).dispatch();
 		}
 		
 		public function fault(info:Object):void

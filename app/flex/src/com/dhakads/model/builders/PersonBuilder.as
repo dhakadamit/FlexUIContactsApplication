@@ -13,6 +13,7 @@ package com.dhakads.model.builders
 			}
 			
 			var person:Person = new Person();
+			person.id = object.id;
 			person.firstName = object.first_name;
 			person.lastName = object.last_name;
 			person.middleName = object.middle_name;
@@ -45,29 +46,35 @@ package com.dhakads.model.builders
 		}
 		
 		public function convertToJson(person:Person):String {
+			if(person == null) {
+				return "{}";
+			}
 			var json:String = "{person:{" + 
-									"mother_id:" + person.father.id;
-									"father_id:" + person.mother.id;
-									"dob:" + person.dob;
-									"sex:" + person.sex;
-									"first_name:" + person.firstName;
-									"last_name:" + person.lastName;
-									"middle_name:" + person.middleName;
-									"education:" + person.education;
-									convertBusinessesToJson(person.businesses) +
-									new ContactDetailBuilder().convertToJson(person.contactDetail) + 
+									"mother_id:" + person.father.id + ", " +
+									"father_id:" + person.mother.id + ", " +
+									"dob:" + person.dob + ", " +
+									"sex:" + person.sex + ", " +
+									"first_name:" + person.firstName + ", " +
+									"last_name:" + person.lastName + ", " +
+									"middle_name:" + person.middleName + ", " +
+									"education:" + person.education + ", " +
+									convertBusinessesToJson(person.businesses) + ", " +
+									new ContactDetailBuilder().convertToJson(person.contactDetail) +
+									"}" +    
 								"}";
 			return json;
 		}
 		
 		private function convertBusinessesToJson(businesses:ArrayCollection):String {
+			if(businesses.length == 0) {
+				return "businesses:[]"
+			}
 			var builder:BusinessBuilder = new BusinessBuilder();
 			var json:String = "businesses:[";
 			
 			for(var i:int=0; i<(businesses.length-1) ; i++) {
 				json += builder.convertToJson(businesses[i]) + ", ";
 			}
-			 
 			json += builder.convertToJson(businesses[i]);
 			json += "]";
 			return json;

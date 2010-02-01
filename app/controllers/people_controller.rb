@@ -11,7 +11,7 @@ class PeopleController < ApplicationController
                                                             :contact_detail => {:only => [:area, :city]},
                                                             :businesses => {:only => :name}
                                                     }
-                                                    )}
+      )}
     end
   end
 
@@ -22,11 +22,11 @@ class PeopleController < ApplicationController
       format.html
       format.xml { render :xml => @results.to_xml() }
       format.json { render :json => @results.to_json(:only => [:first_name, :middle_name],
-                                                    :include => {
-                                                                  :contact_detail => {:only => [:area, :city]},
-                                                                  :businesses => {:only => :name}
-                                                                }
-                                                    )}
+                                                     :include => {
+                                                             :contact_detail => {:only => [:area, :city]},
+                                                             :businesses => {:only => :name}
+                                                     }
+      )}
     end
   end
 
@@ -41,7 +41,7 @@ class PeopleController < ApplicationController
               :father => {:only => [:first_name], :methods => {}},
               :mother => {:only => [:first_name], :methods => {}},
               }, :methods => [:children]
-      ) }         
+      ) }
     end
   end
 
@@ -54,10 +54,21 @@ class PeopleController < ApplicationController
   def create
     @person = Person.new(params[:person])
     if @person.save
-      flash[:notice] = "Person successfully created"
-      redirect_to :action => :show, :id => @person
+      respond_to do |format|
+        format.html do
+          flash[:notice] = "Person successfully created"
+          redirect_to :action => :show, :id => @person
+        end
+        format.json {  render :json => "Person successfully created", :status => 200 }
+      end
     else
-      render :action => :new
+      respond_to do |format|
+        format.html do
+          render :action => :new
+        end
+        format.json {  render :json => "Couldn't create", :status => 500 }
+      end
+
     end
   end
 

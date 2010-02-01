@@ -5,19 +5,19 @@ package com.dhakads.model
 	public class ContactDetail
 	{
 		
-		private var _id:Number;
+		private var _id:String;
 		private var _streetAddress:String;
 		private var _area:String;
 		private var _city:String;
 		private var _state:String;
-		private var _pincode:Number;
+		private var _pincode:String;
 		private var _phoneNumbers:ArrayCollection = new ArrayCollection();
 
-		public function get id():Number {
+		public function get id():String {
 			return _id;
 		}
 
-		public function set id(value:Number):void {
+		public function set id(value:String):void {
 			_id = value;
 		}
 
@@ -61,11 +61,11 @@ package com.dhakads.model
 			_state = value;
 		}
 
-		public function get pincode():Number {
+		public function get pincode():String {
 			return _pincode;
 		}
 
-		public function set pincode(value:Number):void {
+		public function set pincode(value:String):void {
 			_pincode = value;
 		}
 

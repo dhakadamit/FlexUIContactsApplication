@@ -3,6 +3,7 @@
 
 	<mx:Script>
 		<![CDATA[
+			import com.dhakads.model.Person;
 			import com.dhakads.event.GetPersonDetailsEvent;
 			import com.dhakads.event.SearchEvent;
 			import com.dhakads.model.ContactsApplicationModelLocator;
@@ -11,34 +12,33 @@
 			import mx.collections.Sort;
 			import mx.collections.SortField;
 			import mx.events.FlexEvent;
-			
+
 			private static const allAlphabets:Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-													   'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 
+													   'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
 													   'U', 'V', 'W', 'X', 'Y', 'Z'];
-													   
-			[Bindable]										   
-			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance(); 
-													   
+
+			[Bindable]
+			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
+
 			private function init():void {
 				getDirectory();
-			}										   
-			
-			private function getDirectory():void {
-//				new GetDirectoryEvent().dispatch();
-                new GetPersonDetailsEvent(1).dispatch();
 			}
+
+			private function getDirectory():void {
+				new GetDirectoryEvent().dispatch();
+            }
 			
 		
 		]]>
 	</mx:Script>
-	
+
 	<mx:Style source="../css/DirectoryPage.css"/>
-	
+
 	<mx:VBox verticalGap="20" bottom="80" left="80" right="80" top="40">
-		
+
 		<mx:HBox verticalAlign="middle" horizontalGap="10">
 			<mx:Label text="Index:" styleName="indexLinkTextStyle"/>
-			<mx:LinkBar dataProvider="{allAlphabets}" styleName="indexLinkStyle"/>	
+			<mx:LinkBar dataProvider="{allAlphabets}" styleName="indexLinkStyle"/>
 		</mx:HBox>
 		
 		<mx:DataGrid id="directoryListing" dataProvider="{model.people}" rowCount="{model.people.length}" width="100%" styleName="directoryStyle" horizontalScrollPolicy="off" verticalScrollPolicy="off">
@@ -46,29 +46,29 @@
 				<mx:DataGridColumn headerText="Name" paddingLeft="20">
 					<mx:itemRenderer>
         			 	<mx:Component>
-        			 		<mx:LinkButton label="{data.name}" themeColor="#FFFFFF" textAlign="left" textRollOverColor="#013E7D"/>				            			 		
-        			 	</mx:Component>                        			
+        			 		<mx:LinkButton label="{data.name}" themeColor="#FFFFFF" textAlign="left" textRollOverColor="#013E7D"/>
+        			 	</mx:Component>
                     </mx:itemRenderer>
 				</mx:DataGridColumn>
-				
+
 				<mx:DataGridColumn headerText="Area" paddingLeft="20">
 					<mx:itemRenderer>
         			 	<mx:Component>
-        			 		<mx:Label text="{data.name}" />				            			 		
-        			 	</mx:Component>                        			
+        			 		<mx:Label text="{data.name}" />
+        			 	</mx:Component>
                     </mx:itemRenderer>
 				</mx:DataGridColumn>
-				
+
 				<mx:DataGridColumn headerText="Profession" paddingLeft="20">
 					<mx:itemRenderer>
         			 	<mx:Component>
-        			 		<mx:Label text="{data.name}" />				            			 		
-        			 	</mx:Component>                        			
+        			 		<mx:Label text="{data.name}" />
+        			 	</mx:Component>
                     </mx:itemRenderer>
 				</mx:DataGridColumn>
 			</mx:columns>
-		</mx:DataGrid> 
-		
+		</mx:DataGrid>
+
 		<mx:HBox verticalAlign="middle" horizontalGap="10">
 			<mx:Label text="1-10 of 15" styleName="indexLinkTextStyle"/>
 			<mx:LinkButton id="previous">
@@ -78,6 +78,6 @@
 				<mx:skin>@Embed(source='../../../../../assets/previous-button-next.png')</mx:skin>
 			</mx:LinkButton>
 		</mx:HBox>
-		
+
 	</mx:VBox>
 </mx:Canvas>

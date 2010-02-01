@@ -7,10 +7,11 @@ package com.dhakads.model.builders
 	{
 		public function buildFromJson(object:Object):Business{
 			if(object == null) {
-				return new Business();
+				return null;
 			}
 			
 			var business:Business = new Business();
+			business.id = object.id;
 			business.name = object.name;
 			business.description = object.description;
 			business.contactDetail = new ContactDetailBuilder().buildFromJson(object.contactDetail);
@@ -26,9 +27,13 @@ package com.dhakads.model.builders
 		}
 		
 		public function convertToJson(business:Business):String {
+			if(business == null) {
+				return "{}";
+			}
+			
 			var json:String = "{" + 
-						      	"name:" + business.name + ", "
-							  	"description:" + business.description + ", "
+						      	"name:" + business.name + ", " +
+							  	"description:" + business.description + ", " +
 								new ContactDetailBuilder().convertToJson(business.contactDetail) +
 							  "}";
 								

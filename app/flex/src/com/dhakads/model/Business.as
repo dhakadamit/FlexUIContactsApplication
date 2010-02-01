@@ -3,16 +3,16 @@ package com.dhakads.model
 	public class Business
 	{
 		
-		private var _id:Number;
+		private var _id:String;
 		private var _name:String;
 		private var _description:String;
 		private var _contactDetail:ContactDetail;
 
-		public function get id():Number {
+		public function get id():String {
 			return _id;
 		}
 
-		public function set id(value:Number):void {
+		public function set id(value:String):void {
 			_id = value;
 		}
 
