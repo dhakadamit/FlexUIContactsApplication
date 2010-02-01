@@ -5,7 +5,7 @@ package com.dhakads.model
 	public class Person
 	{
 		
-		private var _id:Number;
+		private var _id:String;
 		private var _firstName:String;
 		private var _lastName:String;
 		private var _middleName:String;
@@ -17,11 +17,11 @@ package com.dhakads.model
 		private var _mother:Person;
 		private var _businesses:ArrayCollection = new ArrayCollection();
 
-		public function get id():Number {
+		public function get id():String {
 			return _id;
 		}
 
-		public function set id(value:Number):void {
+		public function set id(value:String):void {
 			_id = value;
 		}
 
