@@ -3,6 +3,7 @@ package com.dhakads.command
 	import com.adobe.cairngorm.commands.ICommand;
 	import com.adobe.cairngorm.control.CairngormEvent;
 	import com.adobe.serialization.json.JSONDecoder;
+	import com.dhakads.business.FaultHandler;
 	import com.dhakads.business.SearchDelegate;
 	import com.dhakads.event.SearchEvent;
 	import com.dhakads.model.builders.PeopleBuilder;
@@ -27,6 +28,10 @@ package com.dhakads.command
 		
 		public function fault(info:Object):void
 		{
+			var statusCode:Number = info.statusCode;
+			if(statusCode == 401) {
+				new FaultHandler().loginRequired();
+			}
 		}
 		
 	}
