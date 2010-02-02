@@ -1,7 +1,7 @@
 package com.dhakads.controller
 {
 	import com.adobe.cairngorm.control.FrontController;
-	import com.dhakads.command.ChangePageCommand;
+	import com.dhakads.command.PageChangeCommand;
 	import com.dhakads.command.CreatePersonCommand;
 	import com.dhakads.command.GetDirectoryCommand;
 	import com.dhakads.command.GetPersonDetailsCommand;
@@ -24,7 +24,7 @@ package com.dhakads.controller
 		}
 		
 		public function initialiseCommands():void {
-			addCommand(PageChangeEvent.PAGE_CHANGE_EVENT, ChangePageCommand);
+			addCommand(PageChangeEvent.PAGE_CHANGE_EVENT, PageChangeCommand);
 			addCommand(LoginEvent.LOGIN_EVENT, LoginCommand);
 			addCommand(LogoutEvent.LOGOUT_EVENT, LogoutCommand);
 			addCommand(GetDirectoryEvent.GET_DIRECTORY_EVENT, GetDirectoryCommand);
