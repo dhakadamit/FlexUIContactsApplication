@@ -53,11 +53,11 @@ package com.dhakads.model
 		}
 
 		public function set currentPage(value:Number):void {
-			if(isLoggedIn) {
+//			if(isLoggedIn) {
 				this._currentPage = value;
-			} else {
-				this._currentPage = Pages.HOME_PAGE;
-			}
+//			} else {
+//				this._currentPage = Pages.HOME_PAGE;
+//			}
 		}
 
 		
