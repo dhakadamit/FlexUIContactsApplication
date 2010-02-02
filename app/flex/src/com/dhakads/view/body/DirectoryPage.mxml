@@ -46,7 +46,7 @@
 				<mx:DataGridColumn headerText="Name" paddingLeft="20">
 					<mx:itemRenderer>
         			 	<mx:Component>
-        			 		<mx:LinkButton label="{data.name}" themeColor="#FFFFFF" textAlign="left" textRollOverColor="#013E7D"/>
+        			 		<mx:LinkButton label="{data.firstName + ' ' + data.middleName}" themeColor="#FFFFFF" textAlign="left" textRollOverColor="#013E7D"/>
         			 	</mx:Component>
                     </mx:itemRenderer>
 				</mx:DataGridColumn>
@@ -54,7 +54,15 @@
 				<mx:DataGridColumn headerText="Area" paddingLeft="20">
 					<mx:itemRenderer>
         			 	<mx:Component>
-        			 		<mx:Label text="{data.name}" />
+        			 		<mx:Label text="{data.contactDetail.area}" />
+        			 	</mx:Component>
+                    </mx:itemRenderer>
+				</mx:DataGridColumn>
+				
+				<mx:DataGridColumn headerText="City" paddingLeft="20">
+					<mx:itemRenderer>
+        			 	<mx:Component>
+        			 		<mx:Label text="{data.contactDetail.city}" />
         			 	</mx:Component>
                     </mx:itemRenderer>
 				</mx:DataGridColumn>
@@ -62,7 +70,7 @@
 				<mx:DataGridColumn headerText="Profession" paddingLeft="20">
 					<mx:itemRenderer>
         			 	<mx:Component>
-        			 		<mx:Label text="{data.name}" />
+        			 		<mx:Label text="{data.businesses.getItemAt(0).name}" />
         			 	</mx:Component>
                     </mx:itemRenderer>
 				</mx:DataGridColumn>

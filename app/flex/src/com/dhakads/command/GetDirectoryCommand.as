@@ -30,7 +30,7 @@ package com.dhakads.command
 		public function result(data:Object):void
 		{
 			var decoder:JSONDecoder = new JSONDecoder(data.result);
-			var people:ArrayCollection = new PeopleBuilder().build(decoder.getValue() as Array);			
+			model.people = new PeopleBuilder().build(decoder.getValue() as Array);			
 		}
 		
 		public function fault(info:Object):void
