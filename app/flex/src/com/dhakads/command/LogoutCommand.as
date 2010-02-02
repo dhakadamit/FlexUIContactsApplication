@@ -6,6 +6,7 @@ package com.dhakads.command
 	import com.dhakads.model.ContactsApplicationModelLocator;
 	import com.dhakads.model.Pages;
 	
+	import mx.controls.Alert;
 	import mx.rpc.IResponder;
 
 	public class LogoutCommand implements ICommand, IResponder

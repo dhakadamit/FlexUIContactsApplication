@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
   def create
     self.current_user =
-      User.authenticate(params[:login], params[:password])
+            User.authenticate(params[:login], params[:password])
     if logged_in?
       respond_to do |format|
         format.html do
@@ -29,7 +29,12 @@ class SessionsController < ApplicationController
     self.current_user.forget_me if logged_in?
     cookies.delete :auth_token
     reset_session
-    flash[:notice] = "You have been logged out."
-    redirect_back_or_default('/')
+    respond_to do |format|
+      format.html do
+        flash[:notice] = "You have been logged out."
+        redirect_back_or_default('/')
+      end
+      format.json { render :text => "Logged out successfully", :status => 200 }
+    end
   end
 end

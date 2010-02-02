@@ -5,21 +5,28 @@
 	
 	<mx:Script>
 		<![CDATA[
+			import mx.collections.ArrayCollection;
+			import com.dhakads.event.LogoutEvent;
 			import com.dhakads.model.Pages;
 			import com.dhakads.model.ContactsApplicationModelLocator;
 			import mx.controls.Alert;
 			import com.dhakads.event.PageChangeEvent;
 			import mx.events.ItemClickEvent;
 			
+			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 			
 			public function buttonBarItemClickHandler(event:ItemClickEvent):void {
 				var pageNumber:Number;
-				var selectedPage:String = event.label.toLowerCase();
-				if( selectedPage == "home") {
+				var selectedPage:String = event.label;
+				if( selectedPage == "Login") {
 					pageNumber = Pages.HOME_PAGE;
 				}
-				if (selectedPage == "directory") {
+				if( selectedPage == "Logout") {
+					new LogoutEvent().dispatch();
+					return;
+				}
+				if (selectedPage == "Directory") {
 					pageNumber = Pages.DIRECTORY_PAGE;
 				}
 				
@@ -35,14 +42,9 @@
 		<!--<mx:Label id="logoText" text="Dhakad's" top="5" left="20" styleName="logo"></mx:Label>-->
 	</mx:Canvas>	
 	
-	<mx:ButtonBar id="mainControlBar" bottom="10" selectedIndex="0" doubleClickEnabled="false"
-		focusEnabled="false" styleName="buttonBarStyle" right="450" itemClick="buttonBarItemClickHandler(event);">
-		<mx:dataProvider>
-                <mx:Array>
-                    <mx:String>Home</mx:String>
-                    <mx:String>Directory</mx:String>
-                </mx:Array>
-            </mx:dataProvider>		
+	<mx:ButtonBar id="mainControlBar" bottom="10" right="450" dataProvider="{model.buttonsInMainControlBar}"
+		selectedIndex="0" doubleClickEnabled="false" styleName="buttonBarStyle" 
+		focusEnabled="false" itemClick="buttonBarItemClickHandler(event);">		
 	</mx:ButtonBar>
 	
 	<mx:VBox width="25%" right="40" top="5">
