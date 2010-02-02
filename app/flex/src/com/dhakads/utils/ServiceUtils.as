@@ -43,7 +43,7 @@ package com.dhakads.utils
             call.addResponder(responder);
         }
         
-        public static function httpDestroy(url:String,  request:Object, responder:IResponder = null, sendXML:Boolean = false):void
+        public static function httpDestroy(url:String,  responder:IResponder = null, request:Object = null, sendXML:Boolean = false):void
         {
             var service:HTTPService = new HTTPService();
             service.url = url;

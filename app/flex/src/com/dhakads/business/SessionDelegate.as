@@ -17,6 +17,11 @@ package com.dhakads.business
 		public function create(username:String, password:String):void {
 			ServiceUtils.httpPost(WebServiceUrls.CREATE_SESSION, {login:username, password:password}, this._responder);  
 		}
+		
+		public function destroy():void {
+			ServiceUtils.httpDestroy(WebServiceUrls.DELETE_SESSION, this._responder);
+		}
+
 
 	}
 }
