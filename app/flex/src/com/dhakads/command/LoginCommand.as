@@ -27,6 +27,7 @@ package com.dhakads.command
 		
 		public function result(data:Object):void {
 			this.model.currentPage = Pages.DIRECTORY_PAGE;
+			this.model.isLoggedIn = true;
 		}
 		
 		public function fault(data:Object):void {

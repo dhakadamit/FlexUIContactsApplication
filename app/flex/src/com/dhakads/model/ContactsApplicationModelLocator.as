@@ -9,6 +9,7 @@ package com.dhakads.model
 	{   
 		private static var modelLocator:ContactsApplicationModelLocator;
 		public var currentPage:Number = Pages.DIRECTORY_PAGE;
+		public var isLoggedIn:Boolean = false;
 		public var serverError:String; 
 		public var people:ArrayCollection;
 
