@@ -50,7 +50,7 @@ package com.dhakads.utils
             service.contentType = sendXML ? "application/xml" : "application/x-www-form-urlencoded";
             service.resultFormat = "e4x";
             service.method = "POST";
-            request["_method"] = "DELETE";
+            request = (request == null) ? {"_method":"DELETE"} : request["_method"] = "DELETE";            
             service.request = request;
             service.useProxy = false;
             var call:AsyncToken = service.send();

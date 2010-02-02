@@ -6,6 +6,7 @@ package com.dhakads.command
 	import com.dhakads.business.DirectoryDelegate;
 	import com.dhakads.event.GetDirectoryEvent;
 	import com.dhakads.model.ContactsApplicationModelLocator;
+	import com.dhakads.model.Pages;
 	import com.dhakads.model.builders.PeopleBuilder;
 	
 	import mx.collections.ArrayCollection;
@@ -34,6 +35,10 @@ package com.dhakads.command
 		
 		public function fault(info:Object):void
 		{
+//			var statusCode:String = info.statusCode;
+//			if(info.statusCode != 200) {
+//				model.currentPage = Pages.HOME_PAGE;
+//			}
 		}
 		
 	}
