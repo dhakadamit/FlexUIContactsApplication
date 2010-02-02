@@ -8,7 +8,7 @@ package com.dhakads.model
 	public class ContactsApplicationModelLocator implements ModelLocator
 	{   
 		private static var modelLocator:ContactsApplicationModelLocator;
-		public var currentPage:Number = Pages.DIRECTORY_PAGE;
+		public var currentPage:Number = Pages.HOME_PAGE;
 		public var isLoggedIn:Boolean = false;
 		public var serverError:String; 
 		public var people:ArrayCollection;

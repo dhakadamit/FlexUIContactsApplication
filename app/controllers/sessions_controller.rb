@@ -10,24 +10,17 @@ class SessionsController < ApplicationController
     self.current_user =
       User.authenticate(params[:login], params[:password])
     if logged_in?
-      if params[:remember_me] == "1"
-        self.current_user.remember_me
-        cookies[:auth_token] = {
-          :value => self.current_user.remember_token ,
-          :expires =>
-            self.current_user.remember_token_expires_at }
-      end
       respond_to do |format|
         format.html do
           redirect_back_or_default('/')
           flash[:notice] = "Logged in successfully"
         end
-        format.xml  { render :xml => self.current_user.to_xml }
+        format.json  { render :text => "Logged in successfully", :status => 200 }
       end
     else
       respond_to do |format|
         format.html { render :action => 'new' }
-        format.xml { render :text => "badlogin", :status => 401 }
+        format.json { render :text => "Login failed", :status => 401 }
       end
     end
   end
