@@ -26,7 +26,7 @@ package com.dhakads.model
 		}
 
 		public function get firstName():String {
-			return _firstName;
+			return (_firstName == null) ? "" : _firstName;
 		}
 
 		public function set firstName(value:String):void {
@@ -42,7 +42,7 @@ package com.dhakads.model
 		}
 
 		public function get middleName():String {
-			return _middleName;
+			return (_middleName == null) ? "" : _middleName;
 		}
 
 		public function set middleName(value:String):void {
