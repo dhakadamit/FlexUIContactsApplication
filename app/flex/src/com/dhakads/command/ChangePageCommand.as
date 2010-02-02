@@ -17,7 +17,7 @@ package com.dhakads.command
 		public function execute(event:CairngormEvent):void
 		{
 			var pageChangeEvent:PageChangeEvent = PageChangeEvent (event);
-			this.model.pageToView = pageChangeEvent.pageNumber;
+			this.model.currentPage = pageChangeEvent.pageNumber;
 		}	
 	}
 }

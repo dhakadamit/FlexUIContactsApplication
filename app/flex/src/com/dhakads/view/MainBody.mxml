@@ -11,7 +11,7 @@
 		]]>
 	</mx:Script>
 	
-	<mx:ViewStack id="pages" width="100%" height="100%" selectedIndex="{model.pageToView}">
+	<mx:ViewStack id="pages" width="100%" height="100%" selectedIndex="{model.currentPage}">
 		<comps:HomePage id="home" />
 		<comps:DirectoryPage id="directory" bottom="80" left="80" right="150" top="80" /> 
 		<comps:PersonDetailsPage id="personDetails" />

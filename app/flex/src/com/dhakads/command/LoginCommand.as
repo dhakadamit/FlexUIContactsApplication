@@ -26,7 +26,7 @@ package com.dhakads.command
 		}
 		
 		public function result(data:Object):void {
-			this.model.pageToView = Pages.DIRECTORY_PAGE;
+			this.model.currentPage = Pages.DIRECTORY_PAGE;
 		}
 		
 		public function fault(data:Object):void {
