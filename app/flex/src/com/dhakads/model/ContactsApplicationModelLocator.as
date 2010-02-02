@@ -1,7 +1,6 @@
 package com.dhakads.model
 {
 	import com.adobe.cairngorm.model.ModelLocator;
-	import com.dhakads.dev.DebugMessage;
 	
 	import mx.collections.ArrayCollection;
 
@@ -12,8 +11,7 @@ package com.dhakads.model
 		private static const LOGIN:String = "Login";
 		private static const LOGOUT:String = "Logout";
 		private var _isLoggedIn:Boolean = false;
-		
-		public var currentPage:Number = Pages.HOME_PAGE;
+		private var _currentPage:Number = Pages.HOME_PAGE;
 		public var serverError:String; 
 		public var people:ArrayCollection;
 		public var buttonsInMainControlBar:ArrayCollection = new ArrayCollection([LOGIN, "Directory"]);
@@ -49,6 +47,20 @@ package com.dhakads.model
 		public function get isLoggedIn():Boolean {
 			return _isLoggedIn;
 		}
+		
+		public function get currentPage():Number {
+			return this._currentPage;
+		}
+
+		public function set currentPage(value:Number):void {
+			if(isLoggedIn) {
+				this._currentPage = value;
+			} else {
+				this._currentPage = Pages.HOME_PAGE;
+			}
+		}
+
+		
 				
 	}
 }
