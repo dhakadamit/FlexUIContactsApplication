@@ -5,6 +5,7 @@ package com.dhakads.business
 	
 	public class FaultHandler
 	{
+		[Bindable]
 		private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 		
 		public function loginRequired():void {

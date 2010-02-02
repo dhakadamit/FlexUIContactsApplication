@@ -9,7 +9,7 @@ module AuthenticatedSystem
     # Accesses the current user from the session. 
     # Future calls avoid the database because nil is not equal to false.
     def current_user
-      @current_user ||= (login_from_session || login_from_basic_auth || login_from_cookie) unless @current_user == false
+      @current_user ||= (login_from_session) unless @current_user == false
     end
 
     # Store the given user id in the session.
@@ -66,8 +66,8 @@ module AuthenticatedSystem
           store_location
           redirect_to new_sessions_path
         end
-        format.any do
-          request_http_basic_authentication 'Web Password'
+        format.json do
+          render :json => "Login required", :status => 401
         end
       end
     end
