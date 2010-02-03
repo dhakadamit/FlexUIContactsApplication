@@ -34,7 +34,7 @@
      	    }			
 		]]>
 	</mx:Script>
-	
+	<mx:LinkBar id="tmp"/>
 	<controllers:ContactsApplicationController id="frontController"/> 
 	
 		<mx:VBox id="applicationContent" width="1280" paddingTop="0" paddingLeft="20" paddingRight="20" verticalGap="0"

@@ -14,6 +14,8 @@
 			import mx.events.FlexEvent;
 			import com.dhakads.utils.PaginationManager;
 			import mx.collections.ArrayCollection;
+			import mx.events.ItemClickEvent;
+			
 
 			private static const ALL_ALPHABETS:Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 													   'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
@@ -22,20 +24,28 @@
 			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 			[Bindable]
-			private var paginationManager:PaginationManager = new PaginationManager(getDirectory, totalCount);	
-		
+			private var paginationManager:PaginationManager;
+			private var alphabet:String = "";
+			
 			private function init():void {
-				attachEvents();
+				paginationManager = new PaginationManager(getDirectory, totalCount);	
 				paginationManager.firstSetOfResults();
+				attachEvents();
 			}
 			
 			private function attachEvents():void {
 				previous.addEventListener(MouseEvent.CLICK, paginationManager.previousSetOfResults);
 				next.addEventListener(MouseEvent.CLICK, paginationManager.nextSetOfResults);
+				alphabeticalIndex.addEventListener(ItemClickEvent.ITEM_CLICK, updateDirectoryForAlphabet);
+			}
+			
+			private function updateDirectoryForAlphabet(event:ItemClickEvent):void {
+				alphabet = String (event.label);
+				paginationManager.firstSetOfResults();
 			}
 
 			private function getDirectory(pageNumber:Number = 1):void {
-				new GetDirectoryEvent(pageNumber, "").dispatch();								
+				new GetDirectoryEvent(pageNumber, alphabet).dispatch();								
             }
             
             private function totalCount():Number {
@@ -52,7 +62,7 @@
 
 		<mx:HBox verticalAlign="middle" horizontalGap="10">
 			<mx:Label text="Index:" styleName="indexLinkTextStyle"/>
-			<mx:LinkBar dataProvider="{ALL_ALPHABETS}" styleName="indexLinkStyle"/>
+			<mx:LinkBar id="alphabeticalIndex" dataProvider="{ALL_ALPHABETS}" styleName="indexLinkStyle"/>
 		</mx:HBox>
 		
 		<mx:DataGrid id="directoryListing" dataProvider="{model.people}" rowCount="{model.people.length}" width="100%" styleName="directoryStyle" horizontalScrollPolicy="off" verticalScrollPolicy="off">
