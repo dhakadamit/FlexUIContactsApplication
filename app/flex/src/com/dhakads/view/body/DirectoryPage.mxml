@@ -22,7 +22,7 @@
 			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 			[Bindable]
-			private var paginationManager:PaginationManager = new PaginationManager(getDirectory, getResults);	
+			private var paginationManager:PaginationManager = new PaginationManager(getDirectory, totalCount);	
 		
 			private function init():void {
 				paginationManager.firstSetOfResults();
@@ -32,8 +32,8 @@
 				new GetDirectoryEvent(pageNumber, "").dispatch();								
             }
             
-            private function getResults():ArrayCollection {
-            	return model.people;
+            private function totalCount():Number {
+            	return 8;
             }
             
             

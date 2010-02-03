@@ -9,15 +9,15 @@ package com.dhakads.view.business
 		private var _displayingItemsFrom:Number = 0;
 		private var _displayingItemsTo:Number = 0;
 		private var fetchNewResultSet:Function;
-		private var resultSet:Function;
+		private var fetchTotalCount:Function;
 		
 		[Bindable]
 		public var displayString:String;
 	
-		public function PaginationManager(fetchNewResultSet:Function, resultSet:Function)
+		public function PaginationManager(fetchNewResultSet:Function, fetchTotalCount:Function)
 		{
 			this.fetchNewResultSet = fetchNewResultSet;
-			this.resultSet = resultSet;
+			this.fetchTotalCount = fetchTotalCount;
 		}
 		
 		public function firstSetOfResults():void {
@@ -31,7 +31,7 @@ package com.dhakads.view.business
 			if(_currentPage < calculateTotalNumberOfPages()) {
 				++_currentPage;
 				fetchNewResultSet(_currentPage);
-//				_totalCount = resultSet().length;
+				_totalCount = fetchTotalCount();
 				updateDisplayString();
 			}			
 		}
@@ -40,7 +40,7 @@ package com.dhakads.view.business
 			if(_currentPage > 1) {
 				--_currentPage;
 				fetchNewResultSet(_currentPage);
-//				_totalCount = resultSet().length;
+				_totalCount = fetchTotalCount();
 				updateDisplayString();
 			}
 		}
