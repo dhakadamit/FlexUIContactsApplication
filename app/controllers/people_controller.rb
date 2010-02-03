@@ -2,7 +2,7 @@ class PeopleController < ApplicationController
   #before_filter :login_required
 
   def directory
-    @people = Person.find_by_first_alphabet(params[:alphabet]).paginate :page => params[:page], :per_page => 20
+    @people = Person.find_by_first_alphabet(params[:alphabet]).paginate :page => params[:page], :per_page => 3
     respond_to do |format|
       format.html
       format.xml { render :xml => @people.to_xml() }

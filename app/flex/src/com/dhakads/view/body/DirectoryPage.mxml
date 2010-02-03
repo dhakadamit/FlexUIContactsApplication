@@ -13,6 +13,7 @@
 			import mx.collections.SortField;
 			import mx.events.FlexEvent;
 			import com.dhakads.view.business.PaginationManager;
+			import mx.collections.ArrayCollection;
 
 			private static const ALL_ALPHABETS:Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 													   'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
@@ -20,19 +21,22 @@
 
 			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
-			
 			[Bindable]
-			private var paginationManager:PaginationManager = new PaginationManager(11);
-			
+			private var paginationManager:PaginationManager = new PaginationManager(getDirectory, getResults);	
+		
 			private function init():void {
-				getDirectory();
+				paginationManager.firstSetOfResults();
 			}
 
-			private function getDirectory():void {
-				new GetDirectoryEvent().dispatch();
-								
-            }	
-		
+			private function getDirectory(pageNumber:Number = 1):void {
+				new GetDirectoryEvent(pageNumber, "").dispatch();								
+            }
+            
+            private function getResults():ArrayCollection {
+            	return model.people;
+            }
+            
+            
 		]]>
 	</mx:Script>
 

@@ -8,7 +8,7 @@ package com.dhakads.event
 		private var _alphabet:String;
 		private var _pageNumber:Number = 1;
 
-		public function GetDirectoryEvent(alphabet:String = "", pageNumber:Number = 1)
+		public function GetDirectoryEvent(pageNumber:Number = 1, alphabet:String = "")
 		{
 			super(GET_DIRECTORY_EVENT);
 			this._alphabet = alphabet;

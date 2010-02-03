@@ -15,7 +15,7 @@ package com.dhakads.business
 			this._responder = responder;
 		}
 		
-		public function getDirectory(alphabet:String = null, pageNumber:Number = 1):void {
+		public function getDirectory(pageNumber:Number = 1, alphabet:String = null):void {
 			var requestUrl:String = new UrlBuilder()
 										.withBaseUrl(WebServiceUrls.GET_DIRECTORY)
 										.withParameter("alphabet", alphabet)

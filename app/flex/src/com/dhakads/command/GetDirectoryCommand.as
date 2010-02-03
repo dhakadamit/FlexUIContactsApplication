@@ -24,7 +24,7 @@ package com.dhakads.command
 		{
 			var getDirectoryEvent:GetDirectoryEvent = GetDirectoryEvent (event);
 			var directoryDelegate:DirectoryDelegate = new DirectoryDelegate(this);
-			directoryDelegate.getDirectory(getDirectoryEvent.alphabet, getDirectoryEvent.pageNumber); 
+			directoryDelegate.getDirectory(getDirectoryEvent.pageNumber, getDirectoryEvent.alphabet); 
 		}
 		
 		public function result(data:Object):void
