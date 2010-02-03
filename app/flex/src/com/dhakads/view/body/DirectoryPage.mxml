@@ -49,7 +49,7 @@
             }
             
             private function totalCount():Number {
-            	return model.totalCount;
+            	return model.people.length;
             }
             
             

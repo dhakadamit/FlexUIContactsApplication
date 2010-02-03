@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" styleName="main">
+<mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" styleName="main" creationComplete="init();">
 
 	<mx:Style source="css/Header.css"/>
 	
 	<mx:Script>
 		<![CDATA[
+			import com.dhakads.event.SearchEvent;
 			import com.dhakads.model.enums.Pages;
 			import mx.collections.ArrayCollection;
 			import com.dhakads.event.LogoutEvent;
@@ -17,7 +18,7 @@
 			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 			
-			public function buttonBarItemClickHandler(event:ItemClickEvent):void {
+			private function buttonBarItemClickHandler(event:ItemClickEvent):void {
 				var pageNumber:Number;
 				var selectedPage:String = event.label;
 				if( selectedPage == "Login") {
@@ -33,6 +34,14 @@
 				
 				var pageChangeEvent:PageChangeEvent = new PageChangeEvent(pageNumber);
 				pageChangeEvent.dispatch();		
+			}
+			
+			private function init():void {
+				search.addEventListener(MouseEvent.CLICK, searchDirectory);
+			} 
+			
+			private function searchDirectory(event:Event):void {
+				new SearchEvent(this.query.text, String(this.searchCriteria.selectedValue)).dispatch();
 			}
 		]]>
 	</mx:Script>

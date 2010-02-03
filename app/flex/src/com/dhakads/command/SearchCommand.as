@@ -6,13 +6,17 @@ package com.dhakads.command
 	import com.dhakads.business.DirectoryDelegate;
 	import com.dhakads.business.FaultHandler;
 	import com.dhakads.event.SearchEvent;
+	import com.dhakads.model.ContactsApplicationModelLocator;
 	import com.dhakads.model.builders.PeopleBuilder;
+	import com.dhakads.model.enums.Pages;
 	
-	import mx.collections.ArrayCollection;
 	import mx.rpc.IResponder;
 
 	public class SearchCommand implements ICommand, IResponder
 	{
+		[Bindable]
+		private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
+		
 		public function execute(event:CairngormEvent):void
 		{
 			var searchEvent:SearchEvent = SearchEvent (event);
@@ -23,7 +27,8 @@ package com.dhakads.command
 		public function result(data:Object):void
 		{
 			var decoder:JSONDecoder = new JSONDecoder(data.result);
-			var people:ArrayCollection = new PeopleBuilder().build(decoder.getValue() as Array);
+			model.people = new PeopleBuilder().build(decoder.getValue() as Array);
+			model.currentPage = Pages.DIRECTORY_PAGE;
 		}
 		
 		public function fault(info:Object):void
