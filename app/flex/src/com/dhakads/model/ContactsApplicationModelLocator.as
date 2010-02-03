@@ -1,6 +1,7 @@
 package com.dhakads.model
 {
 	import com.adobe.cairngorm.model.ModelLocator;
+	import com.dhakads.model.enums.Pages;
 	
 	import mx.collections.ArrayCollection;
 

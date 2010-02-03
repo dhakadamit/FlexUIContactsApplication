@@ -5,9 +5,10 @@
 	
 	<mx:Script>
 		<![CDATA[
+			import com.dhakads.model.enums.Pages;
 			import mx.collections.ArrayCollection;
 			import com.dhakads.event.LogoutEvent;
-			import com.dhakads.model.Pages;
+			import com.dhakads.model.enums.Pages;
 			import com.dhakads.model.ContactsApplicationModelLocator;
 			import mx.controls.Alert;
 			import com.dhakads.event.PageChangeEvent;

@@ -5,7 +5,7 @@ package com.dhakads.command
 	import com.dhakads.business.SessionDelegate;
 	import com.dhakads.event.LoginEvent;
 	import com.dhakads.model.ContactsApplicationModelLocator;
-	import com.dhakads.model.Pages;
+	import com.dhakads.model.enums.Pages;
 	
 	import mx.rpc.IResponder;
 	import mx.rpc.events.FaultEvent;

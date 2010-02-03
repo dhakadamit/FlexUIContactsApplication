@@ -4,7 +4,7 @@ package com.dhakads.command
 	import com.adobe.cairngorm.control.CairngormEvent;
 	import com.dhakads.business.SessionDelegate;
 	import com.dhakads.model.ContactsApplicationModelLocator;
-	import com.dhakads.model.Pages;
+	import com.dhakads.model.enums.Pages;
 	
 	import mx.controls.Alert;
 	import mx.rpc.IResponder;

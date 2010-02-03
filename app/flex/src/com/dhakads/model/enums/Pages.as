@@ -1,4 +1,4 @@
-package com.dhakads.model
+package com.dhakads.model.enums
 {
 	public class Pages
 	{

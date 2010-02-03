@@ -1,6 +1,6 @@
 package com.dhakads.business
 {
-	import com.dhakads.model.WebServiceUrls;
+	import com.dhakads.model.enums.WebServiceUrls;
 	import com.dhakads.utils.ServiceUtils;
 	
 	import mx.rpc.IResponder;

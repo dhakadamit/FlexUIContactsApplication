@@ -1,7 +1,7 @@
 package com.dhakads.business
 {
 	import com.dhakads.model.ContactsApplicationModelLocator;
-	import com.dhakads.model.Pages;
+	import com.dhakads.model.enums.Pages;
 	
 	public class FaultHandler
 	{
