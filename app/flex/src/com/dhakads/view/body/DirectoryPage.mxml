@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Canvas xmlns:mx="http://www.adobe.com/2006/mxml" width="100%" height="100%" show="init();">
 
-	<mx:Script>
+    <mx:Script>
 		<![CDATA[
 			import com.dhakads.model.Person;
 			import com.dhakads.event.GetPersonDetailsEvent;
@@ -12,22 +12,26 @@
 			import mx.collections.Sort;
 			import mx.collections.SortField;
 			import mx.events.FlexEvent;
+			import com.dhakads.view.business.PaginationManager;
 
-			private static const allAlphabets:Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+			private static const ALL_ALPHABETS:Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
 													   'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
 													   'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
-
+			
+			[Bindable]
+			private var paginationManager:PaginationManager = new PaginationManager(11);
+			
 			private function init():void {
 				getDirectory();
 			}
 
 			private function getDirectory():void {
 				new GetDirectoryEvent().dispatch();
-            }
-			
+								
+            }	
 		
 		]]>
 	</mx:Script>
@@ -38,7 +42,7 @@
 
 		<mx:HBox verticalAlign="middle" horizontalGap="10">
 			<mx:Label text="Index:" styleName="indexLinkTextStyle"/>
-			<mx:LinkBar dataProvider="{allAlphabets}" styleName="indexLinkStyle"/>
+			<mx:LinkBar dataProvider="{ALL_ALPHABETS}" styleName="indexLinkStyle"/>
 		</mx:HBox>
 		
 		<mx:DataGrid id="directoryListing" dataProvider="{model.people}" rowCount="{model.people.length}" width="100%" styleName="directoryStyle" horizontalScrollPolicy="off" verticalScrollPolicy="off">
@@ -78,11 +82,11 @@
 		</mx:DataGrid>
 
 		<mx:HBox verticalAlign="middle" horizontalGap="10">
-			<mx:Label text="1-10 of 15" styleName="indexLinkTextStyle"/>
-			<mx:LinkButton id="previous">
+			<mx:Label text="{paginationManager.displayString} " styleName="indexLinkTextStyle"/>
+			<mx:LinkButton id="previous" click="{paginationManager.previousSetOfResults();}">
 				<mx:skin>@Embed(source='../../../../../assets/previous-button-previous.png')</mx:skin>
 			</mx:LinkButton>
-			<mx:LinkButton id="next">
+			<mx:LinkButton id="next" click="{paginationManager.nextSetOfResults();}">
 				<mx:skin>@Embed(source='../../../../../assets/previous-button-next.png')</mx:skin>
 			</mx:LinkButton>
 		</mx:HBox>
