@@ -36,6 +36,10 @@ class Person < ActiveRecord::Base
     Person.find(:all, {:conditions => "first_name LIKE '#{alphabet}%'", :order => :first_name})
   end
 
+  def self.count_by_first_alphabet(alphabet = nil)
+    Person.count(:all, :conditions => "first_name LIKE '#{alphabet}%'")
+  end
+
   def self.find_all_by_query_and_filter(options = {})
     Person.find(:all, query_conditions(options[:query], options[:filter]))
   end

@@ -2,14 +2,13 @@ package com.dhakads.command
 {
 	import com.adobe.cairngorm.commands.ICommand;
 	import com.adobe.cairngorm.control.CairngormEvent;
-	import com.adobe.serialization.json.JSONDecoder;
+	import com.adobe.serialization.json.JSON;
 	import com.dhakads.business.DirectoryDelegate;
 	import com.dhakads.business.FaultHandler;
 	import com.dhakads.event.GetDirectoryEvent;
 	import com.dhakads.model.ContactsApplicationModelLocator;
 	import com.dhakads.model.builders.PeopleBuilder;
 	
-	import mx.collections.ArrayCollection;
 	import mx.rpc.IResponder;
 
 	public class GetDirectoryCommand implements ICommand, IResponder
@@ -29,8 +28,9 @@ package com.dhakads.command
 		
 		public function result(data:Object):void
 		{
-			var decoder:JSONDecoder = new JSONDecoder(data.result);
-			model.people = new PeopleBuilder().build(decoder.getValue() as Array);			
+			var decodedValue:Object = JSON.decode(data.result);
+			model.people = new PeopleBuilder().build(JSON.decode(decodedValue.people) as Array);
+			model.totalCount = JSON.decode(decodedValue.total_count);
 		}
 		
 		public function fault(info:Object):void

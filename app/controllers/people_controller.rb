@@ -3,15 +3,17 @@ class PeopleController < ApplicationController
 
   def directory
     @people = Person.find_by_first_alphabet(params[:alphabet]).paginate :page => params[:page], :per_page => 3
+    @total_count = Person.count_by_first_alphabet(params[:alphabet])
     respond_to do |format|
       format.html
       format.xml { render :xml => @people.to_xml() }
-      format.json { render :json => @people.to_json(:only => [:first_name, :middle_name],
-                                                    :include => {
-                                                            :contact_detail => {:only => [:area, :city]},
-                                                            :businesses => {:only => :name}
-                                                    }
-      )}
+      format.json { render :json => {:people => @people.to_json(:only => [:first_name, :middle_name],
+                                                                :include => {
+                                                                        :contact_detail => {:only => [:area, :city]},
+                                                                        :businesses => {:only => :name}
+                                                                }),
+                                     :total_count => @total_count}
+      }
     end
   end
 

@@ -15,6 +15,7 @@ package com.dhakads.model
 		private var _currentPage:Number = Pages.HOME_PAGE;
 		public var serverError:String; 
 		public var people:ArrayCollection;
+		public var totalCount:Number;
 		public var buttonsInMainControlBar:ArrayCollection = new ArrayCollection([LOGIN, "Directory"]);
 
         public static function getInstance():ContactsApplicationModelLocator{

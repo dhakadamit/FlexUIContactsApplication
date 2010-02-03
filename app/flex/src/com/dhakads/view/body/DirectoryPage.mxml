@@ -49,7 +49,7 @@
             }
             
             private function totalCount():Number {
-            	return 8;
+            	return model.totalCount;
             }
             
             
