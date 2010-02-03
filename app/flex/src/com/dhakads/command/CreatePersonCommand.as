@@ -2,8 +2,8 @@ package com.dhakads.command
 {
 	import com.adobe.cairngorm.commands.ICommand;
 	import com.adobe.cairngorm.control.CairngormEvent;
-	import com.dhakads.business.CreatePersonDelegate;
 	import com.dhakads.business.FaultHandler;
+	import com.dhakads.business.PersonDelegate;
 	import com.dhakads.event.CreatePersonEvent;
 	
 	import mx.controls.Alert;
@@ -14,8 +14,8 @@ package com.dhakads.command
 		public function execute(event:CairngormEvent):void
 		{
 			var createPersonEvent:CreatePersonEvent = CreatePersonEvent (event);
-			var createPersonDelegate:CreatePersonDelegate = new CreatePersonDelegate(this);
-			createPersonDelegate.create(createPersonEvent.person);
+			var personDelegate:PersonDelegate = new PersonDelegate(this);
+			personDelegate.create(createPersonEvent.person);
 		}
 		
 		public function result(data:Object):void

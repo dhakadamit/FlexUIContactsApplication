@@ -25,6 +25,18 @@ package com.dhakads.business
 			ServiceUtils.httpGet(requestUrl, this._responder);
 		}
 		
+		
+		public function searchDirectory(query:String, filter:String, pageNumber:Number):void {
+			var requestUrl:String = new UrlBuilder()
+										.withBaseUrl(WebServiceUrls.SEARCH)
+										.withParameter("query", query)
+										.withParameter("filter", filter)
+										.withParameter("page", pageNumber)
+										.build();
+			
+			ServiceUtils.httpGet(requestUrl, this._responder);
+		}
+		
 
 	}
 }

@@ -4,7 +4,7 @@ package com.dhakads.command
 	import com.adobe.cairngorm.control.CairngormEvent;
 	import com.adobe.serialization.json.JSONDecoder;
 	import com.dhakads.business.FaultHandler;
-	import com.dhakads.business.GetPersonDetailsDelegate;
+	import com.dhakads.business.PersonDelegate;
 	import com.dhakads.event.CreatePersonEvent;
 	import com.dhakads.event.GetPersonDetailsEvent;
 	import com.dhakads.model.Person;
@@ -19,8 +19,8 @@ package com.dhakads.command
 		public function execute(event:CairngormEvent):void
 		{
 			var getPersonDetailsEvent:GetPersonDetailsEvent = GetPersonDetailsEvent (event);
-			var getPersonDetailsDelegate:GetPersonDetailsDelegate = new GetPersonDetailsDelegate(this);
-			getPersonDetailsDelegate.getDetails(getPersonDetailsEvent.id);
+			var personDelegate:PersonDelegate = new PersonDelegate(this);
+			personDelegate.getDetails(getPersonDetailsEvent.id);
 		}
 		
 		public function result(data:Object):void

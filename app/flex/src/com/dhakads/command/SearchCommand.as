@@ -3,8 +3,8 @@ package com.dhakads.command
 	import com.adobe.cairngorm.commands.ICommand;
 	import com.adobe.cairngorm.control.CairngormEvent;
 	import com.adobe.serialization.json.JSONDecoder;
+	import com.dhakads.business.DirectoryDelegate;
 	import com.dhakads.business.FaultHandler;
-	import com.dhakads.business.SearchDelegate;
 	import com.dhakads.event.SearchEvent;
 	import com.dhakads.model.builders.PeopleBuilder;
 	
@@ -16,8 +16,8 @@ package com.dhakads.command
 		public function execute(event:CairngormEvent):void
 		{
 			var searchEvent:SearchEvent = SearchEvent (event);
-			var searchDelegate:SearchDelegate = new SearchDelegate(this);
-			searchDelegate.search(searchEvent.query, searchEvent.filter, searchEvent.pageNumber);
+			var directoryDelegate:DirectoryDelegate = new DirectoryDelegate(this);
+			directoryDelegate.searchDirectory(searchEvent.query, searchEvent.filter, searchEvent.pageNumber);
 		}
 		
 		public function result(data:Object):void
