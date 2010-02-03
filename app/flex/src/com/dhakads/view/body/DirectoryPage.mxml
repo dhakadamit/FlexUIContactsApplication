@@ -25,7 +25,13 @@
 			private var paginationManager:PaginationManager = new PaginationManager(getDirectory, totalCount);	
 		
 			private function init():void {
+				attachEvents();
 				paginationManager.firstSetOfResults();
+			}
+			
+			private function attachEvents():void {
+				previous.addEventListener(MouseEvent.CLICK, paginationManager.previousSetOfResults);
+				next.addEventListener(MouseEvent.CLICK, paginationManager.nextSetOfResults);
 			}
 
 			private function getDirectory(pageNumber:Number = 1):void {
@@ -87,10 +93,10 @@
 
 		<mx:HBox verticalAlign="middle" horizontalGap="10">
 			<mx:Label text="{paginationManager.displayString} " styleName="indexLinkTextStyle"/>
-			<mx:LinkButton id="previous" click="{paginationManager.previousSetOfResults();}">
+			<mx:LinkButton id="previous">
 				<mx:skin>@Embed(source='../../../../../assets/previous-button-previous.png')</mx:skin>
 			</mx:LinkButton>
-			<mx:LinkButton id="next" click="{paginationManager.nextSetOfResults();}">
+			<mx:LinkButton id="next">
 				<mx:skin>@Embed(source='../../../../../assets/previous-button-next.png')</mx:skin>
 			</mx:LinkButton>
 		</mx:HBox>

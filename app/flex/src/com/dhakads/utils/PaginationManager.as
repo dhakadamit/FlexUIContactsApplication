@@ -20,14 +20,14 @@ package com.dhakads.utils
 			this.fetchTotalCount = fetchTotalCount;
 		}
 		
-		public function firstSetOfResults():void {
+		public function firstSetOfResults(event:Event = null):void {
 			fetchNewResultSet(_currentPage);
-			_totalCount = 9;
+			_totalCount = fetchTotalCount();
 				
 			updateDisplayString();
 		}
 		
-		public function nextSetOfResults():void {
+		public function nextSetOfResults(event:Event = null):void {
 			if(_currentPage < calculateTotalNumberOfPages()) {
 				++_currentPage;
 				fetchNewResultSet(_currentPage);
@@ -36,7 +36,7 @@ package com.dhakads.utils
 			}			
 		}
 		
-		public function previousSetOfResults():void {
+		public function previousSetOfResults(event:Event = null):void {
 			if(_currentPage > 1) {
 				--_currentPage;
 				fetchNewResultSet(_currentPage);
