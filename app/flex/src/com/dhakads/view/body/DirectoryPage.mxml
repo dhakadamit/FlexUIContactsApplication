@@ -12,7 +12,7 @@
 			import mx.collections.Sort;
 			import mx.collections.SortField;
 			import mx.events.FlexEvent;
-			import com.dhakads.view.business.PaginationManager;
+			import com.dhakads.utils.PaginationManager;
 			import mx.collections.ArrayCollection;
 
 			private static const ALL_ALPHABETS:Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
