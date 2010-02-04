@@ -17,6 +17,7 @@
 			
 			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
+			private var firstTimeClicked:Boolean;
 			
 			private function buttonBarItemClickHandler(event:ItemClickEvent):void {
 				var pageNumber:Number;
@@ -38,7 +39,15 @@
 			
 			private function init():void {
 				search.addEventListener(MouseEvent.CLICK, searchDirectory);
+				query.addEventListener(MouseEvent.CLICK, clearDefaultText);
 			} 
+			
+			private function clearDefaultText(event:Event):void {
+				if(!firstTimeClicked) {
+					query.text = "";
+					firstTimeClicked = true;
+				}	
+			}
 			
 			private function searchDirectory(event:Event):void {
 				new SearchEvent(this.query.text, String(this.searchCriteria.selectedValue)).dispatch();
@@ -61,7 +70,7 @@
 	 	<mx:HBox width="100%">
 	 		<mx:TextInput id="query" text="Enter search query"
 			 editable="true" focusEnabled="false" alpha="1.0" width="75%" height="100%"
-			 styleName="queryBoxStyle" click="{query.selectionEndIndex = query.text.length}"></mx:TextInput>
+			 styleName="queryTextStyle" click="{query.selectionEndIndex = query.text.length}"></mx:TextInput>
 			
 			<mx:Button id="search" label="Search" height="100%" width="25%"
 				focusEnabled="false" styleName="buttonStyle"></mx:Button> 	

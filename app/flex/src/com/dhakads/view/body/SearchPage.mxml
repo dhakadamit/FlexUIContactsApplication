@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <mx:Canvas 
-	xmlns:mx="http://www.adobe.com/2006/mxml" 
-	xmlns:comps="com.dhakads.view.body.*" 
+	xmlns:mx="http://www.adobe.com/2006/mxml"
+	xmlns:comps="com.dhakads.view.body.*"
 	width="100%" height="100%" show="init();">
 
     <mx:Script>
@@ -20,35 +20,24 @@
 			import mx.events.ItemClickEvent;
 			
 
-			private static const ALL_ALPHABETS:Array = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
-													   'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
-													   'U', 'V', 'W', 'X', 'Y', 'Z'];
-
 			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 			[Bindable]
 			private var paginationManager:PaginationManager;
-			private var alphabet:String = "";
-			
+		
 			private function init():void {
-				paginationManager = new PaginationManager(getDirectory, totalCount);	
+				paginationManager = new PaginationManager(searchDirectory, totalCount);	
 				paginationManager.firstSetOfResults();
 				attachEvents();
 			}
-			
+		
 			private function attachEvents():void {
 				previous.addEventListener(MouseEvent.CLICK, paginationManager.previousSetOfResults);
 				next.addEventListener(MouseEvent.CLICK, paginationManager.nextSetOfResults);
-				alphabeticalIndex.addEventListener(ItemClickEvent.ITEM_CLICK, updateDirectoryForAlphabet);
 			}
 			
-			private function updateDirectoryForAlphabet(event:ItemClickEvent):void {
-				alphabet = String (event.label);
-				paginationManager.firstSetOfResults();
-			}
-
-			private function getDirectory(pageNumber:Number = 1):void {
-				new GetDirectoryEvent(pageNumber, alphabet).dispatch();								
+			private function searchDirectory(pageNumber:Number = 1):void {
+				new SearchEvent(model.mostRecentSearchRequest.query, model.mostRecentSearchRequest.filter, pageNumber).dispatch();								
             }
             
             private function totalCount():Number {
@@ -63,13 +52,15 @@
 
 	<mx:VBox verticalGap="20" bottom="80" left="80" right="80" top="40">
 
-		<mx:HBox verticalAlign="middle" horizontalGap="10">
-			<mx:Label text="Index:" styleName="indexLinkTextStyle"/>
-			<mx:LinkBar id="alphabeticalIndex" dataProvider="{ALL_ALPHABETS}" styleName="indexLinkStyle"/>
+		<mx:HBox verticalAlign="middle" horizontalGap="0">
+			<mx:Label text="Search results for" styleName="indexLinkTextStyle" fontWeight="normal"/>
+			<mx:Label text="{model.mostRecentSearchRequest.query}" styleName="indexLinkTextStyle"/>
+			<mx:Label text="in category" styleName="indexLinkTextStyle" fontWeight="normal"/>
+			<mx:Label text="{model.mostRecentSearchRequest.filter}" styleName="indexLinkTextStyle"/>					
 		</mx:HBox>
 		
-		<comps:DirectoryListing id="directoryListing"  width="100%"/>
-		
+		<comps:DirectoryListing id="searchResults"  width="100%"/>
+
 		<mx:HBox verticalAlign="middle" horizontalGap="10">
 			<mx:Label text="{paginationManager.displayString} " styleName="indexLinkTextStyle"/>
 			<mx:LinkButton id="previous">

@@ -17,6 +17,7 @@ package com.dhakads.model
 		public var people:ArrayCollection;
 		public var totalCount:Number;
 		public var buttonsInMainControlBar:ArrayCollection = new ArrayCollection([LOGIN, "Directory"]);
+		public var mostRecentSearchRequest:SearchRequest;
 
         public static function getInstance():ContactsApplicationModelLocator{
             if (modelLocator == null) {

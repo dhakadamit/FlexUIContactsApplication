@@ -15,5 +15,6 @@
 		<comps:HomePage id="home" />
 		<comps:DirectoryPage id="directory" bottom="80" left="80" right="150" top="80" /> 
 		<comps:PersonDetailsPage id="personDetails" />
+		<comps:SearchPage id="searchResults" />
 	</mx:ViewStack>
 </mx:Canvas>

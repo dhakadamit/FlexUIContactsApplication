@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:DataGrid xmlns:mx="http://www.adobe.com/2006/mxml"
+			 dataProvider="{model.people}"
+			 rowCount="{model.people.length}"
+			 styleName="directoryStyle" horizontalScrollPolicy="off" verticalScrollPolicy="off" show="Alert.show('hi');">
+			 
+	<mx:Script>
+		<![CDATA[
+		  	import com.dhakads.model.ContactsApplicationModelLocator;
+		  	import mx.controls.Alert;
+
+			[Bindable]
+			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();		
+		]]>
+	</mx:Script>
+			 
+	<mx:columns>
+		<mx:DataGridColumn headerText="Name" paddingLeft="20">
+			<mx:itemRenderer>
+			 	<mx:Component>
+			 		<mx:LinkButton label="{data.firstName + ' ' + data.middleName}" themeColor="#FFFFFF" textAlign="left" textRollOverColor="#013E7D"/>
+			 	</mx:Component>
+            </mx:itemRenderer>
+		</mx:DataGridColumn>
+
+		<mx:DataGridColumn headerText="Area" paddingLeft="20">
+			<mx:itemRenderer>
+			 	<mx:Component>
+			 		<mx:Label text="{data.contactDetail.area}" />
+			 	</mx:Component>
+            </mx:itemRenderer>
+		</mx:DataGridColumn>
+		
+		<mx:DataGridColumn headerText="City" paddingLeft="20">
+			<mx:itemRenderer>
+			 	<mx:Component>
+			 		<mx:Label text="{data.contactDetail.city}" />
+			 	</mx:Component>
+            </mx:itemRenderer>
+		</mx:DataGridColumn>
+
+		<mx:DataGridColumn headerText="Profession" paddingLeft="20">
+			<mx:itemRenderer>
+			 	<mx:Component>
+			 		<mx:Label text="{data.businesses.getItemAt(0).name}" />
+			 	</mx:Component>
+            </mx:itemRenderer>
+		</mx:DataGridColumn>
+	</mx:columns>
+</mx:DataGrid>

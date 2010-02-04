@@ -18,7 +18,7 @@ class PeopleController < ApplicationController
   end
 
   def search
-    @results = Person.find_all_by_query_and_filter(params).paginate :page => params[:page], :per_page => 20
+    @results = Person.find_all_by_query_and_filter(params).paginate :page => params[:page], :per_page => 3
 
     respond_to do |format|
       format.html

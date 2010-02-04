@@ -34,7 +34,7 @@
 	horizontalGap: 10;
 }
 
-.queryBoxStyle
+.queryTextStyle
 {
 	backgroundAlpha: 1.0;
 	backgroundColor: #FFFFFF;
@@ -45,8 +45,7 @@
 	cornerRadius: 9;
 	fontFamily: Verdana;
 	fontSize: 10;
-	fontStyle: italic;
-	fontWeight: normal;
+	font-weight: normal;
 	textAlign: left;
 	themeColor: #013E7D;
 	focusThickness: 0;
