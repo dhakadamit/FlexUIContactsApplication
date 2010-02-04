@@ -6,6 +6,9 @@
 
     <mx:Script>
 		<![CDATA[
+			import mx.core.Application;
+			import com.dhakads.view.ShowProgressBar;
+			import mx.managers.PopUpManager;
 			import com.dhakads.model.Person;
 			import com.dhakads.event.GetPersonDetailsEvent;
 			import com.dhakads.event.SearchEvent;
@@ -48,11 +51,13 @@
 			}
 
 			private function getDirectory(pageNumber:Number = 1):void {
+				Application.application.progressBar = ShowProgressBar(PopUpManager.createPopUp(this, ShowProgressBar, true));
+				PopUpManager.centerPopUp(Application.application.progressBar);
 				new GetDirectoryEvent(pageNumber, alphabet).dispatch();								
             }
             
             private function totalCount():Number {
-            	return model.people.length;
+            	return 8;
             }
             
             

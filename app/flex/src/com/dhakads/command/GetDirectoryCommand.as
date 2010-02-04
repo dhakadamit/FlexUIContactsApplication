@@ -9,6 +9,8 @@ package com.dhakads.command
 	import com.dhakads.model.ContactsApplicationModelLocator;
 	import com.dhakads.model.builders.PeopleBuilder;
 	
+	import mx.core.Application;
+	import mx.managers.PopUpManager;
 	import mx.rpc.IResponder;
 
 	public class GetDirectoryCommand implements ICommand, IResponder
@@ -31,6 +33,7 @@ package com.dhakads.command
 			var decodedValue:Object = JSON.decode(data.result);
 			model.people = new PeopleBuilder().build(JSON.decode(decodedValue.people) as Array);
 			model.totalCount = JSON.decode(decodedValue.total_count);
+			PopUpManager.removePopUp(Application.application.progressBar);
 		}
 		
 		public function fault(info:Object):void
