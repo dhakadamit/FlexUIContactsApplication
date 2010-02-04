@@ -2,6 +2,7 @@ package com.dhakads.model
 {
 	import com.adobe.cairngorm.model.ModelLocator;
 	import com.dhakads.model.enums.Pages;
+	import com.dhakads.view.ShowProgressBar;
 	
 	import mx.collections.ArrayCollection;
 
@@ -18,6 +19,7 @@ package com.dhakads.model
 		public var totalCount:Number;
 		public var buttonsInMainControlBar:ArrayCollection = new ArrayCollection([LOGIN, "Directory"]);
 		public var mostRecentSearchRequest:SearchRequest;
+		public var progressBar:ShowProgressBar;
 
         public static function getInstance():ContactsApplicationModelLocator{
             if (modelLocator == null) {

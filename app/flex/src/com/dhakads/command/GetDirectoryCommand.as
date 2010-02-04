@@ -16,6 +16,7 @@ package com.dhakads.command
 	public class GetDirectoryCommand implements ICommand, IResponder
 	{
 		private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
+		private var _callback:Function;
 		
 		public function GetDirectoryCommand()
 		{
@@ -25,6 +26,7 @@ package com.dhakads.command
 		{
 			var getDirectoryEvent:GetDirectoryEvent = GetDirectoryEvent (event);
 			var directoryDelegate:DirectoryDelegate = new DirectoryDelegate(this);
+			this._callback = getDirectoryEvent.callback;
 			directoryDelegate.getDirectory(getDirectoryEvent.pageNumber, getDirectoryEvent.alphabet); 
 		}
 		
@@ -33,7 +35,10 @@ package com.dhakads.command
 			var decodedValue:Object = JSON.decode(data.result);
 			model.people = new PeopleBuilder().build(JSON.decode(decodedValue.people) as Array);
 			model.totalCount = JSON.decode(decodedValue.total_count);
-			PopUpManager.removePopUp(Application.application.progressBar);
+			PopUpManager.removePopUp(model.progressBar);
+			if(_callback != null) {
+				_callback();
+			}
 		}
 		
 		public function fault(info:Object):void

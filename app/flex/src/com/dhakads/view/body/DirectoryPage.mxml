@@ -50,14 +50,15 @@
 				paginationManager.firstSetOfResults();
 			}
 
-			private function getDirectory(pageNumber:Number = 1):void {
-				Application.application.progressBar = ShowProgressBar(PopUpManager.createPopUp(this, ShowProgressBar, true));
-				PopUpManager.centerPopUp(Application.application.progressBar);
-				new GetDirectoryEvent(pageNumber, alphabet).dispatch();								
+			private function getDirectory(pageNumber:Number = 1, callback:Function = null):void {
+				model.progressBar = ShowProgressBar(PopUpManager.createPopUp(this, ShowProgressBar, true));
+				PopUpManager.centerPopUp(model.progressBar);
+				
+				new GetDirectoryEvent(pageNumber, alphabet, callback).dispatch();								
             }
             
             private function totalCount():Number {
-            	return 8;
+            	return model.totalCount;
             }
             
             

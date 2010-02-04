@@ -21,18 +21,13 @@ package com.dhakads.utils
 		}
 		
 		public function firstSetOfResults(event:Event = null):void {
-			fetchNewResultSet(_currentPage);
-			_totalCount = fetchTotalCount();
-				
-			updateDisplayString();
+			fetchNewResultSet(_currentPage, updateDisplayString);
 		}
 		
 		public function nextSetOfResults(event:Event = null):void {
 			if(_currentPage < calculateTotalNumberOfPages()) {
 				++_currentPage;
-				fetchNewResultSet(_currentPage);
-				_totalCount = fetchTotalCount();
-				updateDisplayString();
+				fetchNewResultSet(_currentPage, updateDisplayString);
 			}			
 		}
 		
@@ -40,12 +35,14 @@ package com.dhakads.utils
 			if(_currentPage > 1) {
 				--_currentPage;
 				fetchNewResultSet(_currentPage);
-				_totalCount = fetchTotalCount();
+				
 				updateDisplayString();
 			}
 		}
 		
 		private function updateDisplayString():void {
+			_totalCount = fetchTotalCount();
+			
 			if(_currentPage == calculateTotalNumberOfPages()) {
 				_displayingItemsFrom = _displayingItemsTo + 1;
 				_displayingItemsTo = _totalCount;				
