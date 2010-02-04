@@ -2,7 +2,7 @@ package com.dhakads.command
 {
 	import com.adobe.cairngorm.commands.ICommand;
 	import com.adobe.cairngorm.control.CairngormEvent;
-	import com.adobe.serialization.json.JSONDecoder;
+	import com.adobe.serialization.json.JSON;
 	import com.dhakads.business.DirectoryDelegate;
 	import com.dhakads.business.FaultHandler;
 	import com.dhakads.event.SearchEvent;
@@ -17,10 +17,13 @@ package com.dhakads.command
 	{
 		[Bindable]
 		private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
+		private var _callback:Function;
 		
 		public function execute(event:CairngormEvent):void
 		{
 			var searchEvent:SearchEvent = SearchEvent (event);
+			this._callback = searchEvent.callback;
+		
 			var directoryDelegate:DirectoryDelegate = new DirectoryDelegate(this);
 			directoryDelegate.searchDirectory(searchEvent.query, searchEvent.filter, searchEvent.pageNumber);
 			model.mostRecentSearchRequest = new SearchRequest(searchEvent.query, searchEvent.filter);
@@ -28,9 +31,11 @@ package com.dhakads.command
 		
 		public function result(data:Object):void
 		{
-			var decoder:JSONDecoder = new JSONDecoder(data.result);
-			model.people = new PeopleBuilder().build(decoder.getValue() as Array);
+			var decodedValue:Object = JSON.decode(data.result);
+			model.people = new PeopleBuilder().build(JSON.decode(decodedValue.people) as Array);
+			model.totalCount = JSON.decode(decodedValue.total_count); 
 			model.currentPage = Pages.SEARCH_PAGE;
+			this._callback();	
 		}
 		
 		public function fault(info:Object):void

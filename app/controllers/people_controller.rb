@@ -19,16 +19,17 @@ class PeopleController < ApplicationController
 
   def search
     @results = Person.find_all_by_query_and_filter(params).paginate :page => params[:page], :per_page => 3
-
+    @total_count = Person.count_by_query_and_filter(params)
     respond_to do |format|
       format.html
       format.xml { render :xml => @results.to_xml() }
-      format.json { render :json => @results.to_json(:only => [:first_name, :middle_name],
-                                                     :include => {
-                                                             :contact_detail => {:only => [:area, :city]},
-                                                             :businesses => {:only => :name}
-                                                     }
-      )}
+      format.json { render :json => {:people => @results.to_json(:only => [:first_name, :middle_name],
+                                                                :include => {
+                                                                        :contact_detail => {:only => [:area, :city]},
+                                                                        :businesses => {:only => :name}
+                                                                }),
+                                     :total_count => @total_count}
+      }
     end
   end
 

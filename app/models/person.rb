@@ -40,6 +40,10 @@ class Person < ActiveRecord::Base
     Person.count(:all, :conditions => "first_name LIKE '#{alphabet}%'")
   end
 
+  def self.count_by_query_and_filter(options = {})
+    Person.count(:all, query_conditions(options[:query], options[:filter]))
+  end
+
   def self.find_all_by_query_and_filter(options = {})
     Person.find(:all, query_conditions(options[:query], options[:filter]))
   end
@@ -71,6 +75,7 @@ class Person < ActiveRecord::Base
       {:joins => :contact_detail, :conditions =>"contact_details.area LIKE '%#{query}%'"}  
     end
   end
+
 
 end
 
