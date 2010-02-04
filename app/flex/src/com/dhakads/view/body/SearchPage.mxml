@@ -27,7 +27,8 @@
 		
 			private function init():void {
 				paginationManager = new PaginationManager(searchDirectory, totalCount);	
-				paginationManager.firstSetOfResults();
+				paginationManager.initialize();
+				paginationManager.nextSetOfResults();
 				attachEvents();
 			}
 		
@@ -36,12 +37,12 @@
 				next.addEventListener(MouseEvent.CLICK, paginationManager.nextSetOfResults);
 			}
 			
-			private function searchDirectory(pageNumber:Number = 1):void {
-				new SearchEvent(model.mostRecentSearchRequest.query, model.mostRecentSearchRequest.filter, pageNumber).dispatch();								
+			private function searchDirectory(pageNumber:Number = 1, callback:Function = null):void {
+				new SearchEvent(model.mostRecentSearchRequest.query, model.mostRecentSearchRequest.filter, pageNumber, callback).dispatch();								
             }
             
             private function totalCount():Number {
-            	return model.people.length;
+            	return model.totalCount;
             }
             
             

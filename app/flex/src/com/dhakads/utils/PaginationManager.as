@@ -5,7 +5,7 @@ package com.dhakads.utils
 	{
 		private static const TOTAL_RESULTS_PER_PAGE:Number = 3;
 		private var _totalCount:Number = 0;
-		private var _currentPage:Number = 1;
+		private var _currentPage:Number = 0;
 		private var _displayingItemsFrom:Number = 0;
 		private var _displayingItemsTo:Number = 0;
 		private var fetchNewResultSet:Function;
@@ -20,31 +20,38 @@ package com.dhakads.utils
 			this.fetchTotalCount = fetchTotalCount;
 		}
 		
-		public function firstSetOfResults(event:Event = null):void {
-			fetchNewResultSet(_currentPage, updateDisplayString);
+		public function initialize():void {
+			this._currentPage = 0;
+			this._displayingItemsFrom = 0;
+			this._displayingItemsTo = 0;
 		}
 		
 		public function nextSetOfResults(event:Event = null):void {
-			if(_currentPage < calculateTotalNumberOfPages()) {
+			if(_currentPage == 0 || _currentPage < calculateTotalNumberOfPages()) {
 				++_currentPage;
-				fetchNewResultSet(_currentPage, updateDisplayString);
+				fetchNewResultSet(_currentPage, processResultSet);
 			}			
 		}
 		
 		public function previousSetOfResults(event:Event = null):void {
 			if(_currentPage > 1) {
 				--_currentPage;
-				fetchNewResultSet(_currentPage);
-				
-				updateDisplayString();
+				fetchNewResultSet(_currentPage, processResultSet);
 			}
 		}
 		
-		private function updateDisplayString():void {
+		private function processResultSet():void {
 			_totalCount = fetchTotalCount();
+			if(_totalCount == 0) {
+				initialize();
+			}
 			
+			updateDisplayString();
+		}
+		
+		private function updateDisplayString():void {
 			if(_currentPage == calculateTotalNumberOfPages()) {
-				_displayingItemsFrom = _displayingItemsTo + 1;
+				_displayingItemsFrom = _displayingItemsTo == 0 ? 0 : _displayingItemsTo + 1;
 				_displayingItemsTo = _totalCount;				
 			} 
 			else {

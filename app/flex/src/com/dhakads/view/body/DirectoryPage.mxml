@@ -30,12 +30,11 @@
 			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 			[Bindable]
-			private var paginationManager:PaginationManager;
+			private var paginationManager:PaginationManager = new PaginationManager(getDirectory, totalCount);
 			private var alphabet:String = "";
 			
 			private function init():void {
-				paginationManager = new PaginationManager(getDirectory, totalCount);	
-				paginationManager.firstSetOfResults();
+				updateDirectoryWithAll();				
 				attachEvents();
 			}
 			
@@ -43,11 +42,19 @@
 				previous.addEventListener(MouseEvent.CLICK, paginationManager.previousSetOfResults);
 				next.addEventListener(MouseEvent.CLICK, paginationManager.nextSetOfResults);
 				alphabeticalIndex.addEventListener(ItemClickEvent.ITEM_CLICK, updateDirectoryForAlphabet);
+				viewAllLink.addEventListener(ItemClickEvent.ITEM_CLICK, updateDirectoryWithAll);
+			}
+			
+			private function updateDirectoryWithAll(event:ItemClickEvent = null):void {
+				alphabet = "";
+				paginationManager.initialize();
+				paginationManager.nextSetOfResults();
 			}
 			
 			private function updateDirectoryForAlphabet(event:ItemClickEvent):void {
 				alphabet = String (event.label);
-				paginationManager.firstSetOfResults();
+				paginationManager.initialize();
+				paginationManager.nextSetOfResults();
 			}
 
 			private function getDirectory(pageNumber:Number = 1, callback:Function = null):void {
@@ -71,7 +78,8 @@
 
 		<mx:HBox verticalAlign="middle" horizontalGap="10">
 			<mx:Label text="Index:" styleName="indexLinkTextStyle"/>
-			<mx:LinkBar id="alphabeticalIndex" dataProvider="{ALL_ALPHABETS}" styleName="indexLinkStyle"/>
+			<mx:LinkBar id="alphabeticalIndex" dataProvider="{ALL_ALPHABETS}" styleName="indexLinkStyle" textDecoration="normal"/>
+			<mx:LinkBar id="viewAllLink" dataProvider="{['View all']}" styleName="indexLinkStyle" textDecoration="underline"/>
 		</mx:HBox>
 		
 		<comps:DirectoryListing id="directoryListing"  width="100%"/>
