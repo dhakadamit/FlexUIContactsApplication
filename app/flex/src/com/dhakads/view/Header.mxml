@@ -5,6 +5,9 @@
 	
 	<mx:Script>
 		<![CDATA[
+			import com.dhakads.model.SearchRequest;
+			import mx.core.Application;
+			import com.dhakads.view.body.SearchPage;
 			import com.dhakads.event.SearchEvent;
 			import com.dhakads.model.enums.Pages;
 			import mx.collections.ArrayCollection;
@@ -50,7 +53,8 @@
 			}
 			
 			private function searchDirectory(event:Event):void {
-				new SearchEvent(this.query.text, String(this.searchCriteria.selectedValue)).dispatch();
+				model.searchRequest = new SearchRequest(this.query.text, String (this.searchCriteria.selectedValue));
+				Application.application.mainBody.searchResults.init();
 			}
 		]]>
 	</mx:Script>

@@ -26,7 +26,7 @@ package com.dhakads.command
 		
 			var directoryDelegate:DirectoryDelegate = new DirectoryDelegate(this);
 			directoryDelegate.searchDirectory(searchEvent.query, searchEvent.filter, searchEvent.pageNumber);
-			model.mostRecentSearchRequest = new SearchRequest(searchEvent.query, searchEvent.filter);
+			model.searchRequest = new SearchRequest(searchEvent.query, searchEvent.filter);
 		}
 		
 		public function result(data:Object):void

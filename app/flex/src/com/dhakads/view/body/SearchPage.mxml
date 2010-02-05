@@ -23,29 +23,33 @@
 			[Bindable]
 			private var model:ContactsApplicationModelLocator = ContactsApplicationModelLocator.getInstance();
 			[Bindable]
-			private var paginationManager:PaginationManager;
+			private var _paginationManager:PaginationManager;
 		
-			private function init():void {
-				paginationManager = new PaginationManager(searchDirectory, totalCount);	
-				paginationManager.initialize();
-				paginationManager.nextSetOfResults();
+			public function init():void {
+				_paginationManager = new PaginationManager(searchDirectory, totalCount);	
+				_paginationManager.initialize();
+				_paginationManager.nextSetOfResults();
 				attachEvents();
 			}
 		
 			private function attachEvents():void {
-				previous.addEventListener(MouseEvent.CLICK, paginationManager.previousSetOfResults);
-				next.addEventListener(MouseEvent.CLICK, paginationManager.nextSetOfResults);
+				previous.addEventListener(MouseEvent.CLICK, _paginationManager.previousSetOfResults);
+				next.addEventListener(MouseEvent.CLICK, _paginationManager.nextSetOfResults);
 			}
 			
 			private function searchDirectory(pageNumber:Number = 1, callback:Function = null):void {
-				new SearchEvent(model.mostRecentSearchRequest.query, model.mostRecentSearchRequest.filter, pageNumber, callback).dispatch();								
+				new SearchEvent(model.searchRequest.query, model.searchRequest.filter, pageNumber, callback).dispatch();								
             }
             
             private function totalCount():Number {
             	return model.totalCount;
             }
             
-            
+//            public function get paginationManager():PaginationManager {
+//            	return this._paginationManager;
+//            }
+//            
+//            
 		]]>
 	</mx:Script>
 
@@ -55,15 +59,15 @@
 
 		<mx:HBox verticalAlign="middle" horizontalGap="0">
 			<mx:Label text="Search results for" styleName="indexLinkTextStyle" fontWeight="normal"/>
-			<mx:Label text="{model.mostRecentSearchRequest.query}" styleName="indexLinkTextStyle"/>
+			<mx:Label text="{model.searchRequest.query}" styleName="indexLinkTextStyle"/>
 			<mx:Label text="in category" styleName="indexLinkTextStyle" fontWeight="normal"/>
-			<mx:Label text="{model.mostRecentSearchRequest.filter}" styleName="indexLinkTextStyle"/>					
+			<mx:Label text="{model.searchRequest.filter}" styleName="indexLinkTextStyle"/>					
 		</mx:HBox>
 		
 		<comps:DirectoryListing id="searchResults"  width="100%"/>
 
 		<mx:HBox verticalAlign="middle" horizontalGap="10">
-			<mx:Label text="{paginationManager.displayString} " styleName="indexLinkTextStyle"/>
+			<mx:Label text="{_paginationManager.displayString} " styleName="indexLinkTextStyle"/>
 			<mx:LinkButton id="previous">
 				<mx:skin>@Embed(source='../../../../../assets/previous-button-previous.png')</mx:skin>
 			</mx:LinkButton>
